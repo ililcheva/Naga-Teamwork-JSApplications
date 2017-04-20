@@ -8,11 +8,6 @@
 * Bootstrap CSS
 * back-end
 
-
-
-
-
-
 #### Project Requirements:
 Please define and implement the following assets in your project:
 - Use [jQuery](https://jquery.com/)

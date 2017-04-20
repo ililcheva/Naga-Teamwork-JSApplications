@@ -1,0 +1,22 @@
+{
+  "name": "team-naga-project",
+  "version": "1.0.0",
+  "description": "Teamwork project for Telerik Academy Sofia, Bulgaria",
+  "main": "index.js",
+  "scripts": {
+    "test": "start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/svrakata/Teamwork-JSApplications.git"
+  },
+  "author": "Team Naga",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/svrakata/Teamwork-JSApplications/issues"
+  },
+  "homepage": "https://github.com/svrakata/Teamwork-JSApplications#readme",
+  "dependencies": {
+    "systemjs": "^0.20.12"
+  }
+}
