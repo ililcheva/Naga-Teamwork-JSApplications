@@ -1,6 +1,18 @@
 # Teamwork-JSApplications
 ### Team Naga
 
+#### TO DO:
+* file system
+* exporting with SystemJS
+* Modules
+* Bootstrap CSS
+* back-end
+
+
+
+
+
+
 #### Project Requirements:
 Please define and implement the following assets in your project:
 - Use [jQuery](https://jquery.com/)
