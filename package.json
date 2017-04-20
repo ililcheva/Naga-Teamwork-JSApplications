@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/svrakata/Teamwork-JSApplications#readme",
   "dependencies": {
-    "systemjs": "^0.20.12"
+    "systemjs": "^0.20.12",
+    "systemjs-plugin-babel": "0.0.21"
   }
 }
