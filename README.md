@@ -2,7 +2,7 @@
 ### Team Naga
 
 #### TO DO:
-* file system //almost
+* file system //almost--- //must change libs out of node_modules
 * exporting with SystemJS //done
 * Modules //done
 * Bootstrap CSS //soon
