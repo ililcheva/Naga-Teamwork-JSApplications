@@ -7,5 +7,11 @@ SystemJS.config({
 
         //app scripts
         'main':'./js/main.js'
+    },
+    packages: {
+        '/': {
+            defaultExtension: 'js'
+        }
     }
 });
+System.import('main');
