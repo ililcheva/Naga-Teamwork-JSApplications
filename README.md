@@ -2,11 +2,11 @@
 ### Team Naga
 
 #### TO DO:
-* file system
-* exporting with SystemJS
-* Modules
-* Bootstrap CSS
-* back-end
+* file system //almost
+* exporting with SystemJS //done
+* Modules //done
+* Bootstrap CSS //soon
+* back-end //fb or node.js
 
 #### Project Requirements:
 Please define and implement the following assets in your project:
