@@ -4,11 +4,11 @@
 ### URL: [naga books](https://naga-389d5.firebaseapp.com/)
 
 #### TO DO:
-* file system //almost--- //must change libs out of node_modules
+* file system //almost--- //have to load libs from systemJS --- node_modules is out
 * exporting with SystemJS //done
 * Modules //done
-* Bootstrap CSS //soon
-* back-end //fb or node.js
+* Bootstrap CSS //done
+* back-end //fb db left --- site deployed
 
 #### Project Requirements:
 Please define and implement the following assets in your project:
