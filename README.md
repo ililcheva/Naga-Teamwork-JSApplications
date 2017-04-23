@@ -8,7 +8,7 @@
 - [x] exporting with SystemJS //done
 - [x] Modules //done
 - [x] Bootstrap CSS //done
-- - [ ] back-end //db --- send and retrieve data
+- [ ] back-end //db --- send and retrieve data
 - - [ ] routes ?! how, why, when !? 
 - - [ ] basic interface / html skeleton
 - - [ ] helpers 
