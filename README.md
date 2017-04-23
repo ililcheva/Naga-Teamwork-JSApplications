@@ -12,6 +12,7 @@
 - [ ] routers: 
 * [Navigo](https://github.com/krasimir/navigo)
 * [Page](https://visionmedia.github.io/page.js/)
+* [Sammy](http://sammyjs.org/)
 * or simply using jQuery
 - [ ] basic interface / html skeleton
 - [ ] helpers 
