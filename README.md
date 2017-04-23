@@ -49,8 +49,8 @@ Follow the best practices for producing high-quality code:
 - [ ]   **Data encapsulation**
   -     Use OOP and modules
 - [ ]   **Strong cohesion** and **loose coupling**
-[x]   Use **GIT** as a source control system
-[x]   Host it on [https://github.com](https://github.com)
+- [x]   Use **GIT** as a source control system
+- [x]   Host it on [https://github.com](https://github.com)
 -   Deploy your application on a cloud server of your choice - Heroku, Firebase, Amazon S3, Microsoft Azure
 -   **Usage of a structural JavaScript framework is FORBIDDEN**:
   -     AngularJS, React, KendoUI, Knockout.js, Backbone.js, etc...

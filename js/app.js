@@ -19,3 +19,7 @@ console.log(firebaseConfig);
 //checking handlebars
 import Handlebars from 'handlebars';
 console.log(Handlebars);
+
+//checking router
+import { Router } from './router';
+//console.log(Router.getFragment())
