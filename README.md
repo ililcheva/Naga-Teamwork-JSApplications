@@ -8,10 +8,10 @@
 - [x] exporting with SystemJS //done
 - [x] Modules //done
 - [x] Bootstrap CSS //done
-- - [ ] back-end //db --- send and retrieve data
-- - [ ] routes ?! how, why, when !? 
-- - [ ] basic interface / html skeleton
-- - [ ] helpers 
+- [ ] back-end //db --- send and retrieve data
+- [ ] routes ?! how, why, when !? 
+- [ ] basic interface / html skeleton
+- [ ] helpers 
 
 #### Project Requirements:
 Please define and implement the following assets in your project:
