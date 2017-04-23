@@ -9,7 +9,8 @@
 - [x] Modules //done
 - [x] Bootstrap CSS //done
 - [ ] back-end //db --- send and retrieve data
-- [ ] routes ?! how, why, when !? 
+- [ ] routers: 
+* [Navigo](https://github.com/krasimir/navigo)
 - [ ] basic interface / html skeleton
 - [ ] helpers 
 
