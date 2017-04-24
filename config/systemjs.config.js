@@ -17,6 +17,7 @@ SystemJS.config({
 
         //app scripts
         'main':'./../js/app.js',
+        'main-test':'./../js/app.test.js' //remove this line in the future
     },
     packages: {
         '/':{
@@ -26,3 +27,4 @@ SystemJS.config({
 });
 System.import('firebaseConfig');
 System.import('main');
+System.import('main-test'); //delete this in the future
