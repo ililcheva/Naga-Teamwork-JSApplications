@@ -6,7 +6,7 @@ class User {
             // Handle Errors here.
             const errorCode = error.code;
             const errorMessage = error.message;
-            alert(errorMessage);
+
         });
     }
 
