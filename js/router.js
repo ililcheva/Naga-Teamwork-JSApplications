@@ -2,14 +2,15 @@ import Navigo from 'navigo';
 
 const router = (() => {
     const root = null;
-    const useHash = true; // Defaults to: false
+    const useHash = false; // Defaults to: false
     const hash = '#!'; // Defaults to: '#'
     return new Navigo(root, useHash, hash);
 })();
+//var router = new Navigo(null,false)
 
 
 
-const result = document.getElementById('content');
+const result = document.querySelector('#content h1');
 function print(text) {
     result.innerHTML = (text);
 }
@@ -25,6 +26,10 @@ router
         'login': function () {
 
             print("login")
+        },
+        '/user/:id/:action': function (params) {
+
+            print("user id: " + params.id + '\n' + "action: " + params.action )
         },
     })
     .resolve();
