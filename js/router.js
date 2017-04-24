@@ -6,13 +6,29 @@ const router = (() => {
     const hash = '#!'; // Defaults to: '#'
     return new Navigo(root, useHash, hash);
 })();
+
+
+
+const result = document.getElementById('content');
+function print(text) {
+    result.innerHTML = (text);
+}
 router
-.on('/products', function () {
-    // display all the products
-    console.log('products')
-  })
-  .resolve();
-  router.navigate('/products')
+    .on({
+        'home': function () {
+            print("not home")
+        },
+        
+        'books': function () {
+            print("books")
+        },
+        'login': function () {
+
+            print("login")
+        },
+    })
+    .resolve();
+
 
 
 export default router;
