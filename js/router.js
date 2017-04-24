@@ -9,10 +9,10 @@ const router = (() => {
 router
 .on('/products', function () {
     // display all the products
-    console.log('products')
+    console.log('products');
   })
   .resolve();
-  router.navigate('/products')
+  //router.navigate('/products');
 
 
 export default router;
