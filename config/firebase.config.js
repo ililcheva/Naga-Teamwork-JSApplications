@@ -10,13 +10,7 @@ const firebaseConfig = (function () {
         messagingSenderId: "207538937146"
     };
     firebase.initializeApp(config);
-
-    //will return db and auth
-    //test with kuche
-    return 'kuche';
-
 } ());
 
-export { firebaseConfig };
 
 

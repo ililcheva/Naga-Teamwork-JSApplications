@@ -1,21 +1,24 @@
-import firebase from 'firebase';
-
-function writeUserData(userId, name, email, imageUrl) {
-    firebase.database().ref('users/' + userId).set({
-        username: name,
-        email: email,
-        profile_picture: imageUrl
-    });
-}
+//login public user
 
 
-let data = (function () {
-    const database = firebase.database();
-    return database;
-})();
 
-export { data };
 
+
+// const writeUserData = function(userId, name, email, imageUrl) {
+//     firebaseConfig.database.ref('users/' + userId).set({
+//         username: name,
+//         email: email,
+//         profile_picture: imageUrl
+//     });
+// };
+// writeUserData(1,'svrakata', 'koko@abv.bg', 'http://google.com/google.jpg');
+//
+// const data = (function () {
+//     const database = firebaseConfig.database;
+//     return database;
+// })();
+
+// export { loginUser };
 
 
 

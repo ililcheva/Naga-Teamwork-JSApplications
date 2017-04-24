@@ -8,8 +8,10 @@ SystemJS.config({
         'jquery':'./../libs/script/jquery-3.2.1.min.js',
         'handlebars':'./../libs/script/handlebars-v4.0.5.js',
 
-        //config
+        //paths
         'firebaseConfig':'./../config/firebase.config.js',
+        'fb-database':'./../database/fb-database.js',
+        'user-model':'./../models/user-model.js',
 
         //app scripts
         'main':'./../js/app.js',
@@ -20,4 +22,5 @@ SystemJS.config({
         }
     }
 });
+System.import('firebaseConfig');
 System.import('main');
