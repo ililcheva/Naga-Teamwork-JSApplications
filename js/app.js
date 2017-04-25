@@ -3,7 +3,11 @@ import router from 'router';
 import { handleHtml } from 'htmlHandler';
 
 $(document).ready(function () {
-        $.when(router.initRoutes(),router.checkUrl(),handleHtml('header','header'),handleHtml('footer','footer'))
+        $.when(
+            router.initRoutes(),
+            handleHtml('header','header'),
+            handleHtml('footer','footer')
+        )
             .done(function () {
                 setTimeout(delayLoad, 1800);
                function delayLoad() {

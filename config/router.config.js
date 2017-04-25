@@ -3,10 +3,7 @@ import { handleHtml } from 'htmlHandler';
 
 const router = (() => {
     const navigo = (() => {
-        const root = null;
-        const useHash = true; // Defaults to: false
-        const hash = '#'; // Defaults to: '#'
-        return new Navigo(root, useHash, hash);
+        return new Navigo(null, true, '#');
     })();
 
     function initRoutes() {
