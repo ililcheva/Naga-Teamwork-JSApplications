@@ -9,12 +9,9 @@
 - [x] Modules //done
 - [x] Bootstrap CSS //done
 - [ ] back-end //db --- send and retrieve data
-- [ ] routers: 
+- [x] routers: 
 * [Navigo](https://github.com/krasimir/navigo)
-* [Page](https://visionmedia.github.io/page.js/)
-* [Sammy](http://sammyjs.org/)
-* or simply using jQuery
-- [ ] basic interface / html skeleton
+- [x] basic interface / html skeleton
 - [ ] helpers 
 
 #### Project Requirements:
