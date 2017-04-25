@@ -1,8 +1,6 @@
 .loading {
     animation: pulse 5s infinite;
-    display: none;
 }
-
 @keyframes pulse {
     0% {
         background-color: #001F3F;
@@ -11,9 +9,22 @@
         background-color: #FF4136;
     }
 }
-    /* we can add some animation here */
-
-
 .loaded {
-    background-color: #4cae4c;
+    background-color: #449d44;
 }
+.loader {
+    display: none;
+ }
+.loaderout {
+    display: block;
+}
+
+.hop {
+    -webkit-animation: tracking-in-expand 2s cubic-bezier(0.215, 0.610, 0.355, 1.000) 0.5s reverse both;
+    -moz-animation: tracking-in-expand 2s cubic-bezier(0.215, 0.610, 0.355, 1.000) 0.5s reverse both;
+    animation: tracking-in-expand 2s cubic-bezier(0.215, 0.610, 0.355, 1.000) 0.5s reverse both;
+    position: relative;
+    left: 400px;
+    color:white;
+}
+@-webkit-keyframes tracking-in-expand{0%{letter-spacing:-.5em;opacity:0}40%{opacity:.6}100%{opacity:1}}@keyframes tracking-in-expand{0%{letter-spacing:-.5em;opacity:0}40%{opacity:.6}100%{opacity:1}}
