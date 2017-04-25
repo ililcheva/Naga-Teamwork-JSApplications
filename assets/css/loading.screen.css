@@ -27,4 +27,12 @@
     left: 400px;
     color:white;
 }
-@-webkit-keyframes tracking-in-expand{0%{letter-spacing:-.5em;opacity:0}40%{opacity:.6}100%{opacity:1}}@keyframes tracking-in-expand{0%{letter-spacing:-.5em;opacity:0}40%{opacity:.6}100%{opacity:1}}
+@-webkit-keyframes tracking-in-expand{
+    0%{letter-spacing:-.5em;opacity:0}
+    40%{opacity:.6}100%{opacity:1}
+}
+@keyframes tracking-in-expand{
+    0%{letter-spacing:-.5em;opacity:0}
+    40%{opacity:.6}
+    100%{opacity:1}
+}

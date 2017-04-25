@@ -26,6 +26,6 @@ SystemJS.config({
         }
     }
 });
-System.import('firebaseConfig');
+
 System.import('main');
 System.import('main-test'); //delete this in the future

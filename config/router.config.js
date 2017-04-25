@@ -5,7 +5,7 @@ const router = (() => {
     const navigo = (() => {
         const root = null;
         const useHash = true; // Defaults to: false
-        const hash = '#!'; // Defaults to: '#'
+        const hash = '#'; // Defaults to: '#'
         return new Navigo(root, useHash, hash);
     })();
 
@@ -23,12 +23,11 @@ const router = (() => {
             //handleHtml('error','content');
             console.log(`${query} not found 404`);
         }).resolve();
-
-
     }
+
     return{
         handleHtml: handleHtml,
-        initRoutes: initRoutes
+        initRoutes: initRoutes,
     }
 })();
 
