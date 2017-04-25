@@ -1,7 +1,18 @@
 .loading {
-    background-color: #66512c;
-    /* we can add some animation here */
+    animation: pulse 5s infinite;
+    display: none;
 }
+
+@keyframes pulse {
+    0% {
+        background-color: #001F3F;
+    }
+    100% {
+        background-color: #FF4136;
+    }
+}
+    /* we can add some animation here */
+
 
 .loaded {
     background-color: #4cae4c;

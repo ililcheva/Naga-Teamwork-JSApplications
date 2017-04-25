@@ -14,6 +14,7 @@ SystemJS.config({
         'fb-database':'./../database/fb-database.js',
         'user-model':'./../models/user-model.js',
         'router':'./../config/router.config.js',
+        'htmlHandler':'./../htmls/html.handler.js',
 
         //app scripts
         'main':'./../js/app.js',

@@ -1,5 +1,5 @@
 import Navigo from 'navigo';
-import $ from 'jquery';
+import { handleHtml } from 'htmlHandler';
 
 const router = (() => {
     const navigo = (() => {
@@ -8,11 +8,7 @@ const router = (() => {
         const hash = '#!'; // Defaults to: '#'
         return new Navigo(root, useHash, hash);
     })();
-    function handleHtml(content, target) {
-        $.get(`htmls/${content}.html`)
-            .then((content) => $(`#${target}`).html(content))
-            .done(console.log(`${content} loaded`));
-    }
+
     function initRoutes() {
         navigo.on(() => { handleHtml('home','content'); }).resolve();
         navigo.on('home', () => { handleHtml('home','content'); }).resolve();
@@ -23,7 +19,8 @@ const router = (() => {
         navigo.on('login', () => { handleHtml('login','content'); }).resolve();
 
         //404 error
-        navigo.notFound(function (query) { //handleHtml('error','content');
+        navigo.notFound(function (query) {
+            //handleHtml('error','content');
             console.log(`${query} not found 404`);
         }).resolve();
 
