@@ -32,41 +32,4 @@ const router = (() => {
     }
 })();
 
-
-
-
-
-
-
-// router
-//     .on({
-//         'home': function () {
-//             $.get("htmls/home.html").then( function( data ) {
-//                 $( "#content" ).html( data );
-//
-//             }).done(alert( "Load was performed." ));
-//             print("not home")
-//         },
-//
-//         'books': function () {
-//             print("books")
-//         },
-//         'login': function () {
-//
-//             print("login")
-//         },
-//         'signup': function () {
-//
-//             $.get("htmls/sign-up.html").then( function( data ) {
-//                 $( "#content" ).html( data );
-//                 alert( "Load was performed." );
-//             });
-//
-//             print("signup")
-//         }
-//     })
-//     .resolve();
-
-
-
 export default router;
