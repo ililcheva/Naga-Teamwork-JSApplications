@@ -14,13 +14,16 @@ const router = (() => {
             .done(console.log(`${content} loaded`));
     }
     function initRoutes() {
-        navigo.on(() => {
-            handleHtml('home','content');
-        }).resolve();
-        navigo.on('home', () => {
-            handleHtml('home','content');
-        }).resolve();
-        navigo.notFound(function (query) {
+        navigo.on(() => { handleHtml('home','content'); }).resolve();
+        navigo.on('home', () => { handleHtml('home','content'); }).resolve();
+        navigo.on('page1', () => { handleHtml('page1','content'); }).resolve();
+        navigo.on('page2', () => { handleHtml('page2','content'); }).resolve();
+        navigo.on('page3', () => { handleHtml('page3','content'); }).resolve();
+        navigo.on('signup', () => { handleHtml('signup','content'); }).resolve();
+        navigo.on('login', () => { handleHtml('login','content'); }).resolve();
+
+        //404 error
+        navigo.notFound(function (query) { //handleHtml('error','content');
             console.log(`${query} not found 404`);
         }).resolve();
 
