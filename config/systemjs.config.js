@@ -13,7 +13,7 @@ SystemJS.config({
         'firebaseConfig':'./../config/firebase.config.js',
         'fb-database':'./../database/fb-database.js',
         'user-model':'./../models/user-model.js',
-        'router':'./../js/router.js',
+        'router':'./../config/router.config.js',
 
         //app scripts
         'main':'./../js/app.js',

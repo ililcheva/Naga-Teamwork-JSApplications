@@ -1,4 +1,8 @@
 import 'jquery';
 import router from 'router';
 
-//console.log(router);
+$(document).ready(function () {
+    router.initRoutes();
+    router.handleHtml('header','header');
+    router.handleHtml('footer','footer');
+});
