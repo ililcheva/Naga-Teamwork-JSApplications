@@ -19,7 +19,7 @@ SystemJS.config({
         'loadingScreen':'./../js/loading-screen.js',
         'accountController':'./../controllers/account-controller.js',
         'validator':'./../helpers/validator.js',
-        'popUp':'./../helpers/popUp.js',
+        'errorHandler':'./../helpers/error-handler.js',
 
 
         //app scripts
