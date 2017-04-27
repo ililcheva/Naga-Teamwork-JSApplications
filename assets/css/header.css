@@ -1,0 +1,22 @@
+header .navbar {
+    background-image: url("/assets/img/pw_maze_black_@2X.png");
+}
+header .navbar-brand,
+header .navbar-nav li a {
+    font-size: 16px;
+    line-height: 70px;
+    height: 70px;
+    padding-top: 0;
+    text-transform: uppercase;
+}
+header .navbar-brand{
+    display: inline-block;
+    height: 100%;
+    padding: 0;
+    vertical-align: middle;
+}
+header .navbar-brand img {
+    display: inline-block;
+    vertical-align: middle;
+    width: 30px;
+}

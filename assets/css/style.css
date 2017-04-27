@@ -1,3 +1,8 @@
 /* some fundamental css here or nothing */
-@import url("./footer.css");
-
+@font-face {
+    font-family: Righteous;
+    src: url(/libs/fonts/Righteous/Righteous-Regular.ttf);
+}
+body {
+    font-family: Righteous, sans-serif;
+}
