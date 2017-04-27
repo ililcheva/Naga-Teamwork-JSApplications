@@ -1,36 +1,25 @@
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <nav class="navbar navbar-inverse">
     <div class="container-fluid">
         <div class="navbar-header">
-            <img class="navbar-brand" src="./assets/img/book-icon.png" alt="logo">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#/home">Books</a>
         </div>
-        <ul class="nav navbar-nav">
-            <li class="active"><a href="#/home">Home</a></li>
-            <li><a href="#/page1">Page 1</a></li>
-            <li><a href="#/page2">Page 2</a></li>
-            <li><a href="#/page3">Page 3</a></li>
-        </ul>
-        <ul class="nav navbar-nav navbar-right">
-            <li><a href="#/signup"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
-            <li><a href="#/login"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
-        </ul>
-    </div>
-</nav>
-<!--TODO - delete if not needed-->
-<!--<nav role="navigation" class="navbar navbar-inverse">
-    <div class="container-fluid">
-        <div class="navbar-header">
-            <button type="button" data-target="#navbarCollapse" data-toggle="collapse" class="navbar-toggle">
-                            <span class="sr-only">Toggle navigation</span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>                        
-                        </button>
-            <img class="navbar-brand" src="./assets/img/book-icon.png" alt="logo">
-        </div>
-        <div id="navbarCollapse" class="collapse navbar-collapse">
+        <div class="collapse navbar-collapse" id="myNavbar">
             <ul class="nav navbar-nav">
-                <li class="active"><a href="#/home">Home</a></li>
-                <li><a href="#/page1">Page 1</a></li>
+                <li class="active"><a href="#">Home</a></li>
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">Page 1 <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#/page1">Page 1-1</a></li>
+                        <li><a href="#">Page 1-2</a></li>
+                        <li><a href="#">Page 1-3</a></li>
+                    </ul>
+                </li>
                 <li><a href="#/page2">Page 2</a></li>
                 <li><a href="#/page3">Page 3</a></li>
             </ul>
@@ -40,4 +29,4 @@
             </ul>
         </div>
     </div>
-</nav>-->
+</nav>
