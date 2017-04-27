@@ -10,6 +10,7 @@ class User {
         });
     }
 
+
 }
 const newUser = new User;
 export default newUser;
