@@ -1,0 +1,11 @@
+#popError {
+    margin: auto;
+    width: 400px;
+    height: 400px;
+    background-color: #67b168;
+    text-align: center;
+}
+
+#error {
+    font-size: 18px;
+}

@@ -1,6 +1,7 @@
 import $ from 'jquery';
 import newUser from 'user-model';
 import validator from 'validator';
+import popUp from 'popUp';
 
 const accountController = {
     signUp: () => {
@@ -11,17 +12,10 @@ const accountController = {
              try {
                  validator.validateSignUpForm(data);
              } catch(err) {
-                 function createPopUpError(err) {
-                     let content = $('#content'),
-                         popUp = $('<div><h1></h1></div>');
-                     popUp.children().html(err);
-                     content.fadeOut();
-                     $(content).after(popUp);
-                 }
-                 createPopUpError(err);
+                 popUp.error(err);
              }
-
             newUser.signUp(data);
+            $form.off('submit');
         });
     }
 };
