@@ -2,8 +2,8 @@ SystemJS.config({
     transpiler: 'plugin-babel',
     map: {
         //libs
-        'plugin-babel':'./libs/script/plugin-babel.js',
-        'systemjs-babel-build': './libs/script/systemjs-babel-browser.js',
+        'plugin-babel':'./../libs/script/systemjs-plugin-babel/plugin-babel.js',
+        'systemjs-babel-build': './../libs/script/systemjs-plugin-babel/systemjs-babel-browser.js',
         'firebase':'./../libs/script/firebase.js',
         'jquery':'./../libs/script/jquery-3.2.1.min.js',
         'handlebars':'./../libs/script/handlebars-v4.0.5.js',
@@ -18,6 +18,7 @@ SystemJS.config({
         'htmlHandler':'./../js/html.handler.js',
         'loadingScreen':'./../js/loading-screen.js',
         'accountController':'./../controllers/account-controller.js',
+        'validator':'./../helpers/validator.js',
 
 
         //app scripts

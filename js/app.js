@@ -4,14 +4,12 @@ import { handleHtml } from 'htmlHandler';
 import { loadingScreen } from 'loadingScreen';
 
 $(document).ready(function () {
+    router.initRoutes();
         $.when(
-            router.initRoutes(),
             handleHtml('header','header'),
             handleHtml('footer','footer')
         )
             .done(function () {
                 loadingScreen();
         });
-
-
 });
