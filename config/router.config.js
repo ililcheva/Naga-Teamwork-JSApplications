@@ -1,5 +1,7 @@
 import Navigo from 'navigo';
 import { handleHtml } from 'htmlHandler';
+import accountController from 'accountController';
+import $ from 'jquery';
 
 const router = (() => {
     const navigo = (() => {
@@ -7,16 +9,20 @@ const router = (() => {
     })();
 
     function initRoutes() {
-        navigo.on(() => { handleHtml('home','content'); }).resolve();
-        navigo.on('home', () => { handleHtml('home','content'); }).resolve();
-        navigo.on('page1', () => { handleHtml('page1','content'); }).resolve();
-        navigo.on('page2', () => { handleHtml('page2','content'); }).resolve();
-        navigo.on('page3', () => { handleHtml('page3','content'); }).resolve();
-        navigo.on('signup', () => { handleHtml('signup','content'); }).resolve();
-        navigo.on('login', () => { handleHtml('login','content'); }).resolve();
+        navigo.on(() => { handleHtml('home','content'); })
+            .on('home', () => { handleHtml('home','content');})
+            .on('page1', () => { handleHtml('page1','content'); })
+            .on('page2', () => { handleHtml('page2','content'); })
+            .on('page3', () => { handleHtml('page3','content'); })
+            .on('signup', () => {
+                $.when(handleHtml('signup','content'))
+                    .then(accountController.signUp);
+            })
+            .on('login', () => { handleHtml('login','content'); })
+            .resolve();
 
         //404 error
-        navigo.notFound(function (query) {
+        navigo.notFound((query) => {
             //handleHtml('error','content');
             console.log(`${query} not found 404`);
         }).resolve();

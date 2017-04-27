@@ -8,13 +8,17 @@ SystemJS.config({
         'jquery':'./../libs/script/jquery-3.2.1.min.js',
         'handlebars':'./../libs/script/handlebars-v4.0.5.js',
         'navigo':'./../libs/script/navigo.min.js',
+        'sammy':'./../libs/script/sammy-latest.min.js',
 
         //paths
         'firebaseConfig':'./../config/firebase.config.js',
         'fb-database':'./../database/fb-database.js',
         'user-model':'./../models/user-model.js',
         'router':'./../config/router.config.js',
-        'htmlHandler':'./../htmls/html.handler.js',
+        'htmlHandler':'./../js/html.handler.js',
+        'loadingScreen':'./../js/loading-screen.js',
+        'accountController':'./../controllers/account-controller.js',
+
 
         //app scripts
         'main':'./../js/app.js',
