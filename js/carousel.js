@@ -3,11 +3,18 @@ import 'owl-carousel';
 
 const carousel = {
     init: () => {
-        console.log('zaredi');
-        $('.owl-carousel').owlCarousel({
+        let $owl = $('.owl-carousel');
+        $owl.on({
+            'initialized.owl.carousel': function () {
+                $('.wrapper').show();
+            }
+        }).owlCarousel({
             loop:true,
             margin:10,
             nav:true,
+            autoplay:true,
+            autoplayTimeout:5000,
+            autoplayHoverPause:true,
             responsive:{
                 0:{
                     items:1
@@ -20,6 +27,7 @@ const carousel = {
                 }
             }
         });
+        $owl.trigger('refresh.owl.carousel');
     }
 };
 
