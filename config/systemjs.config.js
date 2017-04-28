@@ -8,7 +8,7 @@ SystemJS.config({
         'jquery':'./../libs/script/jquery-3.2.1.min.js',
         'handlebars':'./../libs/script/handlebars-v4.0.5.js',
         'navigo':'./../libs/script/navigo.min.js',
-        'sammy':'./../libs/script/sammy-latest.min.js',
+        'owl-carousel':'./../libs/script/owl.carousel.min.js',
 
         //paths
         'firebaseConfig':'./../config/firebase.config.js',
@@ -20,6 +20,8 @@ SystemJS.config({
         'accountController':'./../controllers/account-controller.js',
         'validator':'./../helpers/validator.js',
         'errorHandler':'./../helpers/error-handler.js',
+        'carousel':'./../js/carousel.js',
+
 
 
         //app scripts

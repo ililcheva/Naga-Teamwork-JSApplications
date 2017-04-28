@@ -5,11 +5,11 @@ const errorHandler= (() => {
     function error(err) {
         console.log(err);
         err = err.message || err;
-        $('<div/>').attr('id','errorDiv').appendTo($('.error'));
+        let container = $('<div/>').attr('id','errorDiv').hide();
+            container.appendTo($('.error'));
         $.when(handleHtml('error','errorDiv'))
-        .then(() => {
-            $('#error').html(err);
-        });
+            .then(() => { $('#error').html(err); })
+            .then(() => { container.fadeIn()});
     }
     return {
         error: error

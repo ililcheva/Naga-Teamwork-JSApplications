@@ -1,9 +1,8 @@
 #popError {
+    background-image: url("/assets/img/skulls.png");
     margin: auto;
-    width: 300px;
-    height: 100px;
-    background-color: #67b168;
     text-align: center;
+    width: 300px;
 }
 
 #error {

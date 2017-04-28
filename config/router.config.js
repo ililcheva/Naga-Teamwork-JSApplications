@@ -1,7 +1,9 @@
+import $ from 'jquery';
 import Navigo from 'navigo';
 import { handleHtml } from 'htmlHandler';
 import accountController from 'accountController';
-import $ from 'jquery';
+import carousel from 'carousel';
+
 
 const router = (() => {
     const navigo = (() => {
@@ -10,7 +12,10 @@ const router = (() => {
 
     function initRoutes() {
         navigo.on(() => { handleHtml('home','content'); })
-            .on('home', () => { handleHtml('home','content');})
+            .on('home', () => {
+                $.when(handleHtml('home','content'))
+                    .then(carousel.init);
+            })
             .on('page1', () => { handleHtml('page1','content'); })
             .on('page2', () => { handleHtml('page2','content'); })
             .on('page3', () => { handleHtml('page3','content'); })
