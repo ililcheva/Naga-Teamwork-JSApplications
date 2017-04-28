@@ -37,12 +37,15 @@ const router = (() => {
                 $.when(handleHtml('signup', 'content'))
                     .then(accountController.signUp);
             })
-            .on('login', () => { handleHtml('login', 'content'); })
+            .on('login', () => {
+                $.when(handleHtml('login', 'content'))
+                    .then(accountController.logIn);
+            })
             .resolve();
 
         //404 error
         navigo.notFound(() => {
-            handleHtml('error', 'content');;
+            handleHtml('error', 'content');
         }).resolve();
     }
 
