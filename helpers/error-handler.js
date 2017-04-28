@@ -7,7 +7,7 @@ const errorHandler= (() => {
         err = err.message || err;
         let $container = $('#errorDiv');
         $container.children().html(err);
-        $container.fadeIn('slow');
+        $container.fadeIn(1000);
     }
     return {
         error: error

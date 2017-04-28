@@ -1,6 +1,6 @@
 import firebase from 'firebase';
 
-const firebaseDb = (function () {
+const fire = (function () {
     const config = {
         apiKey: "AIzaSyBBBLoJ7-sc6GDXBujOTWyEHrRCkkgmjlQ",
         authDomain: "naga-389d5.firebaseapp.com",
@@ -10,9 +10,13 @@ const firebaseDb = (function () {
         messagingSenderId: "207538937146"
     };
     firebase.initializeApp(config);
-    return firebase.database();
+    return {
+        database: firebase.database(),
+        auth: firebase.auth()
+    }
+
 } ());
 
-export default firebaseDb;
+export default fire;
 
 

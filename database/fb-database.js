@@ -1,27 +1,30 @@
-import firebaseDb from 'firebaseConfig';
-import errorHandler from 'errorHandler'
+import fire from 'firebaseConfig';
+import header from 'header';
 
 const dataBase = {
     createUser: (email,password) => {
         return firebase.auth().createUserWithEmailAndPassword(email, password);
     },
     writeUserData: (userId, name, email) => {
-        firebaseDb.ref('users/' + userId).set({
+        fire.database.ref('users/' + userId).set({
             username: name,
             email: email,
         });
     },
     loginUser:(email,pass) => {
-        return firebaseDb.auth().signInWithEmailAndPassword(email,pass);
+        return firebase.auth().signInWithEmailAndPassword(email,pass);
     },
     checkIfLogged: () => {
-        firebase.auth().onAuthStateChanged(function(user) {
-            if (user) {
-                return user;
+        return firebase.auth().onAuthStateChanged(function(user) {
+            if(user) {
+                header.logged();
             } else {
-                return false;
+                header.loggedOut();
             }
         });
+    },
+    logOut: () => {
+        return firebase.auth().signOut();
     }
 
 };

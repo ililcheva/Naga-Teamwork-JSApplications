@@ -21,6 +21,8 @@ SystemJS.config({
         'validator':'./../helpers/validator.js',
         'errorHandler':'./../helpers/error-handler.js',
         'carousel':'./../js/carousel.js',
+        'header':'./../helpers/header-changer.js',
+
 
 
 

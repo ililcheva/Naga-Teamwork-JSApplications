@@ -21,13 +21,14 @@ class User {
             errorHandler.error(err);
         }
     };
-    login(data){
-        const email = data[1].value,
-            password = data[2].value;
+    logIn(data){
+        const email = data[0].value || '',
+            password = data[1].value;
         try {
             validator.validateEmail(email);
             dataBase.loginUser(email, password)
                 .then(() => {
+                    dataBase.checkIfLogged();
                     router.navigo.navigate('/home');
                 })
                 .catch((err) => {
@@ -36,6 +37,16 @@ class User {
         } catch(err) {
             errorHandler.error(err);
         }
+    }
+    logOut(){
+         dataBase.logOut()
+            .then(() => {
+                dataBase.checkIfLogged();
+                router.navigo.navigate('/home');
+            })
+            .catch((err) => {
+                errorHandler.error(err);
+            });
     }
 }
 

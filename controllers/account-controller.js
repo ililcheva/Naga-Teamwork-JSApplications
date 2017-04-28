@@ -11,14 +11,15 @@ const accountController = {
         });
     },
     logIn: () => {
-        console.log('login is here');
-        let $form = $('#login');
-        console.log($form);
+        let $form = $('#logIn');
         $form.on('submit', function (e) {
             e.preventDefault();
             const data = $form.serializeArray();
             newUser.logIn(data);
         });
+    },
+    logOut: () => {
+        newUser.logOut();
     }
 };
 
