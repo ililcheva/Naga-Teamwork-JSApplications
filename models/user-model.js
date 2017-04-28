@@ -1,4 +1,5 @@
 import dataBase from 'database';
+import router from 'router';
 import errorHandler from 'errorHandler';
 import validator from 'validator';
 
@@ -9,7 +10,13 @@ class User {
             password = data[2].value;
         try {
             validator.validateSignUpForm(data);
-            return dataBase.createUser(email,password);
+            dataBase.createUser(email,password)
+                .then(() => {
+                    router.navigo.navigate('/home');
+                })
+                .catch((err) => {
+                    errorHandler.error(err);
+                });
         } catch(err) {
             errorHandler.error(err);
         }
@@ -17,7 +24,18 @@ class User {
     login(data){
         const email = data[1].value,
             password = data[2].value;
-        dataBase.loginUser(email, password);
+        try {
+            validator.validateEmail(email);
+            dataBase.loginUser(email, password)
+                .then(() => {
+                    router.navigo.navigate('/home');
+                })
+                .catch((err) => {
+                    errorHandler.error(err);
+                });
+        } catch(err) {
+            errorHandler.error(err);
+        }
     }
 }
 

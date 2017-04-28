@@ -12,7 +12,7 @@ const dataBase = {
         });
     },
     loginUser:(email,pass) => {
-        firebaseDb.auth().signInWithEmailAndPassword(email,pass);
+        return firebaseDb.auth().signInWithEmailAndPassword(email,pass);
     },
     checkIfLogged: () => {
         firebase.auth().onAuthStateChanged(function(user) {

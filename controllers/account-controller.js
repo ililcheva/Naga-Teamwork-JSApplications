@@ -1,6 +1,4 @@
 import $ from 'jquery';
-import router from 'router';
-import errorHandler from 'errorHandler';
 import newUser from 'user-model';
 
 const accountController = {
@@ -9,10 +7,19 @@ const accountController = {
         $form.on('submit', function (e) {
             e.preventDefault();
             const data = $form.serializeArray();
-                newUser.signUp(data).catch((err)=>{ errorHandler.error(err);}).then(router.navigo.navigate('/home'));
-            });
-        }
-    };
-
+            newUser.signUp(data);
+        });
+    },
+    logIn: () => {
+        console.log('login is here');
+        let $form = $('#login');
+        console.log($form);
+        $form.on('submit', function (e) {
+            e.preventDefault();
+            const data = $form.serializeArray();
+            newUser.logIn(data);
+        });
+    }
+};
 
 export default accountController;
