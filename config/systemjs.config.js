@@ -12,7 +12,7 @@ SystemJS.config({
 
         //paths
         'firebaseConfig':'./../config/firebase.config.js',
-        'fb-database':'./../database/fb-database.js',
+        'database':'./../database/fb-database.js',
         'user-model':'./../models/user-model.js',
         'router':'./../config/router.config.js',
         'htmlHandler':'./../js/html.handler.js',

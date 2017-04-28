@@ -15,11 +15,19 @@ const router = (() => {
             .on(() => {
                     $('.wrapper').hide();
                     $.when(handleHtml('home','content'))
+                        .then(() => {
+                            //check log
+                            //change header
+                        })
                         .then(carousel.init);
             })
             .on('home', () => {
                     $('.wrapper').hide();
                     $.when(handleHtml('home','content'))
+                        .then(() => {
+                            //check log
+                            //change header
+                        })
                         .then(carousel.init);
             })
             .on('page1', () => { handleHtml('page1','content'); })
@@ -40,6 +48,7 @@ const router = (() => {
     }
 
     return{
+        navigo: navigo,
         handleHtml: handleHtml,
         initRoutes: initRoutes,
     }

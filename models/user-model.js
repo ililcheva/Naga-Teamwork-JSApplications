@@ -1,24 +1,23 @@
-import firebase from 'firebase';
+import dataBase from 'database';
 import errorHandler from 'errorHandler';
 import validator from 'validator';
 
-
 class User {
     signUp(data) {
+        const username = data[0].value,
+            email = data[1].value,
+            password = data[2].value;
         try {
             validator.validateSignUpForm(data);
-            const email = data[1].value;
-            const password = data[2].value;
-            firebase.auth().createUserWithEmailAndPassword(email, password).catch((err) => {
-                errorHandler.error(err.message);
-            });
+            return dataBase.createUser(email,password);
         } catch(err) {
             errorHandler.error(err);
         }
     };
-
     login(data){
-        //login
+        const email = data[1].value,
+            password = data[2].value;
+        dataBase.loginUser(email, password);
     }
 }
 
