@@ -41,6 +41,9 @@ const router = (() => {
                 $.when(handleHtml('login', 'content'))
                     .then(accountController.logIn);
             })
+            .on('logout', () => {
+                    accountController.logOut();
+            })
             .resolve();
 
         //404 error
