@@ -30,7 +30,7 @@ const router = (() => {
                     })
                     .then(carousel.init);
             })
-            .on('page1', () => { handleHtml('page1', 'content'); })
+            .on('page1', () => { handleHtml('books-gallery', 'content'); })
             .on('page2', () => { handleHtml('page2', 'content'); })
             .on('page3', () => { handleHtml('page3', 'content'); })
             .on('signup', () => {
