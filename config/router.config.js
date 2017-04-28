@@ -13,41 +13,40 @@ const router = (() => {
     function initRoutes() {
         navigo
             .on(() => {
-                    $('.wrapper').hide();
-                    $.when(handleHtml('home','content'))
-                        .then(() => {
-                            //check log
-                            //change header
-                        })
-                        .then(carousel.init);
+                $('.wrapper').hide();
+                $.when(handleHtml('home', 'content'))
+                    .then(() => {
+                        //check log
+                        //change header
+                    })
+                    .then(carousel.init);
             })
             .on('home', () => {
-                    $('.wrapper').hide();
-                    $.when(handleHtml('home','content'))
-                        .then(() => {
-                            //check log
-                            //change header
-                        })
-                        .then(carousel.init);
+                $('.wrapper').hide();
+                $.when(handleHtml('home', 'content'))
+                    .then(() => {
+                        //check log
+                        //change header
+                    })
+                    .then(carousel.init);
             })
-            .on('page1', () => { handleHtml('page1','content'); })
-            .on('page2', () => { handleHtml('page2','content'); })
-            .on('page3', () => { handleHtml('page3','content'); })
+            .on('page1', () => { handleHtml('page1', 'content'); })
+            .on('page2', () => { handleHtml('page2', 'content'); })
+            .on('page3', () => { handleHtml('page3', 'content'); })
             .on('signup', () => {
-                    $.when(handleHtml('signup','content'))
-                        .then(accountController.signUp);
+                $.when(handleHtml('signup', 'content'))
+                    .then(accountController.signUp);
             })
-            .on('login', () => { handleHtml('login','content'); })
-        .resolve();
+            .on('login', () => { handleHtml('login', 'content'); })
+            .resolve();
 
         //404 error
-        navigo.notFound((query) => {
-            //handleHtml('error','content');
-            console.log(`${query} not found 404`);
+        navigo.notFound(() => {
+            handleHtml('error', 'content');;
         }).resolve();
     }
 
-    return{
+    return {
         navigo: navigo,
         handleHtml: handleHtml,
         initRoutes: initRoutes,

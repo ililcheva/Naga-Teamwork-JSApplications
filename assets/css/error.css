@@ -1,12 +1,20 @@
 #errorDiv {
-    background-color: rgba(230,114,23,0.68);
+    background-color: rgba(230, 114, 23, 0.68);
     display: none;
     font-size: 15px;
     text-align: center;
     padding: 10px;
 }
-#errorDiv p{
+
+#errorDiv p {
     position: relative;
     top: 50%;
     transform: translateY(10%);
+}
+
+img {
+    position: relative;
+    left: 20%;
+    display: inline-block;
+    width: 200px;
 }
