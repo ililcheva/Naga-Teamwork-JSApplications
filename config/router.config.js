@@ -14,31 +14,23 @@ const router = (() => {
         navigo
             .on(() => {
                 $('.wrapper').hide();
-                $.when(handleHtml('home', 'content'))
-                    .then(() => {
-                        //check log
-                        //change header
-                    })
+                handleHtml('home', 'content')
                     .then(carousel.init);
             })
             .on('home', () => {
                 $('.wrapper').hide();
-                $.when(handleHtml('home', 'content'))
-                    .then(() => {
-                        //check log
-                        //change header
-                    })
+                handleHtml('home', 'content')
                     .then(carousel.init);
             })
             .on('page1', () => { handleHtml('books-gallery', 'content'); })
             .on('page2', () => { handleHtml('page2', 'content'); })
             .on('page3', () => { handleHtml('page3', 'content'); })
             .on('signup', () => {
-                $.when(handleHtml('signup', 'content'))
+                handleHtml('signup', 'content')
                     .then(accountController.signUp);
             })
             .on('login', () => {
-                $.when(handleHtml('login', 'content'))
+                handleHtml('login', 'content')
                     .then(accountController.logIn);
             })
             .on('logout', () => {
