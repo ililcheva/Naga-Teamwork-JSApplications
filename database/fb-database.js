@@ -8,7 +8,7 @@ const dataBase = {
     writeUserData: (data) => {
         const user = firebase.auth().currentUser,
             userId = user.uid;
-        fire.database.ref('users/' + userId).set(data);
+        return fire.database.ref('users/' + userId).set(data);
     },
     readUserDataOnce: () => {
         const userId = firebase.auth().currentUser.uid;
