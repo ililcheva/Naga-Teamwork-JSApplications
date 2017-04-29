@@ -1,7 +1,7 @@
-#loader {
+#all-site-container {
     display: none;
  }
-#loadingContainer {
+#animationContainer {
     height: 200px;
     left: 50%;
     margin-left:-100px;

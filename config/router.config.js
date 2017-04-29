@@ -4,23 +4,21 @@ import { handleHtml } from 'htmlHandler';
 import accountController from 'accountController';
 import carousel from 'carousel';
 
-
 const router = (() => {
     const navigo = (() => {
         return new Navigo(null, true, '#');
     })();
-
     function initRoutes() {
         navigo
             .on(() => {
-                $('.wrapper').hide();
+            $('#content').hide();
                 handleHtml('home', 'content')
-                    .then(carousel.init);
+                    .then(carousel.init)
             })
             .on('home', () => {
-                $('.wrapper').hide();
+                $('#content').hide();
                 handleHtml('home', 'content')
-                    .then(carousel.init);
+                    .then(carousel.init)
             })
             .on('gallery', () => { handleHtml('books-gallery', 'content'); })
             .on('search', () => { handleHtml('booksSearch', 'content');

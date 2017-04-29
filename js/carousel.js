@@ -3,10 +3,11 @@ import 'owl-carousel';
 
 const carousel = {
     init: () => {
-        let $owl = $('.owl-carousel');
+            let $owl = $('.owl-carousel');
+
         $owl.on({
             'initialized.owl.carousel': function () {
-                $('.wrapper').show();
+                setTimeout(()=>{$('#content').fadeIn()},1500);
             }
         }).owlCarousel({
             loop:true,

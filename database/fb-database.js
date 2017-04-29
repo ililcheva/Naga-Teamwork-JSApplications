@@ -21,15 +21,15 @@ const dataBase = {
         return firebase.auth().signInWithEmailAndPassword(email,pass);
     },
     checkIfLogged: () => {
-        return new Promise(() => {
-            firebase.auth().onAuthStateChanged((user) => {
-                if(user) {
-                    header.setUserName();
-                    header.logged();
-                } else {
-                    header.loggedOut();
-                }
-            });
+        firebase.auth().onAuthStateChanged((user) => {
+            if(user) {
+                console.log('logged');
+                header.setUserName();
+                header.logged();
+            } else {
+                console.log('notlogged');
+                header.loggedOut();
+            }
         });
     },
     logOut: () => {
