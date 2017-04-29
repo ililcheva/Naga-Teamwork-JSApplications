@@ -4,7 +4,7 @@ const validator = (function () {
         NAME_PATTERN: /[^a-zA-Z]/,
         PASSWORD_PATTERN: /(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,20}/,
         USER_NAME_PATTERN: /\S[_a-zA-Z0-9]{5,10}/,
-        EMAIL_PATTERN: /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/i,
+        EMAIL_PATTERN: /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/i,
         RESTRICTED_SYMBOLS_PATTERN: /[<>$@#&]/gm
     };
 
@@ -34,6 +34,7 @@ const validator = (function () {
         if (!PATTERNS.EMAIL_PATTERN.test(email)) {
             throw MESSAGES.INVALID_EMAIL_MESSAGES;
         }
+        console.log(email);
     }
 
     function confirmPassword(password, passwordConfirm) {
@@ -55,6 +56,8 @@ const validator = (function () {
         const email = data[1].value;
         const password = data[2].value;
         const passwordConfirm = data[3].value;
+
+        console.log(email);
 
 
 

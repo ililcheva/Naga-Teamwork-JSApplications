@@ -17,14 +17,12 @@ SystemJS.config({
         'router':'./../config/router.config.js',
         'htmlHandler':'./../js/html.handler.js',
         'loadingScreen':'./../js/loading-screen.js',
+        'events':'./../helpers/events.js',
         'accountController':'./../controllers/account-controller.js',
         'validator':'./../helpers/validator.js',
         'errorHandler':'./../helpers/error-handler.js',
         'carousel':'./../js/carousel.js',
         'header':'./../helpers/header-changer.js',
-
-
-
 
         //app scripts
         'main':'./../js/app.js',

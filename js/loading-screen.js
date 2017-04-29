@@ -3,8 +3,7 @@ import dataBase from 'database';
 
 
 function loadingScreen() {
-    dataBase.checkIfLogged();
-    setTimeout(delayLoad, 1500);
+    dataBase.checkIfLogged().then(setTimeout(delayLoad, 1500));
     function delayLoad() {
         $('#loadingContainer').fadeOut();
         $('#loader').fadeIn('slow');

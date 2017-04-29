@@ -5,22 +5,32 @@ const dataBase = {
     createUser: (email,password) => {
         return firebase.auth().createUserWithEmailAndPassword(email, password);
     },
-    writeUserData: (userId, name, email) => {
-        fire.database.ref('users/' + userId).set({
-            username: name,
-            email: email,
-        });
+    writeUserData: (data) => {
+        const user = firebase.auth().currentUser,
+            userId = user.uid;
+        fire.database.ref('users/' + userId).set(data);
+    },
+    readUserDataOnce: () => {
+        const userId = firebase.auth().currentUser.uid;
+        return fire.database.ref('/users/' + userId).once('value');
+
+    },
+    updateUserData: () => {
+        //coming soon
     },
     loginUser:(email,pass) => {
         return firebase.auth().signInWithEmailAndPassword(email,pass);
     },
     checkIfLogged: () => {
-        return firebase.auth().onAuthStateChanged(function(user) {
-            if(user) {
-                header.logged();
-            } else {
-                header.loggedOut();
-            }
+        return new Promise(() => {
+            firebase.auth().onAuthStateChanged((user) => {
+                if(user) {
+                    header.setUserName();
+                    header.logged();
+                } else {
+                    header.loggedOut();
+                }
+            });
         });
     },
     logOut: () => {

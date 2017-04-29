@@ -1,26 +1,16 @@
-import $ from 'jquery';
 import newUser from 'user-model';
+import events from 'events';
 
 const accountController = {
     signUp: () => {
-        let $form = $('#signup');
-        $form.on('submit', function (e) {
-            e.preventDefault();
-            const data = $form.serializeArray();
-            newUser.signUp(data);
-        });
+        events.signUpForm();
     },
     logIn: () => {
-        let $form = $('#logIn');
-        $form.on('submit', function (e) {
-            e.preventDefault();
-            const data = $form.serializeArray();
-            newUser.logIn(data);
-        });
+        events.logInForm()
     },
     logOut: () => {
         newUser.logOut();
-    }
+    },
 };
 
 export default accountController;
