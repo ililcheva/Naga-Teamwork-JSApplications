@@ -7,12 +7,12 @@ import header from 'header';
 class User {
     signUp(data) {
         const name = data[0].value, email = data[1].value, password = data[2].value;
-        const validate = new Promise(() => { validator.validateEmail(data);});
+        const validate = new Promise(() => { validator.validateSignUpForm(data);});
         validate
             .catch((err) => {errorHandler.error(err);})
             .then(dataBase.createUser(email,password)
                 .then(() => { dataBase.writeUserData({username: name, email: email});})
-                .then(router.navigo.navigate('/home'))
+                .then(() => { router.navigo.navigate('/home'); })
                 .catch( err => {errorHandler.error(err);}));
     };
     logIn(data){

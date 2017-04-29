@@ -23,6 +23,8 @@ SystemJS.config({
         'errorHandler':'./../helpers/error-handler.js',
         'carousel':'./../js/carousel.js',
         'header':'./../helpers/header-changer.js',
+        'book':'./../models/book-model.js',
+
 
         //app scripts
         'main':'./../js/app.js',

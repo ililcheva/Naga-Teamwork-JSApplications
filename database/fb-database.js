@@ -13,7 +13,6 @@ const dataBase = {
     readUserDataOnce: () => {
         const userId = firebase.auth().currentUser.uid;
         return fire.database.ref('/users/' + userId).once('value');
-
     },
     updateUserData: () => {
         //coming soon

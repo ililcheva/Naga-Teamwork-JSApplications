@@ -1,5 +1,6 @@
 import $ from 'jquery';
 import newUser from 'user-model';
+import googleBook from 'book';
 
 const events = {
     signUpForm: () => {
@@ -17,6 +18,18 @@ const events = {
             const data = $form.serializeArray();
             newUser.logIn(data);
         });
+    },
+    collapseMenu: (() => {
+        $(document).on('click','.navbar-collapse.in',function(e) {
+            if( $(e.target).is('a') ) {
+                $(this).collapse('hide');
+            }
+        });
+    })(),
+    bookSearch: () => {
+        $('#bookSearch').on('click', () => {
+            googleBook.search();
+        })
     }
 };
 

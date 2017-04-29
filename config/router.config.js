@@ -22,9 +22,10 @@ const router = (() => {
                 handleHtml('home', 'content')
                     .then(carousel.init);
             })
-            .on('page1', () => { handleHtml('books-gallery', 'content'); })
-            .on('page2', () => { handleHtml('page2', 'content'); })
-            .on('page3', () => { handleHtml('page3', 'content'); })
+            .on('gallery', () => { handleHtml('books-gallery', 'content'); })
+            .on('search', () => { handleHtml('booksSearch', 'content');
+                    //book controller search books
+            })
             .on('signup', () => {
                 handleHtml('signup', 'content')
                     .then(accountController.signUp);
