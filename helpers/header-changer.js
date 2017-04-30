@@ -4,11 +4,11 @@ import dataBase from 'database';
 const header = {
     logged: () => {
         $('#headerSignup, #headerLogin').hide();
-        $('#headerLogout, #headerUser').show();
+        $('#headerLogout, #headerUser').fadeIn(600);
     },
     loggedOut: () => {
         $('#headerLogout, #headerUser').hide();
-        $('#headerSignup, #headerLogin').show();
+        $('#headerSignup, #headerLogin').fadeIn(600);
     },
     setUserName: () => {
         dataBase.readUserDataOnce().then((data) => {
