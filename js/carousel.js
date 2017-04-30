@@ -4,8 +4,8 @@ import loadingScreen from 'loadingScreen';
 
 const carousel = {
     init: () => {
-            let $owl = $('.owl-carousel');
-
+        const $owl = $('.owl-carousel');
+        console.log('3');
         $owl.on({
             'initialized.owl.carousel': function () {
                 loadingScreen.swapHide();

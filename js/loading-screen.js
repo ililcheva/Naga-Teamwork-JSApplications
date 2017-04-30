@@ -6,11 +6,13 @@ const loadingScreen = (() => {
    const $content = $('#content');
 
     function contentShow() {
+        console.log('4');
         setTimeout(() => {
             $allSiteContainer.fadeIn(1000);
         },1000);
     }
     function pageSwapShow() {
+        console.log('1');
         $content.hide();
         $pageSwap.fadeIn('slow');
     }
@@ -18,7 +20,7 @@ const loadingScreen = (() => {
         setTimeout(() => {
             $pageSwap.hide();
             $content.fadeIn(500);
-        },2000);
+        },1500);
     }
 
     return {

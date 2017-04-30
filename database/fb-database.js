@@ -23,11 +23,11 @@ const dataBase = {
     checkIfLogged: () => {
         firebase.auth().onAuthStateChanged((user) => {
             if(user) {
-                console.log('logged');
+                console.log('2');
                 header.setUserName();
                 header.logged();
             } else {
-                console.log('notlogged');
+                console.log('2');
                 header.loggedOut();
             }
         });

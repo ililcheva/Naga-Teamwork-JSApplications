@@ -20,6 +20,7 @@ const router = (() => {
                 loadingScreen.swapShow();
                 handleHtml('home', 'content')
                     .then(carousel.init)
+
             })
             .on('gallery', () => {
                 loadingScreen.swapShow();
