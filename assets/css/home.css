@@ -1,0 +1,7 @@
+.owl-carousel .item {
+    background-color: rgba(230,214,17,0.5);
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    height: 400px;
+}

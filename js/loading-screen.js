@@ -1,25 +1,31 @@
 import 'jquery';
-import dataBase from 'database';
 
-const loadingScrin = (() => {
+const loadingScreen = (() => {
    const $allSiteContainer = $('#all-site-container');
-   const $animationContainer = $('#animationContainer');
+   const $pageSwap = $('#pageSwap');
+   const $content = $('#content');
 
-    function show() {
-        $allSiteContainer.hide();
-        $animationContainer.fadeIn('slow');
-    }
-    function hide() {
+    function contentShow() {
         setTimeout(() => {
-            $animationContainer.fadeOut();
             $allSiteContainer.fadeIn(1000);
+        },1000);
+    }
+    function pageSwapShow() {
+        $content.hide();
+        $pageSwap.fadeIn('slow');
+    }
+    function pageSwapHide() {
+        setTimeout(() => {
+            $pageSwap.hide();
+            $content.fadeIn(500);
         },2000);
     }
 
     return {
-        show: show,
-        hide: hide
+        show: contentShow,
+        swapShow: pageSwapShow,
+        swapHide: pageSwapHide
     }
 })();
 
-export default loadingScrin;
+export default loadingScreen;

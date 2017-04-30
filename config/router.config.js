@@ -3,6 +3,7 @@ import Navigo from 'navigo';
 import { handleHtml } from 'htmlHandler';
 import accountController from 'accountController';
 import carousel from 'carousel';
+import loadingScreen from 'loadingScreen';
 
 const router = (() => {
     const navigo = (() => {
@@ -11,28 +12,40 @@ const router = (() => {
     function initRoutes() {
         navigo
             .on(() => {
-            $('#content').hide();
+                loadingScreen.swapShow();
                 handleHtml('home', 'content')
                     .then(carousel.init)
             })
             .on('home', () => {
-                $('#content').hide();
+                loadingScreen.swapShow();
                 handleHtml('home', 'content')
                     .then(carousel.init)
             })
-            .on('gallery', () => { handleHtml('books-gallery', 'content'); })
-            .on('search', () => { handleHtml('booksSearch', 'content');
+            .on('gallery', () => {
+                loadingScreen.swapShow();
+                handleHtml('books-gallery', 'content')
+                    .then(loadingScreen.swapHide);
+            })
+            .on('search', () => {
+                loadingScreen.swapShow();
+                handleHtml('booksSearch', 'content')
+                    .then(loadingScreen.swapHide);
                     //book controller search books
             })
             .on('signup', () => {
+                loadingScreen.swapShow();
                 handleHtml('signup', 'content')
-                    .then(accountController.signUp);
+                    .then(accountController.signUp)
+                    .then(loadingScreen.swapHide);
             })
             .on('login', () => {
+                loadingScreen.swapShow();
                 handleHtml('login', 'content')
-                    .then(accountController.logIn);
+                    .then(accountController.logIn)
+                    .then(loadingScreen.swapHide);
             })
             .on('logout', () => {
+                    router.navigo.navigate('/home');
                     accountController.logOut();
             })
             .resolve();

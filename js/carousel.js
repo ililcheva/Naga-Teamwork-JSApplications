@@ -1,5 +1,6 @@
 import $ from 'jquery';
 import 'owl-carousel';
+import loadingScreen from 'loadingScreen';
 
 const carousel = {
     init: () => {
@@ -7,7 +8,7 @@ const carousel = {
 
         $owl.on({
             'initialized.owl.carousel': function () {
-                setTimeout(()=>{$('#content').fadeIn()},1500);
+                loadingScreen.swapHide();
             }
         }).owlCarousel({
             loop:true,

@@ -1,7 +1,10 @@
 #all-site-container {
     display: none;
  }
-#animationContainer {
+
+
+
+#pageSwap {
     height: 200px;
     left: 50%;
     margin-left:-100px;
@@ -11,20 +14,67 @@
     top: 50%;
     width: 200px;
 }
-#loadingContainer h1 {
-    line-height: 200px;
+
+@-webkit-keyframes pulse {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
 }
-#loadingAnimation {
-    -webkit-animation: tracking-in-expand 2s cubic-bezier(0.215, 0.610, 0.355, 1.000) 0.5s reverse both;
-    -moz-animation: tracking-in-expand 2s cubic-bezier(0.215, 0.610, 0.355, 1.000) 0.5s reverse both;
-    animation: tracking-in-expand 2s cubic-bezier(0.215, 0.610, 0.355, 1.000) 0.5s reverse both;
+@keyframes pulse {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
 }
-@-webkit-keyframes tracking-in-expand{
-    0%{letter-spacing:-.5em;opacity:0}
-    40%{opacity:.6}100%{opacity:1}
+body {
+    margin: 0;
 }
-@keyframes tracking-in-expand{
-    0%{letter-spacing:-.5em;opacity:0}
-    40%{opacity:.6}
-    100%{opacity:1}
+
+.ctnr {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+.ldr {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    margin: auto;
+    width: 3.5em;
+    height: 3.5em;
+}
+
+.ldr-blk {
+    height: 35%;
+    width: 35%;
+    -webkit-animation: pulse 0.75s ease-in infinite alternate;
+    animation: pulse 0.75s ease-in infinite alternate;
+    background-color: #f27b15;
+}
+
+.an_delay {
+    -webkit-animation-delay: 0.75s;
+    animation-delay: 0.75s;
 }
