@@ -9,7 +9,7 @@ import carousel from 'carousel';
 $(document).ready(() => {
 
     router.initRoutes();
-    $.when(handleHtml('header','header'), handleHtml('footer','footer'),handleHtml('home', 'content'))
+    $.when(handleHtml('header','header'), handleHtml('footer','footer'))
         .then(loadingScreen.swapShow)
         .then(dataBase.checkIfLogged)
         .then(carousel.init)
