@@ -13,6 +13,9 @@
 * [Navigo](https://github.com/krasimir/navigo)
 - [x] basic interface / html skeleton
 - [x] helpers 
+- [ ] user profile and data 
+- [ ] handlebarse precompiled tamplets and implemeting them !!! this is important 
+- [ ] check FB or other sharing api-s  
 
 #### Project Requirements:
 Please define and implement the following assets in your project:
