@@ -7,7 +7,12 @@ class GoogleBook {
         booksDatabase.search(data)
             .then(result => {
                 const filterResult = booksFilter.defaultFilter(result.items);
-                console.log(filterResult);
+                const $resultInfo = $('#resultsInfo');
+                $resultInfo.html(" ");
+                filterResult.forEach(element => {
+                    const $thumbnail = $(`<img src="${element.imageLink}" alt=""> <div>${element.title} ${element.authors[0]} ${element.description}</div>`);
+                    $resultInfo.append($thumbnail);
+                })
             })
     }
 }

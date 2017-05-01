@@ -17,7 +17,6 @@ const carousel = {
             autoplay:true,
             autoplayTimeout: 5000,
             autoplayHoverPause: false,
-            items: 5,
             responsive:{
                 0:{
                     items:1
@@ -30,7 +29,6 @@ const carousel = {
                 }
             }
         });
-        // $owl.trigger('refresh.owl.carousel');
     }
 };
 
