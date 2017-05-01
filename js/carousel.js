@@ -4,8 +4,7 @@ import loadingScreen from 'loadingScreen';
 
 const carousel = {
     init: () => {
-        const $owl = $('.owl-carousel');
-        console.log('3');
+        let $owl = $('.owl-carousel');
         $owl.on({
             'initialized.owl.carousel': function () {
                 loadingScreen.swapHide();
@@ -13,10 +12,10 @@ const carousel = {
         }).owlCarousel({
             loop:true,
             margin:10,
-            nav:true,
+            nav: true,
             autoplay:true,
-            autoplayTimeout:5000,
-            autoplayHoverPause:true,
+            autoplayTimeout: 5000,
+            autoplayHoverPause: false,
             responsive:{
                 0:{
                     items:1
@@ -29,7 +28,7 @@ const carousel = {
                 }
             }
         });
-        $owl.trigger('refresh.owl.carousel');
+        // $owl.trigger('refresh.owl.carousel');
     }
 };
 

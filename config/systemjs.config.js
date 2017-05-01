@@ -24,6 +24,8 @@ SystemJS.config({
         'carousel':'./../js/carousel.js',
         'header':'./../helpers/header-changer.js',
         'book':'./../models/book-model.js',
+        'hbars':'./../htmls/hbars-templates/hbars-template.js',
+        'booksDatabase':'./../database/books-database.js',
 
 
         //app scripts

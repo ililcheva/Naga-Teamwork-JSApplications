@@ -4,6 +4,7 @@ import { handleHtml } from 'htmlHandler';
 import accountController from 'accountController';
 import carousel from 'carousel';
 import loadingScreen from 'loadingScreen';
+import events from 'events';
 
 const router = (() => {
     const navigo = (() => {
@@ -30,8 +31,8 @@ const router = (() => {
             .on('search', () => {
                 loadingScreen.swapShow();
                 handleHtml('booksSearch', 'content')
+                    .then(events.bookSearch)
                     .then(loadingScreen.swapHide);
-                    //book controller search books
             })
             .on('signup', () => {
                 loadingScreen.swapShow();
