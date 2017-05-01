@@ -9,3 +9,9 @@
     height: 320px;
     border-radius: 5px;
 }
+@media only screen and (max-width: 1025px) {
+    .owl-carousel .item > img {
+        height: auto;
+        border-radius: 5px;
+    }
+}
