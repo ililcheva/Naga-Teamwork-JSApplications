@@ -26,6 +26,7 @@ SystemJS.config({
         'book':'./../models/book-model.js',
         'hbars':'./../htmls/hbars-templates/hbars-template.js',
         'booksDatabase':'./../database/books-database.js',
+        'booksFilter':'./../helpers/filter-books-data.js',
 
 
         //app scripts

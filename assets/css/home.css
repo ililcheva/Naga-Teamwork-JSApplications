@@ -3,5 +3,9 @@
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
     border-radius: 5px;
-    height: 400px;
+}
+
+.owl-carousel .item > img {
+    height: 300px;
+    border-radius: 5px;
 }

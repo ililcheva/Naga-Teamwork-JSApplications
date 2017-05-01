@@ -13,9 +13,11 @@ const carousel = {
             loop:true,
             margin:10,
             nav: true,
+            autoHeight: true,
             autoplay:true,
             autoplayTimeout: 5000,
             autoplayHoverPause: false,
+            items: 5,
             responsive:{
                 0:{
                     items:1
