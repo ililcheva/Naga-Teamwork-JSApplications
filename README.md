@@ -23,7 +23,7 @@ Please define and implement the following assets in your project:
 - [x] Implement OOP design
   - [x] Application logic using objects, modules and data hiding
     - [x] Use ES2015 classes and mixins
-    - [ ] Both Prototypal and classical inheritances are Ok
+    - [x] Both Prototypal and classical inheritances are Ok
   - [x] At least 3 modules
   - [x] At least 7 types (classes) of objects
 - [ ] Unit tests
