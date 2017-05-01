@@ -8,26 +8,26 @@
 - [x] exporting with SystemJS //done
 - [x] Modules //done
 - [x] Bootstrap CSS //done
-- [ ] back-end //db --- send and retrieve data
+- [x] back-end //db --- send and retrieve data
 - [x] routers: 
 * [Navigo](https://github.com/krasimir/navigo)
 - [x] basic interface / html skeleton
-- [ ] helpers 
+- [x] helpers 
 
 #### Project Requirements:
 Please define and implement the following assets in your project:
-- - [ ] Use [jQuery](https://jquery.com/)
-- [ ] Implement OOP design
-  - [ ] Application logic using objects, modules and data hiding
-    - [ ] Use ES2015 classes and mixins
+- - [x] Use [jQuery](https://jquery.com/)
+- [x] Implement OOP design
+  - [x] Application logic using objects, modules and data hiding
+    - [x] Use ES2015 classes and mixins
     - [ ] Both Prototypal and classical inheritances are Ok
-  - [ ] At least 3 modules
-  - [ ] At least 7 types (classes) of objects
+  - [x] At least 3 modules
+  - [x] At least 7 types (classes) of objects
 - [ ] Unit tests
   - [ ] Using [Mocha](https://mochajs.org/), [Chai](http://chaijs.com/) and [SinonJS](http://sinonjs.org/)
 - [ ] Implement a UI for your application
   - Use KendoUI, jQueryUI or implement your own UI logic
-- [ ] Use some kind of web data storage, one of the following is Ok
+- [x] Use some kind of web data storage, one of the following is Ok
   - Your backend with Node.js, PHP, ASP.NET, Django, Ruby on Rails, Spring, etc...
   - Telerik Backend Services
   - Firebase
@@ -35,7 +35,7 @@ Please define and implement the following assets in your project:
 - [ ] Use some kind of local storage, one of the following is Ok:
   - `localStorage`
   - `sessionStorage`
-- [ ] Use [Twitter Bootstrap](https://getbootstrap.com/)
+- [x] Use [Twitter Bootstrap](https://getbootstrap.com/)
   - Research and use Bootstrap for your application
   - Make the application responsive for different screens and resolutions
 - [ ] At least one third-party API to share something from your application
@@ -43,13 +43,14 @@ Please define and implement the following assets in your project:
     - Share status to Facebook, Google+, Twitter, etc...
     - Upload images to Facebook, Flickr, Instagram
 - [ ]   **The application must work in the latest versions of the browsers: Google Chrome, Mozilla Firefox, MS Edge, Internet Explorer 10/11, Opera and Apple Safari**
+* НЕ РАБОТИ НА IE 11/10 заради Systemjs// трябва да видя <!-->if ie10<--> как става
 
 ####  Additional Requirements:
 Follow the best practices for producing high-quality code:
-- [ ]   **Correct naming**
-- [ ]   **Data encapsulation**
+- [x]   **Correct naming**
+- [x]   **Data encapsulation**
   -     Use OOP and modules
-- [ ]   **Strong cohesion** and **loose coupling**
+- [x]   **Strong cohesion** and **loose coupling**
 - [x]   Use **GIT** as a source control system
 - [x]   Host it on [https://github.com](https://github.com)
 -   Deploy your application on a cloud server of your choice - Heroku, Firebase, Amazon S3, Microsoft Azure
@@ -61,5 +62,5 @@ If you have a chance, time and a suitable situation, you might add some of the f
 - [ ]   Backward compatibility (make the application usable on browsers like IE8, IE7 and IE6)
 - [ ]   Integration tests
 - [ ]   Minify your application source - minified and concatenated javascript and css files
-- [ ]   Use a module loader of your choice - SystemJS, RequireJS, etc, or roll up your own loader
-- [ ]   Use semantic tags and semantic html
+- [x]   Use a module loader of your choice - SystemJS, RequireJS, etc, or roll up your own loader
+- [x]   Use semantic tags and semantic html
