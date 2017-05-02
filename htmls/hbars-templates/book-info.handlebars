@@ -1,0 +1,27 @@
+<div class="media">
+    <div class="row">
+        <div class="col-xs-12 col-sm-4">
+            <div class="media-left">
+                <img class="img-responsive media-object" src="{{imageLink}}" alt="{{title}} poster">
+            </div>
+        </div>
+        <div class="col-xs-6 col-sm-8">
+            <div class="media-body">
+                <h1 class="media-heading">{{title}}</h1>
+                <p>
+                    <h5>
+                        {{#each authors}} {{name}} {{/each}}
+                    </h5>
+                </p>
+                <p class="lead text-justify">
+                    {{description}}
+                </p>
+                <p class="small text-justify">
+                    <em>{{infoLink}}</em>
+                </p>
+            </div>
+        </div>
+    </div>
+
+
+</div>

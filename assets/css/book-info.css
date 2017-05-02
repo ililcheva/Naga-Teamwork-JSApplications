@@ -1,0 +1,15 @@
+.media-body h1 {
+    margin-top: 3%;
+}
+
+.media-body p:first-of-type {
+    margin-top: 1%;
+}
+
+.media-body p:nth-of-type(2) {
+    margin-top: 5%;
+}
+
+.media-body p:nth-of-type(3) {
+    margin-top: 1%;
+}
