@@ -2,8 +2,9 @@ footer {
     background-image: url("/assets/img/pw_maze_black_@2X.png");
     min-height: 150px;
     padding: 30px 50px;
-    position: relative;
-    top: 1000px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
 }
 
 footer p{
@@ -13,7 +14,6 @@ footer p{
 }
 footer ul {
     width: 70%;
-
 }
 footer .nav-pills a {
     color: #fff;

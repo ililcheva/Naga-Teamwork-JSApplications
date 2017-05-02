@@ -1,5 +1,7 @@
 #all-site-container {
     display: none;
+    position: relative;
+    min-height: 1300px;
  }
 #pageSwap {
     height: 200px;
