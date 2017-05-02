@@ -17,7 +17,7 @@ class User {
         } catch(err) {
             errorHandler.error(err);
         }
-    };
+    }
     logIn(data){
         const email = data[0].value, password = data[1].value;
         const validate = new Promise(() => { validator.validateEmail(email);});
@@ -35,5 +35,5 @@ class User {
     }
 }
 
-const newUser = new User;
+const newUser = new User();
 export default newUser;
