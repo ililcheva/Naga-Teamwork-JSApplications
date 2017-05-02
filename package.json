@@ -23,6 +23,8 @@
     "navigo": "^4.6.2",
     "owl.carousel": "^2.2.0",
     "systemjs": "^0.20.12",
-    "systemjs-plugin-babel": "0.0.21"
+    "systemjs-plugin-babel": "0.0.21",
+    "mocha":"3.3.0",
+    "chai": "3.5.0"
   }
 }
