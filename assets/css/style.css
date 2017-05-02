@@ -6,4 +6,9 @@
 body {
     font-family: Righteous, sans-serif;
     background-image: url("/assets/img/skulls.png");
+
+}
+
+#content {
+    min-height: 1000px;
 }
