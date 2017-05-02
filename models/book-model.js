@@ -10,7 +10,7 @@ class GoogleBook {
                 const $resultInfo = $('#resultsInfo');
                 $resultInfo.html(" ");
                 filterResult.forEach(element => {
-                    const $thumbnail = $(`<img src="${element.imageLink}" alt=""> <div>${element.title} ${element.authors[0]} ${element.description}</div>`);
+                    const $thumbnail = $(`<img src="${element.imageLink}" alt=""> <div>${element.title} ${element.authors[0]} ${element.description} ${element.infoLink}</div>`);
                     $resultInfo.append($thumbnail);
                 })
             })
