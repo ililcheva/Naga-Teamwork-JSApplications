@@ -14,7 +14,7 @@
 - [x] basic interface / html skeleton
 - [x] helpers 
 - [ ] user profile and data 
-- [ ] handlebarse precompiled tamplets and implemeting them !!! this is important 
+- [ ] handlebars precompiled tamplets and implemeting them !!! this is important 
 - [ ] check FB or other sharing api-s  
 
 #### Project Requirements:
@@ -45,8 +45,8 @@ Please define and implement the following assets in your project:
   - Samples:
     - Share status to Facebook, Google+, Twitter, etc...
     - Upload images to Facebook, Flickr, Instagram
-- [ ]   **The application must work in the latest versions of the browsers: Google Chrome, Mozilla Firefox, MS Edge, Internet Explorer 10/11, Opera and Apple Safari**
-* НЕ РАБОТИ НА IE 11/10 заради Systemjs// трябва да видя <!-->if ie10<--> как става
+- [x]   **The application must work in the latest versions of the browsers: Google Chrome, Mozilla Firefox, MS Edge, Internet Explorer 10/11, Opera and Apple Safari**
+* РАБОТИ НА: CHROME/MOZILLA/OPERA/SAFARI/EDGE/IE11/IE10
 
 ####  Additional Requirements:
 Follow the best practices for producing high-quality code:
