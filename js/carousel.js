@@ -5,11 +5,7 @@ import loadingScreen from 'loadingScreen';
 const carousel = {
     init: () => {
         let $owl = $('.owl-carousel');
-        $owl.on({
-            'initialized.owl.carousel': function () {
-                loadingScreen.swapHide();
-            }
-        }).owlCarousel({
+        $owl.owlCarousel({
             loop:true,
             margin:10,
             nav: true,

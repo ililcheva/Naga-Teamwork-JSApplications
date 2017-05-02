@@ -25,7 +25,6 @@ const booksFilter = {
             }
             infoLink = element.volumeInfo.infoLink;
 
-
             return {
                 title: title,
                 authors: authors,

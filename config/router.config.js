@@ -16,11 +16,13 @@ const router = (() => {
                 loadingScreen.swapShow();
                 handleHtml('home', 'content')
                     .then(carousel.init)
+                    .then(loadingScreen.swapHide);
             })
             .on('home', () => {
                 loadingScreen.swapShow();
                 handleHtml('home', 'content')
                     .then(carousel.init)
+                    .then(loadingScreen.swapHide);
 
             })
             .on('gallery', () => {

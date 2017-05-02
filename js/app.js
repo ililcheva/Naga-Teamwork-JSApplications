@@ -13,5 +13,7 @@ $(document).ready(() => {
         .then(loadingScreen.swapShow)
         .then(dataBase.checkIfLogged)
         .then(carousel.init)
-        .then(loadingScreen.show);
+        .then(loadingScreen.show)
+        .then(loadingScreen.swapHide);
+
 });
