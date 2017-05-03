@@ -1,8 +1,12 @@
+@media (min-width: 1200px) {
+    .search-container {
+        height: 500px;
+    }
+}
 .search-container {
     margin: 10px 0;
     overflow: hidden;
     position: relative;
-    height: 500px;
 }
 .search-container img {
     width: 100%;
@@ -14,7 +18,7 @@
     text-transform: uppercase;
 }
 .result-div::before {
-    line-height: 500px;
+    padding-top: 220px;
     font-size: 25px;
     font-family: inherit;
     color: white;

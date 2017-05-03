@@ -3,7 +3,7 @@ footer {
     min-height: 150px;
     padding: 30px 50px;
     position: absolute;
-    bottom: 0;
+    bottom: -200px;
     width: 100%;
 }
 
