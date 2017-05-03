@@ -1,6 +1,7 @@
 import booksDatabase from 'booksDatabase';
-import hbars from 'hbars';
+import Handlebars from 'handlebars';
 import booksFilter from 'booksFilter';
+import hbars from 'hbars';
 
 class GoogleBook {
     search(data) {
@@ -10,8 +11,8 @@ class GoogleBook {
                 const $resultInfo = $('#resultsInfo');
                 $resultInfo.html(" ");
                 filterResult.forEach(element => {
-                    const $thumbnail = $(`<img src="${element.imageLink}" alt=""> <div>${element.title} ${element.authors[0]} ${element.description} ${element.infoLink}</div>`);
-                    $resultInfo.append($thumbnail);
+                    const html = Handlebars.templates['book-info'](element);
+                    $resultInfo.append(html);
                 })
             })
     }

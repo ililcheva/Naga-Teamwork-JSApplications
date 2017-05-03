@@ -6,7 +6,7 @@ SystemJS.config({
         'systemjs-babel-build': './../libs/script/systemjs-plugin-babel/systemjs-babel-browser.js',
         'firebase':'./../libs/script/firebase.js',
         'jquery':'./../libs/script/jquery-3.2.1.min.js',
-        'handlebars':'./../libs/script/handlebars-v4.0.5.js',
+        'handlebars':'./../libs/script/handlebars.js',
         'navigo':'./../libs/script/navigo.min.js',
         'owl-carousel':'./../libs/script/owl.carousel.min.js',
 
