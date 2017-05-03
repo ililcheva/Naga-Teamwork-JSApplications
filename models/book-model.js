@@ -1,4 +1,5 @@
 import booksDatabase from 'booksDatabase';
+import loadingScreen from 'loadingScreen'
 import Handlebars from 'handlebars';
 import booksFilter from 'booksFilter';
 import hbars from 'hbars';
@@ -9,11 +10,13 @@ class GoogleBook {
             .then(result => {
                 const filterResult = booksFilter.defaultFilter(result.items);
                 const $resultInfo = $('#resultsInfo');
-                $resultInfo.html(" ");
+                $resultInfo.html('');
+                $resultInfo.hide();
                 filterResult.forEach(element => {
                     const html = Handlebars.templates['book-info'](element);
                     $resultInfo.append(html);
-                })
+                });
+                $resultInfo.fadeIn(1500);
             })
     }
 }
