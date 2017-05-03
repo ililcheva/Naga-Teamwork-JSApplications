@@ -1,18 +1,27 @@
 #search-form {
-    margin: auto;
-    width: 70%;
     text-align: center;
 }
-#search-form h1 {
-
+#search-form ::-webkit-input-placeholder {
+    text-align: center;
 }
-#search-form input {
-
+#search-form :-moz-placeholder { /* Firefox 18- */
+    text-align: center;
+}
+#search-form ::-moz-placeholder {  /* Firefox 19+ */
+    text-align: center;
+}
+#search-form :-ms-input-placeholder {
+    text-align: center;
 }
 #search-form button {
-
+    background-image: url("/assets/img/pw_maze_black_@2X.png");
+    color: #fff;
+    width: 90%;
 }
-
+#search-form > form > .form-group > div {
+    float: none;
+    margin: auto;
+}
 @media (min-width: 1200px) {
     .search-container {
         height: 500px;
@@ -23,35 +32,36 @@
     overflow: hidden;
     position: relative;
 }
-.search-container img {
-    width: 100%;
-}
-.info-container {
-    padding:10px;
-}
-.info-container h4 {
-    text-transform: uppercase;
-}
-.result-div::before {
-    padding-top: 220px;
-    font-size: 25px;
-    font-family: inherit;
-    color: white;
-    text-align: center;
-    vertical-align: middle;
-    display: none;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(31,6,1,0.75);
-    content: 'Click to read the description';
-    position: absolute;
-    top: 0;
+    .search-container img {
+        width: 100%;
+    }
+    .info-container {
+        padding:10px;
+    }
+    .info-container h4 {
+        text-transform: uppercase;
+    }
+    .result-div::before {
+        border-radius: 3px;
+        padding-top: 220px;
+        font-size: 25px;
+        font-family: inherit;
+        color: white;
+        text-align: center;
+        vertical-align: middle;
+        display: none;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(31,6,1,0.75);
+        content: 'Click to read the description';
+        position: absolute;
+        top: 0;
 
-}
-.result-div:hover:before {
-    display: inline-block;
-}
-/*.info-container div {*/
-/*text-align: justify;*/
-/*word-break: break-all;*/
-/*}*/
+    }
+    .result-div:hover:before {
+        display: inline-block;
+    }
+    /*.info-container div {*/
+    /*text-align: justify;*/
+    /*word-break: break-all;*/
+    /*}*/

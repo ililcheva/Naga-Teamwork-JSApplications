@@ -27,8 +27,8 @@ const events = {
         });
     })(),
     bookSearch: () => {
-        $('#bookSearch').on('click', () => {
-            const data = $('#bookInput').val();
+        $('#search-button').on('click', () => {
+            const data = $('#book-input').val();
             googleBook.search(data);
         })
     }

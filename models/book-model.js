@@ -11,7 +11,6 @@ class GoogleBook {
                 const $resultInfo = $('#resultsInfo');
                 $resultInfo.html(" ");
                 filterResult.forEach(element => {
-                    console.log(element);
                     const html = Handlebars.templates['book-info'](element);
                     $resultInfo.append(html);
                 })
