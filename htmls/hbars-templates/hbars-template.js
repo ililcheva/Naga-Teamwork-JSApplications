@@ -1,14 +1,11 @@
 import Handlebars from 'handlebars';
 
 const hbars = (function() {
-  console.log(Handlebars);
     var template = Handlebars.template, templates = Handlebars.templates = Handlebars.templates || {};
     templates['book-info'] = template({"1":function(container,depth0,helpers,partials,data) {
-        var helper;
-
-        return " "
-            + container.escapeExpression(((helper = (helper = helpers.name || (depth0 != null ? depth0.name : depth0)) != null ? helper : helpers.helperMissing),(typeof helper === "function" ? helper.call(depth0 != null ? depth0 : (container.nullContext || {}),{"name":"name","hash":{},"data":data}) : helper)))
-            + " ";
+        return "                    <h5>"
+            + container.escapeExpression(container.lambda(depth0, depth0))
+            + "</h5>\n";
     },"compiler":[7,">= 4.0.0"],"main":function(container,depth0,helpers,partials,data) {
         var stack1, helper, alias1=depth0 != null ? depth0 : (container.nullContext || {}), alias2=helpers.helperMissing, alias3="function", alias4=container.escapeExpression;
 
@@ -18,14 +15,15 @@ const hbars = (function() {
             + alias4(((helper = (helper = helpers.title || (depth0 != null ? depth0.title : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"title","hash":{},"data":data}) : helper)))
             + " poster\">\n            </div>\n        </div>\n        <div class=\"col-xs-6 col-sm-8\">\n            <div class=\"media-body\">\n                <h1 class=\"media-heading\">"
             + alias4(((helper = (helper = helpers.title || (depth0 != null ? depth0.title : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"title","hash":{},"data":data}) : helper)))
-            + "</h1>\n                <p>\n                    <h5>\n                        "
+            + "</h1>\n"
             + ((stack1 = helpers.each.call(alias1,(depth0 != null ? depth0.authors : depth0),{"name":"each","hash":{},"fn":container.program(1, data, 0),"inverse":container.noop,"data":data})) != null ? stack1 : "")
-            + "\n                    </h5>\n                </p>\n                <p class=\"lead text-justify\">\n                    "
+            + "                <p class=\"lead text-justify\">\n                    "
             + alias4(((helper = (helper = helpers.description || (depth0 != null ? depth0.description : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"description","hash":{},"data":data}) : helper)))
             + "\n                </p>\n                <p class=\"small text-justify\">\n                    <em>"
             + alias4(((helper = (helper = helpers.infoLink || (depth0 != null ? depth0.infoLink : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"infoLink","hash":{},"data":data}) : helper)))
             + "</em>\n                </p>\n            </div>\n        </div>\n    </div>\n\n\n</div>";
     },"useData":true});
 })();
+
 
 export default hbars;

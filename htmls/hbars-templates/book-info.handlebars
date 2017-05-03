@@ -8,11 +8,9 @@
         <div class="col-xs-6 col-sm-8">
             <div class="media-body">
                 <h1 class="media-heading">{{title}}</h1>
-                <p>
-                    <h5>
-                        {{#each authors}} {{name}} {{/each}}
-                    </h5>
-                </p>
+                {{#each authors}}
+                    <h5>{{this}}</h5>
+                {{/each}}
                 <p class="lead text-justify">
                     {{description}}
                 </p>
