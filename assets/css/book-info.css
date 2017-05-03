@@ -1,12 +1,8 @@
-@media (min-width: 1000px) {
-    .search-container {
-        height: 450px;
-    }
-}
 .search-container {
-    border: 1px solid black;
     margin: 10px 0;
     overflow: hidden;
+    position: relative;
+    height: 500px;
 }
 .search-container img {
     width: 100%;
@@ -14,7 +10,29 @@
 .info-container {
     padding:10px;
 }
-.info-container div {
-    text-align: justify;
-    word-break: break-all;
+.info-container h4 {
+    text-transform: uppercase;
 }
+.result-div::before {
+    line-height: 500px;
+    font-size: 25px;
+    font-family: inherit;
+    color: white;
+    text-align: center;
+    vertical-align: middle;
+    display: none;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(31,6,1,0.75);
+    content: 'Click to read the description';
+    position: absolute;
+    top: 0;
+
+}
+.result-div:hover:before {
+    display: inline-block;
+}
+/*.info-container div {*/
+/*text-align: justify;*/
+/*word-break: break-all;*/
+/*}*/
