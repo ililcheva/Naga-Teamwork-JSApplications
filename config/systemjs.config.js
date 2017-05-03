@@ -18,7 +18,6 @@ SystemJS.config({
         'htmlHandler':'./../js/html.handler.js',
         'loadingScreen':'./../js/loading-screen.js',
         'events':'./../helpers/events.js',
-        'accountController':'./../controllers/account-controller.js',
         'validator':'./../helpers/validator.js',
         'errorHandler':'./../helpers/error-handler.js',
         'carousel':'./../js/carousel.js',

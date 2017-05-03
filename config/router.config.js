@@ -1,10 +1,9 @@
-import $ from 'jquery';
 import Navigo from 'navigo';
 import { handleHtml } from 'htmlHandler';
-import accountController from 'accountController';
 import carousel from 'carousel';
 import loadingScreen from 'loadingScreen';
 import events from 'events';
+import newUser from 'user-model';
 
 const router = (() => {
     const navigo = (() => {
@@ -32,25 +31,25 @@ const router = (() => {
             })
             .on('search', () => {
                 loadingScreen.swapShow();
-                handleHtml('booksSearch', 'content')
+                handleHtml('books-search', 'content')
                     .then(events.bookSearch)
                     .then(loadingScreen.swapHide);
             })
             .on('signup', () => {
                 loadingScreen.swapShow();
                 handleHtml('signup', 'content')
-                    .then(accountController.signUp)
+                    .then(events.signUpForm)
                     .then(loadingScreen.swapHide);
             })
             .on('login', () => {
                 loadingScreen.swapShow();
                 handleHtml('login', 'content')
-                    .then(accountController.logIn)
+                    .then(events.logInForm)
                     .then(loadingScreen.swapHide);
             })
             .on('logout', () => {
                     router.navigo.navigate('/home');
-                    accountController.logOut();
+                    newUser.logOut();
             })
             .resolve();
 

@@ -1,3 +1,18 @@
+#search-form {
+    margin: auto;
+    width: 70%;
+    text-align: center;
+}
+#search-form h1 {
+
+}
+#search-form input {
+
+}
+#search-form button {
+
+}
+
 @media (min-width: 1200px) {
     .search-container {
         height: 500px;
