@@ -24,11 +24,6 @@ const router = (() => {
                     .then(loadingScreen.swapHide);
 
             })
-            .on('gallery', () => {
-                loadingScreen.swapShow();
-                handleHtml('books-gallery', 'content')
-                    .then(loadingScreen.swapHide);
-            })
             .on('search', () => {
                 loadingScreen.swapShow();
                 handleHtml('books-search', 'content')
@@ -45,6 +40,11 @@ const router = (() => {
                 loadingScreen.swapShow();
                 handleHtml('login', 'content')
                     .then(events.logInForm)
+                    .then(loadingScreen.swapHide);
+            })
+            .on('userpage', () => {
+                loadingScreen.swapShow();
+                handleHtml('userpage', 'content')
                     .then(loadingScreen.swapHide);
             })
             .on('logout', () => {

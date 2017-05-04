@@ -1,5 +1,4 @@
 import booksDatabase from 'booksDatabase';
-import loadingScreen from 'loadingScreen'
 import Handlebars from 'handlebars';
 import booksFilter from 'booksFilter';
 import hbars from 'hbars';

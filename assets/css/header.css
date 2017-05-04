@@ -20,3 +20,49 @@ header .navbar-brand img {
     vertical-align: middle;
     width: 30px;
 }
+
+
+#header-search {
+    display: none;
+}
+#search-option {
+    display: inline-block;
+}
+
+@media (min-width: 768px) {
+    #search-option {
+        display: none;
+    }
+    #header-search {
+        width: 300px;
+        height:70px;
+        display: flex;
+        align-items: center
+    }
+    #header-input {
+        border: 1px solid black;
+        border-right: none;
+        float: left;
+        height: 30px;
+        width: 100%;
+        padding: 4px;
+        border-bottom-left-radius: 5px;
+        border-top-left-radius: 5px;
+    }
+    #header-input:focus, #header-button:focus{
+        outline: none;
+    }
+    #header-button {
+        background-image: url("/assets/img/glass.png");
+        background-color: #fff;
+        background-size: cover;
+        border: 1px solid black;
+        border-bottom-right-radius: 5px;
+        border-top-right-radius: 5px;
+        float: left;
+        border-left: none;
+        height: 30px;
+        width: 30px;
+    }
+}
+
