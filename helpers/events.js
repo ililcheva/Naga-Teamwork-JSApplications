@@ -2,7 +2,9 @@ import $ from 'jquery';
 import newUser from 'user-model';
 import googleBook from 'book';
 import { handleHtml } from 'htmlHandler';
+import { hbars2 } from 'hbars';
 import router from 'router';
+import Handlebars from 'handlebars';
 
 const events = {
     signUpForm: () => {
@@ -56,6 +58,39 @@ const events = {
             router.navigo.navigate('/search');
             $headerInput.val('');
             googleBook.search($value);
+        });
+    },
+    startScroll: () => {
+        $('body').on('scroll touchmove mousewheel', function(e){
+            e.preventDefault();
+            e.stopPropagation();
+            return false;
+        });
+    },
+    displayInfo: (info) => {
+        let arr = info;
+        function myFunction(arg1, arg2) {
+            const $blur = $('#blur');
+            let index = $(arg1.target).attr('index'),
+                obj = arg2[index];
+            events.startScroll();
+            const html = Handlebars.templates['description'](obj);
+            $blur.html(html);
+            events.descriptionOut();
+            $blur.fadeIn();
+        }
+        $('#resultsInfo').on('click','#rid-button',(e) => {
+            myFunction.call(this,e,arr);
+        });
+    },
+    stopScroll: () => {
+        console.log('stop');
+        $('body').off('scroll touchmove mousewheel');
+    },
+    descriptionOut: () => {
+        $('#description-close').on('click', () => {
+            $('#blur').html('').fadeOut();
+            events.stopScroll();
         });
     }
 };

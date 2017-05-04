@@ -1,5 +1,6 @@
 const booksFilter = {
     defaultFilter: data => {
+        let index = -1;
         return data.map(element => {
             let title, authors, description, thumbnail, infoLink;
 
@@ -24,8 +25,9 @@ const booksFilter = {
                 thumbnail =  '/assets/img/dog.jpg';
             }
             infoLink = element.volumeInfo.infoLink;
-
+            index++;
             return {
+                index: index,
                 title: title,
                 authors: authors,
                 description: description,

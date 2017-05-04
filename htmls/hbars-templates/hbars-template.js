@@ -1,6 +1,6 @@
 import Handlebars from 'handlebars';
 
-const hbars = (function() {
+const hbars1 = (function() {
     var template = Handlebars.template, templates = Handlebars.templates = Handlebars.templates || {};
     templates['book-info'] = template({"1":function(container,depth0,helpers,partials,data) {
         return "                <h5>"
@@ -9,7 +9,9 @@ const hbars = (function() {
     },"compiler":[7,">= 4.0.0"],"main":function(container,depth0,helpers,partials,data) {
         var stack1, helper, alias1=depth0 != null ? depth0 : (container.nullContext || {}), alias2=helpers.helperMissing, alias3="function", alias4=container.escapeExpression;
 
-        return "<div class=\"col-lg-3 col-md-4 col-xs-12 \">\n    <div class=\"search-container result-div\">\n        <img src=\""
+        return "\n<div class=\"col-lg-3 col-md-4 col-xs-12 \">\n    <div class=\"search-container result-div\">\n        <div id=\"rid-button\" index=\""
+            + alias4(((helper = (helper = helpers.index || (depth0 != null ? depth0.index : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"index","hash":{},"data":data}) : helper)))
+            + "\">description</div>\n        <div id=\"add-button\">add</div>\n        <img src=\""
             + alias4(((helper = (helper = helpers.imageLink || (depth0 != null ? depth0.imageLink : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"imageLink","hash":{},"data":data}) : helper)))
             + "\" alt=\"book cover\" class=\"img-responsive img-thumbnail\">\n        <div class=\"info-container\">\n            <h4>"
             + alias4(((helper = (helper = helpers.title || (depth0 != null ? depth0.title : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"title","hash":{},"data":data}) : helper)))
@@ -19,6 +21,30 @@ const hbars = (function() {
     },"useData":true});
 })();
 
+const hbars2 = (function() {
+    var template = Handlebars.template, templates = Handlebars.templates = Handlebars.templates || {};
+    templates['description'] = template({"1":function(container,depth0,helpers,partials,data) {
+        return "        <h5>"
+            + container.escapeExpression(container.lambda(depth0, depth0))
+            + "</h5>\n";
+    },"compiler":[7,">= 4.0.0"],"main":function(container,depth0,helpers,partials,data) {
+        var stack1, helper, alias1=depth0 != null ? depth0 : (container.nullContext || {}), alias2=helpers.helperMissing, alias3="function", alias4=container.escapeExpression;
+
+        return "<div id=\"description-div\">\n    <h1>"
+            + alias4(((helper = (helper = helpers.title || (depth0 != null ? depth0.title : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"title","hash":{},"data":data}) : helper)))
+            + "</h1>\n"
+            + ((stack1 = helpers.each.call(alias1,(depth0 != null ? depth0.authors : depth0),{"name":"each","hash":{},"fn":container.program(1, data, 0),"inverse":container.noop,"data":data})) != null ? stack1 : "")
+            + "    <h5>"
+            + alias4(((helper = (helper = helpers.author || (depth0 != null ? depth0.author : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"author","hash":{},"data":data}) : helper)))
+            + "</h5>\n    <h5>"
+            + alias4(((helper = (helper = helpers.description || (depth0 != null ? depth0.description : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"description","hash":{},"data":data}) : helper)))
+            + "</h5>\n    <h5>"
+            + alias4(((helper = (helper = helpers.infoLink || (depth0 != null ? depth0.infoLink : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"infoLink","hash":{},"data":data}) : helper)))
+            + "</h5>\n    <button id=\"description-close\">CLOSE</button>\n</div>\n\n\n\n\n";
+    },"useData":true});
+})();
 
 
-export default hbars;
+
+
+export { hbars1,hbars2 };
