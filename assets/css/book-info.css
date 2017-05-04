@@ -1,27 +1,52 @@
 #search-form {
+    margin-bottom: 50px;
     text-align: center;
 }
-#search-form ::-webkit-input-placeholder {
-    text-align: center;
-}
-#search-form :-moz-placeholder { /* Firefox 18- */
-    text-align: center;
-}
-#search-form ::-moz-placeholder {  /* Firefox 19+ */
-    text-align: center;
-}
-#search-form :-ms-input-placeholder {
-    text-align: center;
-}
-#search-form button {
-    background-image: url("/assets/img/pw_maze_black_@2X.png");
-    color: #fff;
+#search-form-info {
+    margin: auto;
+    display: flex;
+    align-items: center;
+    height: 30px;
     width: 90%;
 }
-#search-form > form > .form-group > div {
-    float: none;
-    margin: auto;
+#search-form-info input {
+    border: 1px solid black;
+    border-right: none;
+    float: left;
+    height: 30px;
+    width: 100%;
+    padding: 4px;
+    border-bottom-left-radius: 5px;
+    border-top-left-radius: 5px;
 }
+#search-form-info input::-webkit-input-placeholder {
+    text-align: center;
+}
+#search-form-info input:-moz-placeholder { /* Firefox 18- */
+    text-align: center;
+}
+#search-form-info input::-moz-placeholder {  /* Firefox 19+ */
+    text-align: center;
+}
+#search-form-info input:-ms-input-placeholder {
+    text-align: center;
+}
+#search-form-info button {
+    background-image: url("/assets/img/glass.png");
+    background-color: #fff;
+    background-size: cover;
+    border: 1px solid black;
+    border-bottom-right-radius: 5px;
+    border-top-right-radius: 5px;
+    border-left: none;
+    float: left;
+    width: 30px;
+    height: 30px;
+}
+#search-form-info input, #search-form-info button:focus{
+    outline: none;
+}
+
 @media (min-width: 1200px) {
     .search-container {
         height: 500px;

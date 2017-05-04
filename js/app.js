@@ -8,7 +8,6 @@ import events from 'events';
 
 
 $(document).ready(() => {
-
     router.initRoutes();
     $.when(handleHtml('header','header'), handleHtml('footer','footer'))
         .then(loadingScreen.swapShow)
@@ -17,5 +16,4 @@ $(document).ready(() => {
         .then(carousel.init)
         .then(loadingScreen.show)
         .then(loadingScreen.swapHide);
-
 });

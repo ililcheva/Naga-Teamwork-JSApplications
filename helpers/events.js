@@ -29,8 +29,10 @@ const events = {
         });
     })(),
     bookSearch: () => {
-        $('#search-button').on('click', () => {
-            const data = $('#book-input').val();
+        $('#sfi-button').on('click', () => {
+            const $input = $('#sfi-input'),
+                 data = $input.val();
+            $input.val('');
             googleBook.search(data);
         })
     },
