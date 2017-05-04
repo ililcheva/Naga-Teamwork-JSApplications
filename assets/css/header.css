@@ -49,6 +49,18 @@ header .navbar-brand img {
         border-bottom-left-radius: 5px;
         border-top-left-radius: 5px;
     }
+    #header-input::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+        color: #cccccc;
+    }
+    #header-input::-moz-placeholder { /* Firefox 19+ */
+        color: #cccccc;
+    }
+    #header-input:-ms-input-placeholder { /* IE 10+ */
+        color: #cccccc;
+    }
+    #header-input:-moz-placeholder { /* Firefox 18- */
+        color: #cccccc;
+    }
     #header-input:focus, #header-button:focus{
         outline: none;
     }

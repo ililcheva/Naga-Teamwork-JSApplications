@@ -1,6 +1,8 @@
 import $ from 'jquery';
 import newUser from 'user-model';
 import googleBook from 'book';
+import { handleHtml } from 'htmlHandler';
+import router from 'router';
 
 const events = {
     signUpForm: () => {
@@ -46,6 +48,14 @@ const events = {
             }, 500);
         });
     })(),
+    headerSearch: () => {
+        $('#header-button').on('click',() => {
+            const $headerInput = $('#header-input'), $value = $headerInput.val();
+            router.navigo.navigate('/search');
+            $headerInput.val('');
+            googleBook.search($value);
+        });
+    }
 };
 
 export default events;
