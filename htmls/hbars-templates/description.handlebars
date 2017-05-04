@@ -1,14 +1,12 @@
-<div id="description-div">
+<div id="description-div" >
     <h1>{{title}}</h1>
+    <hr>
     {{#each authors}}
-        <h5>{{this}}</h5>
+        <h2>{{this}}</h2>
     {{/each}}
-    <h5>{{author}}</h5>
-    <h5>{{description}}</h5>
-    <h5>{{infoLink}}</h5>
-    <button id="description-close">CLOSE</button>
+    <p>
+        {{description}}
+    </p>
+    <a href="{{infoLink}}" id="google-button">Read on Google Books</a>
+    <button id="description-close">X</button>
 </div>
-
-
-
-

@@ -33,15 +33,15 @@
     text-align: center;
 }
 #search-form-info button {
-    background-image: url("/assets/img/glass.png");
-    background-color: #fff;
+    background-color: #000;
     background-size: cover;
     border: 1px solid black;
     border-bottom-right-radius: 5px;
     border-top-right-radius: 5px;
     border-left: none;
+    color: #fff;
     float: left;
-    width: 30px;
+    width: 100px;
     height: 30px;
 }
 #search-form-info input, #search-form-info button:focus{
