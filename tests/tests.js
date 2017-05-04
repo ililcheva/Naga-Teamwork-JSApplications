@@ -1,7 +1,7 @@
 mocha.setup("bdd");
 //const chai = require("chai");
 const { expect } = chai;
-import validator from 'validator';
+import booksFilter from 'booksFilter';
 
 describe("test 1", () =>{
 	it("2+2=4", () =>{
@@ -11,9 +11,9 @@ describe("test 1", () =>{
 		//chai.assert(2+2 === 4, "some error")
 	})
 }),
-describe("Login tests", () => {
-	it("expect user to be correct", () =>{
-		expect(validator).to.exist;
+describe("Book model tests", () => {
+	it("Expect a default filter", () =>{
+		expect(booksFilter.defaultFilter).to.exist;
 	})
 
 })
