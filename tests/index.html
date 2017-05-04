@@ -4,15 +4,25 @@
 	<link rel="stylesheet" href="../node_modules/mocha/mocha.css">
 	<meta charset="UTF-8">
 	<title>Tests</title>
+	 <!--<script src="https://jspm.io/system@0.18.js"></script>-->
+
 </head>
 <body>
 
 <div id="mocha"></div>
-<script src="../node_modules/jquery/src/jquery.js"></script>
+<script src="../libs/script/systemjs/dist/system.js"></script>
+<script src="../config/systemjs.config.js"></script>
+
+
+<!--<script src="../node_modules/jquery/src/jquery.js"></script>-->
 <script src="../node_modules/mocha/mocha.js"></script>
 <script src="../node_modules/chai/chai.js"></script>
-<script src="../database/fb-database.js"></script>
-<script src="./tests.js"></script>
+<script>
+	System.import('unit-tests')
+</script>
+
+<!--<script src="./data.js"></script>
+<script src="./tests.js"></scrip>-->
 
 	
 </body>

@@ -1,6 +1,7 @@
 mocha.setup("bdd");
 //const chai = require("chai");
 const { expect } = chai;
+import validator from 'validator';
 
 describe("test 1", () =>{
 	it("2+2=4", () =>{
@@ -12,7 +13,7 @@ describe("test 1", () =>{
 }),
 describe("Login tests", () => {
 	it("expect user to be correct", () =>{
-		expect(fire).to.exist;
+		expect(validator).to.exist;
 	})
 
 })
