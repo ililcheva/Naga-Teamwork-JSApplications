@@ -2,7 +2,7 @@ const booksFilter = {
     defaultFilter: data => {
         let index = -1;
         return data.map(element => {
-            let title, authors, description, thumbnail, infoLink;
+            let title, authors, description, thumbnail, infoLink, id;
 
             if (element.volumeInfo.hasOwnProperty('title')) {
                 title = element.volumeInfo.title;
@@ -25,6 +25,7 @@ const booksFilter = {
                 thumbnail =  '/assets/img/dog.jpg';
             }
             infoLink = element.volumeInfo.infoLink;
+            id = element.id;
             index++;
             return {
                 index: index,
@@ -32,7 +33,8 @@ const booksFilter = {
                 authors: authors,
                 description: description,
                 imageLink: thumbnail,
-                infoLink: infoLink
+                infoLink: infoLink,
+                id: id
             };
         });
     },

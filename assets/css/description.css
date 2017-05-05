@@ -1,4 +1,4 @@
-#description-div {
+.description-div {
     background-image: url("/assets/img/skulls.png");
     border: 1px solid black;
     border-radius: 5px;
@@ -14,7 +14,7 @@
     overflow: auto;
 }
 @media (min-width: 1024px) {
-    #description-div {
+    .description-div {
         width: 50%;
     }
 }
@@ -22,11 +22,11 @@
 and (min-device-width: 768px)
 and (max-device-width: 1024px)
 and (-webkit-min-device-pixel-ratio: 1) {
-    #description-div {
+    .description-div {
         width: 70%;
     }
 }
-#google-button {
+.google-button {
     background-image: url("/assets/img/pw_maze_black_@2X.png");
     border: none;
     border-radius: 5px;
@@ -38,7 +38,7 @@ and (-webkit-min-device-pixel-ratio: 1) {
     text-decoration: none;
     width: 60%;
 }
-#description-close {
+.description-close {
     background-image: url("/assets/img/pw_maze_black_@2X.png");
     border: none;
     border-bottom-left-radius: 5px;
@@ -49,24 +49,24 @@ and (-webkit-min-device-pixel-ratio: 1) {
     top: 10px;
     width: 40px;
 }
-#description-div h1 {
+.description-div h1 {
     text-transform: uppercase;
     margin: 60px 0 0 0;
 }
-#description-div h2 {
+.description-div h2 {
     font-size: 18px;
     margin-top: 5px;
 }
-#description-div p {
+.description-div p {
     padding: 0 25px;
     font-size: 16px;
     text-align: justify;
 }
-#description-div hr {
+.description-div hr {
     border: 1px solid #bbb;
     margin: 0 auto;
     width: 92%;
 }
-#description-div p {
+.description-div p {
     margin: 30px 0;
 }

@@ -79,20 +79,35 @@ const events = {
             events.descriptionOut();
             $blur.fadeIn();
         }
-        $('#resultsInfo').on('click','#rid-button',(e) => {
+        $('#resultsInfo').on('click.displayInfo','.rid-button',(e) => {
             myFunction.call(this,e,arr);
         });
     },
     stopScroll: () => {
-        console.log('stop');
         $('body').off('scroll touchmove mousewheel');
     },
     descriptionOut: () => {
-        $('#description-close').on('click', () => {
+        $('.description-close').on('click', () => {
             $('#blur').html('').fadeOut();
             events.stopScroll();
         });
+    },
+    addUserInfo: (info) => {
+        let arr = info;
+        function myFunction(arg1,arg2) {
+            console.log('adding');
+            let $target = arg1.target;
+            let index = $($target).attr('index'),
+                obj = arg2[index];
+            newUser.addBook(obj);
+            $($target).html('book added');
+            $($target).removeClass('add-button').addClass('added-button');
+        }
+        $('#resultsInfo').on('click.addBook','.add-button',(e) => {
+            myFunction.call(this,e,arr);
+        })
     }
+
 };
 
 export default events;

@@ -14,7 +14,6 @@ const fire = (function () {
         database: firebase.database(),
         auth: firebase.auth()
     }
-
 } ());
 
 export default fire;

@@ -33,6 +33,14 @@ class User {
              .catch((err) => { errorHandler.error(err); })
 
     }
+    addBook(data){
+        const obj = {};
+        obj['/books/' + data.id] = data;
+        dataBase.updateUserData(obj);
+    }
+    getBooks(){
+
+    }
 }
 
 const newUser = new User();

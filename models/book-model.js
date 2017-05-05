@@ -1,4 +1,5 @@
 import booksDatabase from 'booksDatabase';
+import dataBase from 'database';
 import Handlebars from 'handlebars';
 import booksFilter from 'booksFilter';
 import events from 'events';
@@ -15,9 +16,20 @@ class GoogleBook {
                 filterResult.forEach(element => {
                     const html = Handlebars.templates['book-info'](element);
                     $resultInfo.append(html);
+                    dataBase.readUserDataOnce('books')
+                        .then( result => {
+                            if(result && result.hasChild(element.id)){
+                                let $added = $('#'+ element.id);
+                                $added.html('already added');
+                                $added.removeClass('add-button').addClass('added-button');
+                            } else {
+                                //not logged
+                            }
+                    })
                 });
                 $resultInfo.fadeIn(1500);
                 events.displayInfo(filterResult);
+                events.addUserInfo(filterResult);
             })
     }
 }
