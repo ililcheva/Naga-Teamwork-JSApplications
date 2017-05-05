@@ -9,6 +9,7 @@ import events from 'events';
 
 $(document).ready(() => {
     router.initRoutes();
+
     $.when(handleHtml('header','header'), handleHtml('footer','footer'))
         .then(loadingScreen.swapShow)
         .then(dataBase.checkIfLogged)

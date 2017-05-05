@@ -3,6 +3,9 @@ import router from 'router';
 import errorHandler from 'errorHandler';
 import validator from 'validator';
 import header from 'header';
+import Handlebars from 'handlebars';
+import { hbars1 } from 'hbars';
+import events from 'events';
 
 class User {
     signUp(data) {
@@ -39,7 +42,22 @@ class User {
         dataBase.updateUserData(obj);
     }
     getBooks(){
-
+        firebase.auth().onAuthStateChanged((user) => {
+            if(user) {
+                dataBase.readUserDataOnce('books')
+                    .then(result => {
+                        let obj = Object.values(result.val());
+                        const $resultInfo = $('#resultsInfo');
+                        obj.forEach(element => {
+                            const html = Handlebars.templates['user-data'](element);
+                            $resultInfo.append(html);
+                        });
+                        events.removeBook();
+                    });
+            } else {
+                console.log('hui');
+            }
+        });
     }
 }
 

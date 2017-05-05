@@ -45,6 +45,7 @@ const router = (() => {
             .on('userpage', () => {
                 loadingScreen.swapShow();
                 handleHtml('userpage', 'content')
+                    .then(newUser.getBooks) //load user data
                     .then(loadingScreen.swapHide);
             })
             .on('logout', () => {

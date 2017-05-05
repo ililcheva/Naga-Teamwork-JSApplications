@@ -19,7 +19,7 @@ class GoogleBook {
                     dataBase.readUserDataOnce('books')
                         .then( result => {
                             if(result && result.hasChild(element.id)){
-                                let $added = $('#'+ element.id);
+                                const $added = $('#'+ element.id);
                                 $added.html('already added');
                                 $added.removeClass('add-button').addClass('added-button');
                             } else {

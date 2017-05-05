@@ -5,6 +5,7 @@ import { handleHtml } from 'htmlHandler';
 import { hbars2 } from 'hbars';
 import router from 'router';
 import Handlebars from 'handlebars';
+import dataBase from 'database';
 
 const events = {
     signUpForm: () => {
@@ -106,6 +107,14 @@ const events = {
         $('#resultsInfo').on('click.addBook','.add-button',(e) => {
             myFunction.call(this,e,arr);
         })
+    },
+    removeBook: () => {
+        $('#resultsInfo').on('click.removeItem','.remove-button',(e) => {
+            let $target = e.target;
+            let id = $($target).attr('id');
+            dataBase.removeNode(id);
+            $($target).parents('.col-lg-3').remove();
+        });
     }
 
 };

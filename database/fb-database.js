@@ -35,17 +35,20 @@ const dataBase = {
     checkIfLogged: () => {
         firebase.auth().onAuthStateChanged((user) => {
             if(user) {
-                console.log('2');
                 header.setUserName();
                 header.logged();
             } else {
-                console.log('2');
                 header.loggedOut();
             }
         });
     },
     logOut: () => {
         return firebase.auth().signOut();
+    },
+    removeNode: (id) => {
+        const user = firebase.auth().currentUser,
+            userId = user.uid;
+        fire.database.ref('users/' + userId + '/books/' + id).remove();
     }
 
 };
