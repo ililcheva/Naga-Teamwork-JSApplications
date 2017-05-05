@@ -11,10 +11,18 @@ $(document).ready(() => {
     router.initRoutes();
 
     $.when(handleHtml('header','header'), handleHtml('footer','footer'))
-        .then(loadingScreen.swapShow)
-        .then(dataBase.checkIfLogged)
-        .then(events.headerSearch)
-        .then(carousel.init)
-        .then(loadingScreen.show)
-        .then(loadingScreen.swapHide);
+        .then(() => {
+            loadingScreen.swapShow();
+            dataBase.checkIfLogged();
+            events.headerSearch();
+            carousel.init();
+            loadingScreen.show();
+            loadingScreen.swapHide();
+        });
+        // .then(loadingScreen.swapShow)
+        // .then(dataBase.checkIfLogged)
+        // .then(events.headerSearch)
+        // .then(carousel.init)
+        // .then(loadingScreen.show)
+        // .then(loadingScreen.swapHide);
 });

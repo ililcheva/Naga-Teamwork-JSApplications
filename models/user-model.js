@@ -4,7 +4,7 @@ import errorHandler from 'errorHandler';
 import validator from 'validator';
 import header from 'header';
 import Handlebars from 'handlebars';
-import { hbars1 } from 'hbars';
+import { bookInfoHbars } from 'hbars'
 import events from 'events';
 
 class User {
@@ -52,6 +52,7 @@ class User {
                             const html = Handlebars.templates['user-data'](element);
                             $resultInfo.append(html);
                         });
+                        events.displayInfo(obj);
                         events.removeBook();
                     });
             } else {

@@ -14,21 +14,26 @@ const router = (() => {
             .on(() => {
                 loadingScreen.swapShow();
                 handleHtml('home', 'content')
-                    .then(carousel.init)
-                    .then(loadingScreen.swapHide);
+                    .then(() => {
+                        carousel.init();
+                        loadingScreen.swapHide();
+                    });
             })
             .on('home', () => {
                 loadingScreen.swapShow();
                 handleHtml('home', 'content')
-                    .then(carousel.init)
-                    .then(loadingScreen.swapHide);
-
+                    .then(() => {
+                        carousel.init();
+                        loadingScreen.swapHide()
+                    })
             })
             .on('search', () => {
                 loadingScreen.swapShow();
                 handleHtml('books-search', 'content')
-                    .then(events.bookSearch)
-                    .then(loadingScreen.swapHide);
+                    .then(() => {
+                        events.bookSearch();
+                        loadingScreen.swapHide();
+                    })
             })
             .on('signup', () => {
                 loadingScreen.swapShow();

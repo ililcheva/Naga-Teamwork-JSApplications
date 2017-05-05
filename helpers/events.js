@@ -2,7 +2,6 @@ import $ from 'jquery';
 import newUser from 'user-model';
 import googleBook from 'book';
 import { handleHtml } from 'htmlHandler';
-import { hbars2 } from 'hbars';
 import router from 'router';
 import Handlebars from 'handlebars';
 import dataBase from 'database';
@@ -72,8 +71,10 @@ const events = {
         let arr = info;
         function myFunction(arg1, arg2) {
             const $blur = $('#blur');
-            let index = $(arg1.target).attr('index'),
-                obj = arg2[index];
+            let id = $(arg1.target).attr('index1'),
+                obj = arg2.find(element => {
+                    return element.id === id;
+                });
             events.startScroll();
             const html = Handlebars.templates['description'](obj);
             $blur.html(html);
@@ -96,10 +97,11 @@ const events = {
     addUserInfo: (info) => {
         let arr = info;
         function myFunction(arg1,arg2) {
-            console.log('adding');
             let $target = arg1.target;
-            let index = $($target).attr('index'),
-                obj = arg2[index];
+            let index = $($target).attr('index2'),
+                obj = arg2.find(element => {
+                    return element.id === index;
+                });
             newUser.addBook(obj);
             $($target).html('book added');
             $($target).removeClass('add-button').addClass('added-button');
@@ -111,7 +113,7 @@ const events = {
     removeBook: () => {
         $('#resultsInfo').on('click.removeItem','.remove-button',(e) => {
             let $target = e.target;
-            let id = $($target).attr('id');
+            let id = $($target).attr('index2');
             dataBase.removeNode(id);
             $($target).parents('.col-lg-3').remove();
         });

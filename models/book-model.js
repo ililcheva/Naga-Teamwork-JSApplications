@@ -3,7 +3,6 @@ import dataBase from 'database';
 import Handlebars from 'handlebars';
 import booksFilter from 'booksFilter';
 import events from 'events';
-import { hbars1 } from 'hbars';
 
 class GoogleBook {
     search(data) {
@@ -19,7 +18,7 @@ class GoogleBook {
                     dataBase.readUserDataOnce('books')
                         .then( result => {
                             if(result && result.hasChild(element.id)){
-                                const $added = $('#'+ element.id);
+                                const $added = $("[index2=" + element.id + "]");
                                 $added.html('In My books');
                                 $added.removeClass('add-button').addClass('added-button');
                             } else {
