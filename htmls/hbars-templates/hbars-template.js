@@ -17,13 +17,14 @@ const hbars1 = (function() {
             + alias4(((helper = (helper = helpers.id || (depth0 != null ? depth0.id : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"id","hash":{},"data":data}) : helper)))
             + "\">add</div>\n        <img src=\""
             + alias4(((helper = (helper = helpers.imageLink || (depth0 != null ? depth0.imageLink : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"imageLink","hash":{},"data":data}) : helper)))
-            + "\" alt=\"book cover\" class=\"img-responsive img-thumbnail\">\n        <div class=\"info-container\">\n            <h4>"
+            + "\" alt=\"book cover\" class=\"img-responsive\">\n        <div class=\"info-container\">\n            <h4>"
             + alias4(((helper = (helper = helpers.title || (depth0 != null ? depth0.title : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"title","hash":{},"data":data}) : helper)))
             + "</h4>\n"
             + ((stack1 = helpers.each.call(alias1,(depth0 != null ? depth0.authors : depth0),{"name":"each","hash":{},"fn":container.program(1, data, 0),"inverse":container.noop,"data":data})) != null ? stack1 : "")
             + "        </div>\n    </div>\n</div>\n";
     },"useData":true});
 })();
+
 
 
 const hbars2 = (function() {

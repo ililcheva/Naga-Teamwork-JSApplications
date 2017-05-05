@@ -20,7 +20,7 @@ class GoogleBook {
                         .then( result => {
                             if(result && result.hasChild(element.id)){
                                 const $added = $('#'+ element.id);
-                                $added.html('already added');
+                                $added.html('In My books');
                                 $added.removeClass('add-button').addClass('added-button');
                             } else {
                                 //not logged
