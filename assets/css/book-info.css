@@ -50,14 +50,23 @@
 /* handlebars template */
 @media (min-width: 1200px) {
     .search-container {
-        height: 500px;
+        height: 400px;
     }
 }
 .search-container {
-    margin: 10px 0;
+    background-color: rgba(242,238,242,0.73);
+    border: 1px solid black;
+    border-radius: 8px;
+    margin-top: 15px;
     overflow: hidden;
     position: relative;
 }
+    .search-image-container {
+        background-color: #8c8c8c;
+        border-bottom: 1px solid #cccccc;
+        height: 80%;
+        overflow: hidden;
+    }
     .search-container img {
         border-radius: 5px;
         width: 100%;
@@ -103,7 +112,7 @@
                 background-color: rgba(40,183,9,0.95);
             }
             .rid-button:hover {
-                background: #d02033;
+                background: #ebf8ed;
                 color: #000;
             }
             .add-button:hover {
