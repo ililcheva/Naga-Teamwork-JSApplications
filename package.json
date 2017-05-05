@@ -23,8 +23,13 @@
     "navigo": "^4.6.2",
     "owl.carousel": "^2.2.0",
     "systemjs": "^0.20.12",
-    "systemjs-plugin-babel": "0.0.21",
-    "mocha":"^3.3.0",
-    "chai": "^3.5.0"
+    "systemjs-plugin-babel": "0.0.21"
+
+  },
+  "devDependencies": {
+    "mocha": "^3.3.0",
+    "chai": "^3.5.0",
+    "sinon": "^2.2.0",
+    "sinon-chai": "^2.10.0"
   }
 }
