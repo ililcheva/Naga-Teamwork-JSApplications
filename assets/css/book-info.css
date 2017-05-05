@@ -48,11 +48,11 @@
     outline: none;
 }
 /* handlebars template */
-@media (min-width: 1200px) {
+
     .search-container {
         height: 400px;
     }
-}
+
 .search-container {
     background-color: rgba(242,238,242,0.73);
     border: 1px solid black;
@@ -72,10 +72,16 @@
         width: 100%;
     }
     .info-container {
-        padding:10px;
+        padding: 5px 10px;
     }
     .info-container h4 {
+        font-size: 16px;
+        margin: 0;
         text-transform: uppercase;
+        border-bottom: 1px solid #cccccc;
+    }
+    .info-container h5 {
+        margin: 5px 0;
     }
 
     /*these are nodes add and description buttons*/
@@ -95,6 +101,9 @@
                 justify-content: center;
                 height: 10%;
                 width: 40%;
+            }
+            .add-button {
+                text-transform: none;
             }
             .rid-button {
                 border-top-left-radius: 5px;
@@ -117,9 +126,7 @@
             }
             .add-button:hover {
                 background-color: #efff16;
-            }
-            .remove-button:hover{
-                background-color: rgba(125,227,40,1);
+                color: #000;
             }
             .remove-button {
                 text-transform: uppercase;
@@ -128,15 +135,19 @@
                 display: flex;
                 align-items: center;
                 color: #fff;
-                border-radius: 5px;
-                top: 10px;
-                right: 10px;
+                border-bottom-left-radius: 5px;
+                top: 0;
+                right: 0;
                 position: absolute;
-                background-color: rgba(38,39,183,0.56);
+                background-image: url("/assets/img/pw_maze_black_@2X.png");
                 z-index: 999;
                 width: 40px;
                 height: 40px;
                 justify-content: center;
+            }
+            .remove-button:hover{
+                background: #ebf8ed;
+                color: #000;
             }
 
     /*.info-container div {*/

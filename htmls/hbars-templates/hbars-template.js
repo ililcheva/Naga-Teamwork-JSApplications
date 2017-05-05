@@ -9,13 +9,13 @@ const hbars1 = (function() {
     },"compiler":[7,">= 4.0.0"],"main":function(container,depth0,helpers,partials,data) {
         var stack1, helper, alias1=depth0 != null ? depth0 : (container.nullContext || {}), alias2=helpers.helperMissing, alias3="function", alias4=container.escapeExpression;
 
-        return "\n<div class=\"col-lg-3 col-md-4 col-xs-12 \">\n    <div class=\"search-container result-div\" >\n        <div class=\"rid-button\" index=\""
+        return "\n<div class=\"col-lg-3 col-sm-6 col-md-4 col-xs-12 \">\n    <div class=\"search-container result-div\" >\n        <div class=\"rid-button\" index=\""
             + alias4(((helper = (helper = helpers.index || (depth0 != null ? depth0.index : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"index","hash":{},"data":data}) : helper)))
             + "\">description</div>\n        <div class=\"add-button\" index=\""
             + alias4(((helper = (helper = helpers.index || (depth0 != null ? depth0.index : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"index","hash":{},"data":data}) : helper)))
             + "\" id=\""
             + alias4(((helper = (helper = helpers.id || (depth0 != null ? depth0.id : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"id","hash":{},"data":data}) : helper)))
-            + "\">add</div>\n        <div class=\"search-image-container\">\n            <img src=\""
+            + "\">Want to read</div>\n        <div class=\"search-image-container\">\n            <img src=\""
             + alias4(((helper = (helper = helpers.imageLink || (depth0 != null ? depth0.imageLink : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"imageLink","hash":{},"data":data}) : helper)))
             + "\" alt=\"book cover\" class=\"img-responsive\">\n        </div>\n\n        <div class=\"info-container\">\n            <h4>"
             + alias4(((helper = (helper = helpers.title || (depth0 != null ? depth0.title : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"title","hash":{},"data":data}) : helper)))
@@ -24,6 +24,7 @@ const hbars1 = (function() {
             + "        </div>\n    </div>\n</div>\n";
     },"useData":true});
 })();
+
 
 
 
@@ -58,7 +59,7 @@ const hbars3 = (function() {
     },"compiler":[7,">= 4.0.0"],"main":function(container,depth0,helpers,partials,data) {
         var stack1, helper, alias1=depth0 != null ? depth0 : (container.nullContext || {}), alias2=helpers.helperMissing, alias3="function", alias4=container.escapeExpression;
 
-        return "<div class=\"col-lg-3 col-md-4 col-xs-12 \">\n    <div class=\"search-container result-div\" >\n        <div class=\"rid-button\" index=\""
+        return "<div class=\"col-lg-3 col-sm-6 col-md-4 col-xs-12 \">\n    <div class=\"search-container result-div\" >\n        <div class=\"rid-button\" index=\""
             + alias4(((helper = (helper = helpers.index || (depth0 != null ? depth0.index : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"index","hash":{},"data":data}) : helper)))
             + "\">description</div>\n        <div class=\"remove-button\" index=\""
             + alias4(((helper = (helper = helpers.index || (depth0 != null ? depth0.index : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"index","hash":{},"data":data}) : helper)))
@@ -75,6 +76,7 @@ const hbars3 = (function() {
             + "        </div>\n    </div>\n</div>";
     },"useData":true});
 })();
+
 
 
 
