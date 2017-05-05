@@ -1,17 +1,17 @@
 [debug] ----------------------------------------------------------------------
 [debug] Command:      /home/svrakata/.nvm/versions/node/v7.9.0/bin/node /home/svrakata/.nvm/versions/node/v7.9.0/bin/firebase deploy
-[debug] CLI Version:  3.6.1
+[debug] CLI Version:  3.7.0
 [debug] Platform:     linux
 [debug] Node Version: v7.9.0
-[debug] Time:         Tue Apr 25 2017 12:40:45 GMT+0300 (EEST)
+[debug] Time:         Sat May 06 2017 01:46:12 GMT+0300 (EEST)
 [debug] ----------------------------------------------------------------------
 [debug] 
 [debug] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
 [debug] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/naga-389d5  
- Tue Apr 25 2017 12:40:45 GMT+0300 (EEST)
+ Sat May 06 2017 01:46:12 GMT+0300 (EEST)
 [debug] <<< HTTP RESPONSE 200
 [debug] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/naga-389d5/tokens  
- Tue Apr 25 2017 12:40:46 GMT+0300 (EEST)
+ Sat May 06 2017 01:46:14 GMT+0300 (EEST)
 [debug] <<< HTTP RESPONSE 200
 [info] 
 [info] === Deploying to 'naga-389d5'...
@@ -30,27 +30,32 @@
 [info] i  functions: ensuring necessary APIs are enabled...
 [info] i  runtimeconfig: ensuring necessary APIs are enabled...
 [debug] >>> HTTP REQUEST GET https://servicemanagement.googleapis.com/v1/services/cloudfunctions.googleapis.com/projectSettings/naga-389d5?view=CONSUMER_VIEW  
- Tue Apr 25 2017 12:40:49 GMT+0300 (EEST)
+ Sat May 06 2017 01:46:16 GMT+0300 (EEST)
 [debug] >>> HTTP REQUEST GET https://servicemanagement.googleapis.com/v1/services/runtimeconfig.googleapis.com/projectSettings/naga-389d5?view=CONSUMER_VIEW  
- Tue Apr 25 2017 12:40:49 GMT+0300 (EEST)
+ Sat May 06 2017 01:46:16 GMT+0300 (EEST)
 [debug] <<< HTTP RESPONSE 200
 [info] ✔  runtimeconfig: all necessary APIs are enabled
 [debug] <<< HTTP RESPONSE 200
 [info] ✔  functions: all necessary APIs are enabled
 [debug] >>> HTTP REQUEST GET https://appengine.googleapis.com/v1/apps/naga-389d5  
- Tue Apr 25 2017 12:40:50 GMT+0300 (EEST)
+ Sat May 06 2017 01:46:18 GMT+0300 (EEST)
 [debug] >>> HTTP REQUEST GET https://apikeys.googleapis.com/v1/projects/naga-389d5/apiKeys  
- Tue Apr 25 2017 12:40:50 GMT+0300 (EEST)
-[debug] Error fetching server API key: 
-[info] 
-
-There was an issue deploying your functions. Verify that your project has a Google App Engine instance setup at https://console.cloud.google.com/appengine and try again. If this issue persists, please contact support.
-[debug] Error: connect ENETUNREACH 2a00:1450:400d:803::200a:443 - Local (:::0)
-    at Object.exports._errnoException (util.js:1050:11)
-    at exports._exceptionWithHostPort (util.js:1073:20)
-    at internalConnect (net.js:894:16)
-    at emitLookup (net.js:1020:7)
-    at GetAddrInfoReqWrap.asyncCallback [as callback] (dns.js:62:16)
-    at GetAddrInfoReqWrap.onlookup [as oncomplete] (dns.js:78:10)
-[error] 
-[error] Error: Server Error. connect ENETUNREACH 2a00:1450:400d:803::200a:443 - Local (:::0)
+ Sat May 06 2017 01:46:18 GMT+0300 (EEST)
+[debug] <<< HTTP RESPONSE 200
+[debug] <<< HTTP RESPONSE 200
+[info] i  functions: preparing functions directory for uploading...
+[debug] >>> HTTP REQUEST GET https://runtimeconfig.googleapis.com/v1beta1/projects/naga-389d5/configs  
+ Sat May 06 2017 01:46:19 GMT+0300 (EEST)
+[debug] <<< HTTP RESPONSE 200
+[debug] > [functions] runtime config materialized as: {
+  "firebase": {
+    "databaseURL": "https://naga-389d5.firebaseio.com",
+    "storageBucket": "naga-389d5.appspot.com",
+    "apiKey": "AIzaSyAAjzKOjuqqVWkWl3-hLs8qOhapULDYwfg",
+    "authDomain": "naga-389d5.firebaseapp.com"
+  }
+}
+[debug] > [functions] parsed triggers: []
+[info] i  hosting: preparing public directory for upload...
+[debug] >>> HTTP REQUEST PUT https://deploy.firebase.com/v1/hosting/naga-389d5/uploads/-KjPmhfWrtiK2bEwR-Sq?fileCount=8701&message=  
+ Sat May 06 2017 01:46:29 GMT+0300 (EEST)

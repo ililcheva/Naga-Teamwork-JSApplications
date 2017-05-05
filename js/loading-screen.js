@@ -20,7 +20,7 @@ const loadingScreen = (() => {
         setTimeout(() => {
             $pageSwap.hide();
             $content.fadeIn(500);
-        },1500);
+        },800);
     }
 
     return {
