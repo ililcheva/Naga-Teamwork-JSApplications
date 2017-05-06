@@ -15,12 +15,16 @@ const router = (() => {
                 handleHtml('home', 'content')
                     .then(() => {
                         carousel.init();
+                        googleBook.updateComments();
+                        events.postComment();
                     });
             })
             .on('home', () => {
                 handleHtml('home', 'content')
                     .then(() => {
                         carousel.init();
+                        googleBook.updateComments();
+                        events.postComment();
                     })
             })
             .on('search', () => {
@@ -45,13 +49,6 @@ const router = (() => {
                     router.navigo.navigate('/home');
                     newUser.logOut();
             })
-            .on('discuss', () => {
-                handleHtml('discuss','content')
-                    .then(() => {
-                        googleBook.updateComents();
-                        events.postComment();
-                    });
-            })
             .resolve();
 
         //404 error
@@ -59,7 +56,6 @@ const router = (() => {
             handleHtml('error', 'content');
         }).resolve();
     }
-
     return {
         navigo: navigo,
         initRoutes: initRoutes,

@@ -35,32 +35,32 @@ class GoogleBook {
             })
     }
     comment(str) {
-        firebase.auth().onAuthStateChanged((user) => {
-            if(user) {
-                dataBase.readUserDataOnce().then( data => {
-                    const userdata = data.val(),
-                        usr = userdata.username,
-                         date = new Date();
-                    let obj = {
-                        comment: str,
-                        usr: usr,
-                        date: date
-                    };
-                    let path = 'comments';
-                    dataBase.updateData(path,obj);
-                    const html = Handlebars.templates['comments'](obj);
-                    $('#comment-container').append(html);
-                });
-
-            } else {
-                console.log('ur not logged')
-            }
-        });
+        const user = firebase.auth().currentUser;
+        if(user !== null){
+            dataBase.readUserDataOnce().then( data => {
+                const userdata = data.val(),
+                    usr = userdata.username,
+                    date = new Date();
+                let obj = {
+                    comment: str,
+                    usr: usr,
+                    date: date
+                };
+                let path = 'comments';
+                dataBase.updateData(path,obj);
+                const html = Handlebars.templates['comments'](obj);
+                $('#comment-container').append(html);
+            });
+        } else {
+            console.log('ur not logged')
+        }
     }
-    updateComents(){
+    updateComments(){
         dataBase.readDataOnce('comments')
             .then(result => {
                 let arr = Object.values(result.val());
+                console.log(result.val());
+                $('#comment-container').html('');
                 arr.forEach( element => {
                     const html = Handlebars.templates['comments'](element);
                     $('#comment-container').append(html);
