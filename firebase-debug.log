@@ -59,3 +59,5 @@
 [info] i  hosting: preparing public directory for upload...
 [debug] >>> HTTP REQUEST PUT https://deploy.firebase.com/v1/hosting/naga-389d5/uploads/-KjPmhfWrtiK2bEwR-Sq?fileCount=8701&message=  
  Sat May 06 2017 01:46:29 GMT+0300 (EEST)
+[debug] <<< HTTP RESPONSE 200
+[debug] [hosting] .tgz uploaded successfully, waiting for extraction

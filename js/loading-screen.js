@@ -6,23 +6,16 @@ const loadingScreen = (() => {
    const $content = $('#content');
 
     function contentShow() {
-        console.log('4');
-        setTimeout(() => {
-            $allSiteContainer.fadeIn(1000);
-        },1000);
+        $allSiteContainer.fadeIn(500);
     }
     function pageSwapShow() {
-        console.log('1');
         $content.hide();
         $pageSwap.fadeIn('slow');
     }
     function pageSwapHide() {
-        setTimeout(() => {
             $pageSwap.hide();
             $content.fadeIn(500);
-        },800);
     }
-
     return {
         show: contentShow,
         swapShow: pageSwapShow,

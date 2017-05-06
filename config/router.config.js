@@ -12,27 +12,21 @@ const router = (() => {
     function initRoutes() {
         navigo
             .on(() => {
-                loadingScreen.swapShow();
                 handleHtml('home', 'content')
                     .then(() => {
                         carousel.init();
-                        loadingScreen.swapHide();
                     });
             })
             .on('home', () => {
-                loadingScreen.swapShow();
                 handleHtml('home', 'content')
                     .then(() => {
                         carousel.init();
-                        loadingScreen.swapHide()
                     })
             })
             .on('search', () => {
-                loadingScreen.swapShow();
                 handleHtml('books-search', 'content')
                     .then(() => {
                         events.bookSearch();
-                        loadingScreen.swapHide();
                     })
             })
             .on('signup', () => {

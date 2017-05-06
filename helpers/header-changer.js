@@ -11,11 +11,11 @@ const header = {
         $('#headerSignup, #headerLogin').fadeIn(600);
     },
     setUserName: () => {
-        dataBase.readUserDataOnce().then((data) => {
+        dataBase.readUserDataOnce().then( data => {
             const userdata = data.val();
-                $('#usernameSpan').text(` ${userdata.username}`).fadeIn('slow');
+                $('#usernameSpan').text(` ${userdata.username}`);
             }
-        );
+        ).then(header.logged);
     }
 };
 

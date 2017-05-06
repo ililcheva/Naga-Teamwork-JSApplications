@@ -5,6 +5,7 @@ import { handleHtml } from 'htmlHandler';
 import router from 'router';
 import Handlebars from 'handlebars';
 import dataBase from 'database';
+import booksFilter from 'booksFilter'
 
 const events = {
     signUpForm: () => {
@@ -67,12 +68,11 @@ const events = {
             return false;
         });
     },
-    displayInfo: (info) => {
-        let arr = info;
-        function myFunction(arg1, arg2) {
+    displayInfo: () => {
+        $('#resultsInfo').on('click.displayInfo','.rid-button',(e) => {
             const $blur = $('#blur');
-            let id = $(arg1.target).attr('index1'),
-                obj = arg2.find(element => {
+            let id = $(e.target).attr('index1'),
+                obj = booksFilter.filteredData.find(element => {
                     return element.id === id;
                 });
             events.startScroll();
@@ -80,9 +80,6 @@ const events = {
             $blur.html(html);
             events.descriptionOut();
             $blur.fadeIn();
-        }
-        $('#resultsInfo').on('click.displayInfo','.rid-button',(e) => {
-            myFunction.call(this,e,arr);
         });
     },
     stopScroll: () => {
@@ -94,20 +91,16 @@ const events = {
             events.stopScroll();
         });
     },
-    addUserInfo: (info) => {
-        let arr = info;
-        function myFunction(arg1,arg2) {
-            let $target = arg1.target;
+    addUserInfo: () => {
+        $('#resultsInfo').on('click.addBook','.add-button',(e) => {
+            let $target = e.target;
             let index = $($target).attr('index2'),
-                obj = arg2.find(element => {
+                obj = booksFilter.filteredData.find(element => {
                     return element.id === index;
                 });
             newUser.addBook(obj);
             $($target).html('book added');
             $($target).removeClass('add-button').addClass('added-button');
-        }
-        $('#resultsInfo').on('click.addBook','.add-button',(e) => {
-            myFunction.call(this,e,arr);
         })
     },
     removeBook: () => {

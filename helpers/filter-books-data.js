@@ -1,9 +1,9 @@
 const booksFilter = {
-    defaultFilter: data => {
-        let index = -1;
-        return data.map(element => {
-            let title, authors, description, thumbnail, infoLink, id;
 
+    defaultFilter: data => {
+        booksFilter.filteredData = [];
+         data.map(element => {
+            let title, authors, description, thumbnail, infoLink, id;
             if (element.volumeInfo.hasOwnProperty('title')) {
                 title = element.volumeInfo.title;
             } else {
@@ -26,19 +26,17 @@ const booksFilter = {
             }
             infoLink = element.volumeInfo.infoLink;
             id = element.id;
-            index++;
-            return {
-                index: index,
+            booksFilter.filteredData.push({
                 title: title,
                 authors: authors,
                 description: description,
                 imageLink: thumbnail,
                 infoLink: infoLink,
                 id: id
-            };
+            });
         });
     },
+    filteredData: [],
 };
-
 
 export default booksFilter;

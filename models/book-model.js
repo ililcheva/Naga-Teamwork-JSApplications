@@ -8,15 +8,18 @@ class GoogleBook {
     search(data) {
         booksDatabase.search(data)
             .then(result => {
-                const filterResult = booksFilter.defaultFilter(result.items);
+                booksFilter.defaultFilter(result.items);
+                const filterResult = booksFilter.filteredData;
                 const $resultInfo = $('#resultsInfo');
                 $resultInfo.hide();
                 $resultInfo.html('');
                 filterResult.forEach(element => {
                     const html = Handlebars.templates['book-info'](element);
                     $resultInfo.append(html);
-                    dataBase.readUserDataOnce('books')
-                        .then( result => {
+                });
+                dataBase.readUserDataOnce('books')
+                    .then( result => {
+                        filterResult.map( element => {
                             if(result && result.hasChild(element.id)){
                                 const $added = $("[index2=" + element.id + "]");
                                 $added.html('In My books');
@@ -24,11 +27,11 @@ class GoogleBook {
                             } else {
                                 //not logged
                             }
-                    })
-                });
-                $resultInfo.fadeIn(1500);
-                events.displayInfo(filterResult);
-                events.addUserInfo(filterResult);
+                        });
+                    });
+                events.displayInfo();
+                events.addUserInfo();
+                $resultInfo.fadeIn(1000);
             })
     }
 }

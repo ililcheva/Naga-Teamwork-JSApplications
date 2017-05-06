@@ -36,7 +36,6 @@ const dataBase = {
         firebase.auth().onAuthStateChanged((user) => {
             if(user) {
                 header.setUserName();
-                header.logged();
             } else {
                 header.loggedOut();
             }
