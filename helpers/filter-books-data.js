@@ -22,7 +22,7 @@ const booksFilter = {
             if (element.volumeInfo.hasOwnProperty('imageLinks')) {
                 thumbnail =  element.volumeInfo.imageLinks.thumbnail;
             } else {
-                thumbnail =  '/assets/img/dog.jpg';
+                thumbnail =  '/assets/img/nopreview.png';
             }
             infoLink = element.volumeInfo.infoLink;
             id = element.id;

@@ -84,7 +84,7 @@ const events = {
         });
     },
     userInfoDescription: (data) => {
-        $('#resultsInfo').on('click.displayInfo','.rid-button',e => {
+        $('#resultsInfo').on('click.displayUserInfo','.rid-button',e => {
             const $blur = $('#blur');
             let id = $(e.target).attr('index1'),
             obj = data.find( element => {
@@ -125,6 +125,17 @@ const events = {
             dataBase.removeNode(id);
             $($target).parents('.col-lg-3').remove();
         });
+    },
+    postComment: () => {
+        console.log('attached');
+        $('#comment-button').on('click.postComment', () => {
+            const $commentInput = $('#comment-input'),
+                comment = $commentInput.val();
+            $commentInput.val('');
+            if(comment !== ''){
+                googleBook.comment(comment);
+            }
+        })
     }
 };
 

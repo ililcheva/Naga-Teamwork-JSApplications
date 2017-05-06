@@ -3,6 +3,7 @@ import { handleHtml } from 'htmlHandler';
 import carousel from 'carousel';
 import events from 'events';
 import newUser from 'user-model';
+import googleBook from 'book'
 
 const router = (() => {
     const navigo = (() => {
@@ -43,6 +44,13 @@ const router = (() => {
             .on('logout', () => {
                     router.navigo.navigate('/home');
                     newUser.logOut();
+            })
+            .on('discuss', () => {
+                handleHtml('discuss','content')
+                    .then(() => {
+                        googleBook.updateComents();
+                        events.postComment();
+                    });
             })
             .resolve();
 

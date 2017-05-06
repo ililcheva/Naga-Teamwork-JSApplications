@@ -13,7 +13,7 @@ const header = {
     setUserName: () => {
         dataBase.readUserDataOnce().then( data => {
             const userdata = data.val();
-                $('#usernameSpan').text(` ${userdata.username}`);
+            $('#usernameSpan').text(` ${userdata.username}`);
             }
         ).then(header.logged);
     }

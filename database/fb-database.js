@@ -21,6 +21,15 @@ const dataBase = {
             return Promise.resolve(false);
         }
     },
+    readDataOnce: (path) => {
+        path = path || '';
+        return fire.database.ref(path).once('value');
+    },
+    updateData: (path,data) => {
+        path = path || '';
+        let newPostKey = fire.database.ref().child(path).push().key;
+        return fire.database.ref('/' + path +'/' + newPostKey).update(data);
+    },
     updateUserData: (data) => {
         const user = firebase.auth().currentUser;
         if(user === null){
