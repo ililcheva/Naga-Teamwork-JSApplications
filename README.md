@@ -13,8 +13,8 @@
 * [Navigo](https://github.com/krasimir/navigo)
 - [x] basic interface / html skeleton
 - [x] helpers 
-- [ ] user profile and data 
-- [ ] handlebars precompiled tamplets and implemeting them !!! this is important 
+- [x] user profile and data 
+- [x] handlebars precompiled tamplets and implemeting them !!! this is important 
 - [ ] check FB or other sharing api-s  
 
 #### Project Requirements:
@@ -28,7 +28,7 @@ Please define and implement the following assets in your project:
   - [x] At least 7 types (classes) of objects
 - [ ] Unit tests
   - [ ] Using [Mocha](https://mochajs.org/), [Chai](http://chaijs.com/) and [SinonJS](http://sinonjs.org/)
-- [ ] Implement a UI for your application
+- [x] Implement a UI for your application
   - Use KendoUI, jQueryUI or implement your own UI logic
 - [x] Use some kind of web data storage, one of the following is Ok
   - Your backend with Node.js, PHP, ASP.NET, Django, Ruby on Rails, Spring, etc...
