@@ -3,6 +3,7 @@ import { handleHtml } from 'htmlHandler';
 import carousel from 'carousel';
 import events from 'events';
 import newUser from 'user-model';
+import googleBook from 'book'
 
 const router = (() => {
     const navigo = (() => {
@@ -14,12 +15,16 @@ const router = (() => {
                 handleHtml('home', 'content')
                     .then(() => {
                         carousel.init();
+                        googleBook.updateComments();
+                        events.postComment();
                     });
             })
             .on('home', () => {
                 handleHtml('home', 'content')
                     .then(() => {
                         carousel.init();
+                        googleBook.updateComments();
+                        events.postComment();
                     })
             })
             .on('search', () => {
@@ -51,7 +56,6 @@ const router = (() => {
             handleHtml('error', 'content');
         }).resolve();
     }
-
     return {
         navigo: navigo,
         initRoutes: initRoutes,

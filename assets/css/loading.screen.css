@@ -13,6 +13,9 @@
     top: 50%;
     width: 200px;
 }
+#not-supported {
+    display: none;
+}
 
 @-webkit-keyframes pulse {
     0% {

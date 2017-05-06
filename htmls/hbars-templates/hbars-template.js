@@ -67,4 +67,20 @@ const userDataHbars = (function() {
     },"useData":true});
 })();
 
-export { bookInfoHbars, userDataHbars, descriptionHbars };
+const commentsHbars = (function() {
+    var template = Handlebars.template, templates = Handlebars.templates = Handlebars.templates || {};
+    templates['comments'] = template({"compiler":[7,">= 4.0.0"],"main":function(container,depth0,helpers,partials,data) {
+        var helper, alias1=depth0 != null ? depth0 : (container.nullContext || {}), alias2=helpers.helperMissing, alias3="function", alias4=container.escapeExpression;
+
+        return "<div class=\".comment-box\">\n    <div class=\".comment-info\">\n        <span>"
+            + alias4(((helper = (helper = helpers.usr || (depth0 != null ? depth0.usr : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"usr","hash":{},"data":data}) : helper)))
+            + "</span>\n        <span>"
+            + alias4(((helper = (helper = helpers.date || (depth0 != null ? depth0.date : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"date","hash":{},"data":data}) : helper)))
+            + "</span>\n    </div>\n    <p>"
+            + alias4(((helper = (helper = helpers.comment || (depth0 != null ? depth0.comment : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"comment","hash":{},"data":data}) : helper)))
+            + "</p>\n</div>";
+    },"useData":true});
+})();
+
+
+export { bookInfoHbars, userDataHbars, descriptionHbars, commentsHbars };
