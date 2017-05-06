@@ -13,7 +13,7 @@
     <link rel="stylesheet" type="text/css" href="libs/css/bootstrap.min.css">
     <link rel="stylesheet" href="/libs/css/owl.carousel.min.css">
     <link rel="stylesheet" href="/libs/css/owl.theme.default.css">
-    <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+    <link rel="stylesheet" href="/libs/css/font-awesome.min.css">
 
     <!-- Styles -->
     <link rel="stylesheet" type="text/css" href="assets/css/loading.screen.css">
@@ -93,6 +93,22 @@
                 <li class="active"><a href="#">home</a></li>
                 <li><a href="#">about</a></li>
             </ul>
+            <div id="social-media" class="row">
+                <div class="col-md-6 col-md-3">
+                    <div class="btn-group btn-group-lg">
+                        <a href="javascript:fbShareCurrentPage()" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u='+escape(window.location.href)+'&t='+document.title, '','menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=500,width=500');return false;"
+                            class="btn btn-default">
+                            <i class="fa fa-facebook"></i>
+                        </a>
+                        <a href="https://twitter.com/intent/tweet?text=Hey, guys! Book WormHole is the best! Check it out!" onclick="window.open(this.href, 'mywin','left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" class="btn btn-default">
+                            <i class="fa fa-twitter"></i>
+                        </a>
+                        <a id="reddit-submit" class="btn btn-default" href="//www.reddit.com/r/books/submit?&title=Hey, guys! Book WormHole is the best! Check it out!" onclick="window.open(this.href, 'mywin','left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;">
+                            <i class="fa fa-reddit"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
             <p>Team Naga - SPA Team project 2017</p>
         </footer>
     </div>
@@ -121,4 +137,5 @@
     </script>
 
 </body>
+
 </html>
