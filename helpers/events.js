@@ -6,11 +6,12 @@ import router from 'router';
 import Handlebars from 'handlebars';
 import dataBase from 'database';
 import booksFilter from 'booksFilter'
+import 'bootstrap-js';
 
 const events = {
     signUpForm: () => {
         const $form = $('#signup');
-        $form.on('submit', function (e) {
+        $form.on('submit', e => {
             e.preventDefault();
             const data = $form.serializeArray();
             newUser.signUp(data);
@@ -18,14 +19,14 @@ const events = {
     },
     logInForm: () => {
         const $form = $('#logIn');
-        $form.on('submit', function (e) {
+        $form.on('submit', e => {
             e.preventDefault();
             const data = $form.serializeArray();
             newUser.logIn(data);
         });
     },
     collapseMenu: (() => {
-        $(document).on('click','.navbar-collapse.in',function(e) {
+        $(document).on('click','.navbar-collapse.in',e => {
             if( $(e.target).is('a') ) {
                 $(this).collapse('hide');
             }
@@ -40,16 +41,16 @@ const events = {
         })
     },
     windowScroll: (() => {
-        $(window).scroll(function() {
-            if ($(this).scrollTop() >= 50) {        // If page is scrolled more than 50px
-                $('#return-to-top').fadeIn(200);    // Fade in the arrow
+        $(window).scroll(() => {
+            if ($(this).scrollTop() >= 50) {
+                $('#return-to-top').fadeIn(200);
             } else {
-                $('#return-to-top').fadeOut(200);   // Else fade out the arrow
+                $('#return-to-top').fadeOut(200);
             }
         });
-        $('#return-to-top').click(function() {      // When arrow is clicked
+        $('#return-to-top').click(() => {
             $('body,html').animate({
-                scrollTop : 0                       // Scroll to top of body
+                scrollTop : 0
             }, 500);
         });
     })(),
@@ -62,19 +63,33 @@ const events = {
         });
     },
     startScroll: () => {
-        $('body').on('scroll touchmove mousewheel', function(e){
+        $('body').on('scroll touchmove mousewheel', e => {
             e.preventDefault();
             e.stopPropagation();
             return false;
         });
     },
-    displayInfo: () => {
-        $('#resultsInfo').on('click.displayInfo','.rid-button',(e) => {
+    inSearchDescription: () => {
+        $('#resultsInfo').on('click.displayInfo','.rid-button',e => {
             const $blur = $('#blur');
             let id = $(e.target).attr('index1'),
-                obj = booksFilter.filteredData.find(element => {
+                obj = booksFilter.filteredData.find( element => {
                     return element.id === id;
                 });
+            events.startScroll();
+            const html = Handlebars.templates['description'](obj);
+            $blur.html(html);
+            events.descriptionOut();
+            $blur.fadeIn();
+        });
+    },
+    userInfoDescription: (data) => {
+        $('#resultsInfo').on('click.displayInfo','.rid-button',e => {
+            const $blur = $('#blur');
+            let id = $(e.target).attr('index1'),
+            obj = data.find( element => {
+                return element.id === id;
+            });
             events.startScroll();
             const html = Handlebars.templates['description'](obj);
             $blur.html(html);
@@ -92,7 +107,7 @@ const events = {
         });
     },
     addUserInfo: () => {
-        $('#resultsInfo').on('click.addBook','.add-button',(e) => {
+        $('#resultsInfo').on('click.addBook','.add-button',e => {
             let $target = e.target;
             let index = $($target).attr('index2'),
                 obj = booksFilter.filteredData.find(element => {
@@ -104,14 +119,13 @@ const events = {
         })
     },
     removeBook: () => {
-        $('#resultsInfo').on('click.removeItem','.remove-button',(e) => {
+        $('#resultsInfo').on('click.removeItem','.remove-button',e => {
             let $target = e.target;
             let id = $($target).attr('index2');
             dataBase.removeNode(id);
             $($target).parents('.col-lg-3').remove();
         });
     }
-
 };
 
 export default events;

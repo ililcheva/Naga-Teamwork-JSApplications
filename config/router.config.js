@@ -1,7 +1,6 @@
 import Navigo from 'navigo';
 import { handleHtml } from 'htmlHandler';
 import carousel from 'carousel';
-import loadingScreen from 'loadingScreen';
 import events from 'events';
 import newUser from 'user-model';
 
@@ -30,22 +29,16 @@ const router = (() => {
                     })
             })
             .on('signup', () => {
-                loadingScreen.swapShow();
                 handleHtml('signup', 'content')
                     .then(events.signUpForm)
-                    .then(loadingScreen.swapHide);
             })
             .on('login', () => {
-                loadingScreen.swapShow();
                 handleHtml('login', 'content')
                     .then(events.logInForm)
-                    .then(loadingScreen.swapHide);
             })
             .on('userpage', () => {
-                loadingScreen.swapShow();
                 handleHtml('userpage', 'content')
                     .then(newUser.getBooks) //load user data
-                    .then(loadingScreen.swapHide);
             })
             .on('logout', () => {
                     router.navigo.navigate('/home');
@@ -61,7 +54,6 @@ const router = (() => {
 
     return {
         navigo: navigo,
-        handleHtml: handleHtml,
         initRoutes: initRoutes,
     }
 })();

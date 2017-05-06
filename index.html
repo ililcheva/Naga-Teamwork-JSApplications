@@ -50,13 +50,50 @@
     <a href="javascript:" id="return-to-top"><i class="icon-chevron-up"></i></a>
     <div id="all-site-container">
         <header id="header">
-
+            <nav class="navbar navbar-inverse">
+                <div class="container-fluid">
+                    <div class="container">
+                        <div class="navbar-header">
+                            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
+                            <a class="navbar-brand" href="#/home">
+                                <img src="/assets/img/book-icon.png" alt="red book logo">
+                            </a>
+                        </div>
+                        <div class="collapse navbar-collapse" id="myNavbar">
+                            <ul class="nav navbar-nav">
+                                <li class="active"><a href="#/home">BookREADS</a></li>
+                                <li id="search-option"><a href="#/search">Search</a></li>
+                                <li>
+                                    <div id="header-search">
+                                        <input id="header-input" type="text" placeholder="Search books">
+                                        <button id="header-button"></button>
+                                    </div>
+                                </li>
+                            </ul>
+                            <ul class="nav navbar-nav navbar-right">
+                                <li><a href="#/signup" id="headerSignup"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+                                <li><a href="#/login" id="headerLogin"><span class="glyphicon glyphicon-log-in"></span> Sign In</a></li>
+                                <li><a href="#/userpage" id="headerUser"><span class="glyphicon glyphicon-book"></span><span id="usernameSpan"></span></a></li>
+                                <li><a href="#/logout" id="headerLogout"><span class="glyphicon glyphicon-log-out"></span> Sign Out</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </nav>
         </header>
         <main class="container" id="content">
 
         </main>
         <footer id="footer">
-
+            <ul class="nav  nav-pills">
+                <li class="active"><a href="#">home</a></li>
+                <li><a href="#">about</a></li>
+            </ul>
+            <p>Team Naga - SPA Team project 2017</p>
         </footer>
     </div>
 

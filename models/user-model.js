@@ -34,7 +34,6 @@ class User {
          dataBase.logOut()
              .then(() => { header.loggedOut(); router.navigo.navigate('/home');})
              .catch((err) => { errorHandler.error(err); })
-
     }
     addBook(data){
         const obj = {};
@@ -52,11 +51,12 @@ class User {
                             const html = Handlebars.templates['user-data'](element);
                             $resultInfo.append(html);
                         });
-                        events.displayInfo(obj);
+                        events.userInfoDescription(obj);
                         events.removeBook();
-                    });
+                    })
+                    .catch( () => {console.log('there is nothing in the books list')});
             } else {
-                console.log('hui');
+                //not logged
             }
         });
     }

@@ -1,3 +1,12 @@
+#carousel-wrapper {
+
+}
+@media (min-width: 768px) {
+    #carousel-wrapper {
+        height: 400px;
+    }
+}
+
 .owl-carousel .item {
     background-color: rgba(230,214,17,0.5);
     -webkit-border-radius: 5px;

@@ -29,7 +29,7 @@ class GoogleBook {
                             }
                         });
                     });
-                events.displayInfo();
+                events.inSearchDescription();
                 events.addUserInfo();
                 $resultInfo.fadeIn(1000);
             })

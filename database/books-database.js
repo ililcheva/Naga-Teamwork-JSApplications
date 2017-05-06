@@ -7,5 +7,4 @@ const booksDatabase = {
     //add more google books api features
 };
 
-
 export default booksDatabase;

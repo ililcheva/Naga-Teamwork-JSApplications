@@ -9,6 +9,7 @@ SystemJS.config({
         'handlebars':'./../libs/script/handlebars.js',
         'navigo':'./../libs/script/navigo.min.js',
         'owl-carousel':'./../libs/script/owl.carousel.min.js',
+        'bootstrap-js':'./../libs/script/bootstrap.min.js',
 
         //paths
         'firebaseConfig':'./../config/firebase.config.js',
