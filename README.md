@@ -15,7 +15,7 @@
 - [x] helpers 
 - [x] user profile and data 
 - [x] handlebars precompiled tamplets and implemeting them !!! this is important 
-- [ ] check FB or other sharing api-s  
+- [x] check FB or other sharing api-s  
 
 #### Project Requirements:
 Please define and implement the following assets in your project:
@@ -41,7 +41,7 @@ Please define and implement the following assets in your project:
 - [x] Use [Twitter Bootstrap](https://getbootstrap.com/)
   - Research and use Bootstrap for your application
   - Make the application responsive for different screens and resolutions
-- [ ] At least one third-party API to share something from your application
+- [x] At least one third-party API to share something from your application
   - Samples:
     - Share status to Facebook, Google+, Twitter, etc...
     - Upload images to Facebook, Flickr, Instagram
@@ -62,7 +62,7 @@ Follow the best practices for producing high-quality code:
 
 ####  Optional Requirements
 If you have a chance, time and a suitable situation, you might add some of the following to your project:
-- [ ]   Backward compatibility (make the application usable on browsers like IE8, IE7 and IE6)
+- [ ]   Backward compatibility (make the application usable on browsers like IE8, IE7 and IE6) NO FUKIN WAY
 - [ ]   Integration tests
 - [ ]   Minify your application source - minified and concatenated javascript and css files
 - [x]   Use a module loader of your choice - SystemJS, RequireJS, etc, or roll up your own loader
