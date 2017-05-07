@@ -34,7 +34,6 @@ const validator = (function () {
         if (!PATTERNS.EMAIL_PATTERN.test(email)) {
             throw MESSAGES.INVALID_EMAIL_MESSAGES;
         }
-        console.log(email);
     }
 
     function confirmPassword(password, passwordConfirm) {
@@ -57,15 +56,10 @@ const validator = (function () {
         const password = data[2].value;
         const passwordConfirm = data[3].value;
 
-        console.log(email);
-
-
-
         validateUsername(username);
         validateEmail(email);
         confirmPassword(password, passwordConfirm);
     }
-
     return {
         validateSignUpForm,
         validateUsername,

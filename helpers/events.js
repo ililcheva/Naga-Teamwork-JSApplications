@@ -41,14 +41,14 @@ const events = {
         })
     },
     windowScroll: (() => {
-        $(window).scroll(() => {
-            if ($(this).scrollTop() >= 50) {
+        $(window).on('scroll',() => {
+            if ($(window).scrollTop() >= 50) {
                 $('#return-to-top').fadeIn(200);
             } else {
                 $('#return-to-top').fadeOut(200);
             }
         });
-        $('#return-to-top').click(() => {
+        $('#return-to-top').on('click',() => {
             $('body,html').animate({
                 scrollTop : 0
             }, 500);
