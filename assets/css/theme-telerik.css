@@ -18,3 +18,10 @@ header .navbar {
 #site-theme select option {
     color: #000;
 }
+
+main {
+    border-radius: 5px;
+    background-color: #fff;
+    color: #000;
+    padding-top: 20px;
+}
