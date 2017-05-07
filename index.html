@@ -19,7 +19,6 @@
     <!-- Styles -->
     <link rel="stylesheet" type="text/css" href="assets/css/loading.screen.css">
     <link rel="stylesheet" type="text/css" href="assets/css/header.css">
-    <link rel="stylesheet" type="text/css" href="/assets/css/home.css">
     <link rel="stylesheet" type="text/css" href="assets/css/pop-ups.css">
     <link rel="stylesheet" type="text/css" href="assets/css/footer.css">
     <link rel="stylesheet" type="text/css" href="assets/css/signup.css">
@@ -29,22 +28,14 @@
     <link rel="stylesheet" type="text/css" href="assets/css/return-to-top.css">
     <link rel="stylesheet" type="text/css" href="assets/css/description.css">
     <link rel="stylesheet" type="text/css" href="assets/css/user-page.css">
-    <link id="theme" rel="stylesheet" href="">
-
-    <!-- totally not working -->
-    <!--[if lt IE 9]>
-    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
+    <link rel="stylesheet" type="text/css" href="/assets/css/home.css">
+    <link id="theme" rel="stylesheet" type="text/css" href="">
 
     <!--[if IE]>
     <style type="text/css">
         /* add div that says that IE 9 or older IE browsers are not supported */
-        .ctnr {
-            display: none;
-        }
-        #not-supported {
-            display: block;
+        body {
+            content: 'This website is not supported for IE9 and older versions of IE9.'
         }
     </style>
     <![endif]-->
@@ -96,7 +87,7 @@
         </main>
         <footer id="footer">
             <ul class="nav  nav-pills">
-                <li class="active"><a href="#">home</a></li>
+                <li class="active" id="footer-home"><a href="#">home</a></li>
                 <li><a href="#">about</a></li>
                 <li id="social-media">
                     <div class="btn-group btn-group-lg">
@@ -130,7 +121,6 @@
             </section>
         </div>
     </div>
-
     <!-- IE 11/10 support polyfills-->
     <script src="/libs/script/es5-shim.min.js"></script>
     <script src="/libs/script/es6-shim.min.js"></script>

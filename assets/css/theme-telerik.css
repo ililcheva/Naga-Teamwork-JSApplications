@@ -12,16 +12,22 @@ header .navbar {
     background-color: #43A700;
     color: #fff;
 }
-#footer {
-    background: #43A700;
-}
 #site-theme select option {
     color: #000;
 }
 
 main {
+    min-height: 1000px;
     border-radius: 5px;
     background-color: #fff;
     color: #000;
     padding-top: 20px;
+    padding-bottom: 20px;
+}
+#header-input {
+    color: #000;
+}
+.description-div {
+    background: #fff;
+    color: #000;
 }

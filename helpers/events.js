@@ -26,10 +26,8 @@ const events = {
         });
     },
     collapseMenu: (() => {
-        $(document).on('click','.navbar-collapse.in',e => {
-            if( $(e.target).is('a') ) {
-                $(this).collapse('hide');
-            }
+        $(document).on('click','a, span','.navbar-collapse.in', () => {
+                $('.navbar-collapse.in').collapse('hide');
         });
     })(),
     bookSearch: () => {

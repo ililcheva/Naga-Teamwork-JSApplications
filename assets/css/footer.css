@@ -38,7 +38,12 @@ footer .nav-pills .active a:hover {
 footer .nav-pills .active a {
     background-color: rgba(243, 234, 201, 0.4);
 }
-
+footer #social-media a {
+    height: 50px;
+    line-height: 50px;
+    padding: 0;
+    width: 50px;
+}
 footer #social-media a:first-of-type {
     background-color: #3b5998;
 }
@@ -49,4 +54,9 @@ footer #social-media a:nth-of-type(2) {
 
 footer #social-media a:nth-of-type(3) {
     background-color: #FF5E76;
+}
+@media only screen and (max-width: 767px) {
+    #footer-home {
+        display: none;
+    }
 }

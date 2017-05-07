@@ -48,6 +48,9 @@ const router = (() => {
                         events.changeTheme();
                     }) //load user data
             })
+            .on('about', () => {
+                handleHtml('about', 'content');
+            })
             .on('logout', () => {
                     router.navigo.navigate('/home');
                     newUser.logOut();
