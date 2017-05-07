@@ -16,32 +16,38 @@ describe("Login tests", () => {
 
 	describe("User tests", () => {
 		describe("Register user", () => {
-			let DB_user_login;
-			let DB_login_check;
-			let cryptoJSStub;
-			const passHash = 'SOME_PASS_HASH';
-
+			let createUser;
 			beforeEach(() => {
-				DB_create_user = sinon.stub(dataBase,"createUser");
-				DB_user_login = sinon.stub(dataBase,"loginUser");
-				DB_login_check = sinon.stub(dataBase,"checkIfLogged");
-				
+				createUser = sinon.stub(dataBase, "createUser");
 			});
 			afterEach(() => {
-				DB_user_login.restore();
-				DB_login_check.restore();
-				DB_create_user.restore();
-				
+				createUser.restore();
+
 			});
-			it('expext db to exist', () => {
-				expect(dataBase.loginUser).to.exist;
+			it('Expext create user to make a request', (done) => {
+				let user = {
+					email: "m",
+					password: "222"
+				};
+				let response = {
+					result: {
+						username: user.username,
+						authKey: 'SOME_AUTH_KEY'
+					}
+				}
+
+				createUser.returns(Promise.resolve(response));
+
+				createUser(user)
+					.then(() => {
+						expect(createUser).to.have.been.calledOnce;
+					})
+					.then(done, done);
+
 			});
-			it("register user",() => {
-				DB_create_user.returns(Promise.resolve());
-			});
-			it('expect register to make a POST request', (done) => {
+			it('Expect createUser function to return a Promise', () => {
 				const user = {
-					username: 'de',
+					username: 'testuser',
 					password: '123456'
 				};
 
@@ -50,47 +56,19 @@ describe("Login tests", () => {
 						username: user.username,
 						authKey: 'SOME_AUTH_KEY'
 					}
-				}
-						
-				DB_user_login.returns(Promise.resolve(response));
+				};
 
-				DB_user_login(user)
-					.then(() => {
-						expect(DB_user_login).to.have.been.calledOnce;
-					})
-					.then(done, done);
-			});
-			it("expect to login a user", (done) => {
-				const user ={};
-				const response = {}; 
-						
-				DB_login_check.returns(Promise.resolve(response));
+				createUser.returns(Promise.resolve(response));
 
-				DB_login_check(user)
-					.then(() => {
-						expect(DB_login_check).to.have.been.calledOnce;
-					})
-					.then(done, done);
+				const promise = createUser(user);
+				expect(promise).to.be.an.instanceof(Promise);
 			});
+
 		});
-	});
-	it("2+2=4", () => {
-		let console = sinon.stub(console);
-		console("ttt")
-		let a = 2;
-		let b = 4;
-		expect(console("ttt")).returns("ttt");
-		sinon.restore(console);
-		//console.log("ppp")
-		//chai.assert(2+2 === 4, "some error")
-	})
-}),
-	describe("Book model tests", () => {
-		it("Expect a default filter", () => {
-			expect(booksFilter.defaultFilter).to.exist;
-		})
 
-	})
+	});
+});
+
 
 
 mocha.run();
