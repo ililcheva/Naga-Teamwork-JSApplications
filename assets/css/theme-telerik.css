@@ -1,0 +1,20 @@
+body {
+    background-image: url("/assets/img/tree_bark.png");
+    color: #fff;
+}
+header .navbar {
+    background: #43A700;
+}
+#header .navbar li > a{
+    color: #fff;
+}
+#header .navbar .active > a{
+    background-color: #43A700;
+    color: #fff;
+}
+#footer {
+    background: #43A700;
+}
+#site-theme select option {
+    color: #000;
+}

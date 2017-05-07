@@ -28,6 +28,8 @@
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
     <link rel="stylesheet" type="text/css" href="assets/css/return-to-top.css">
     <link rel="stylesheet" type="text/css" href="assets/css/description.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/user-page.css">
+    <link id="theme" rel="stylesheet" href="">
 
     <!-- totally not working -->
     <!--[if lt IE 9]>
@@ -96,12 +98,10 @@
             <ul class="nav  nav-pills">
                 <li class="active"><a href="#">home</a></li>
                 <li><a href="#">about</a></li>
-            </ul>
-            <div id="social-media" class="row">
-                <div class="col-md-6 col-md-3">
+                <li id="social-media">
                     <div class="btn-group btn-group-lg">
                         <a href="javascript:fbShareCurrentPage()" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u='+escape(window.location.href)+'&t='+document.title, '','menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=500,width=500');return false;"
-                            class="btn btn-default">
+                           class="btn btn-default">
                             <i class="fa fa-facebook"></i>
                         </a>
                         <a href="https://twitter.com/intent/tweet?text=Hey, guys! Book WormHole is the best! Check it out!" onclick="window.open(this.href, 'mywin','left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" class="btn btn-default">
@@ -111,8 +111,8 @@
                             <i class="fa fa-reddit"></i>
                         </a>
                     </div>
-                </div>
-            </div>
+                </li>
+            </ul>
             <p>Team Naga - SPA Team project 2017</p>
         </footer>
     </div>

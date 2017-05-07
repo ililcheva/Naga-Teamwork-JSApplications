@@ -44,8 +44,10 @@ const dataBase = {
     checkIfLogged: () => {
         firebase.auth().onAuthStateChanged((user) => {
             if(user) {
+                header.setTheme();
                 header.setUserName();
             } else {
+                header.setDefaultTheme();
                 header.loggedOut();
             }
         });

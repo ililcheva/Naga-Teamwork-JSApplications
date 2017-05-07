@@ -1,7 +1,7 @@
 footer {
     background-image: url("/assets/img/pw_maze_black_@2X.png");
     min-height: 150px;
-    padding: 30px 50px;
+    padding: 30px 40px 10px 40px;
     position: absolute;
     bottom: -200px;
     width: 100%;
@@ -31,13 +31,12 @@ footer .nav-pills .active a:hover {
     background-color: rgba(243, 234, 201, 0.4);
     color: black;
 }
-
+#social-media {
+    position: absolute;
+    right: 40px;
+}
 footer .nav-pills .active a {
     background-color: rgba(243, 234, 201, 0.4);
-}
-
-footer #social-media {
-    padding-top: 15px;
 }
 
 footer #social-media a:first-of-type {

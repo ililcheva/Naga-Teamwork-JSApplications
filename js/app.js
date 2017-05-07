@@ -5,9 +5,9 @@ import carousel from 'carousel';
 import events from 'events';
 
 $(document).ready(() => {
+    dataBase.checkIfLogged();
     router.initRoutes();
     loadingScreen.swapShow();
-    dataBase.checkIfLogged();
     events.headerSearch();
     carousel.init();
     loadingScreen.show();

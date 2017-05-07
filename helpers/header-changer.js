@@ -16,6 +16,13 @@ const header = {
             $('#usernameSpan').text(` ${userdata.username}`);
             }
         ).then(header.logged);
+    },
+    setTheme: () => {
+        let data = localStorage.getItem('theme');
+        $('#theme').attr('href',`/assets/css/theme-${data}.css`);
+    },
+    setDefaultTheme: () => {
+        $('#theme').attr('href',`/assets/css/theme-default.css`);
     }
 };
 

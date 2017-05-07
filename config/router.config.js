@@ -43,7 +43,10 @@ const router = (() => {
             })
             .on('userpage', () => {
                 handleHtml('userpage', 'content')
-                    .then(newUser.getBooks) //load user data
+                    .then(() => {
+                        newUser.getBooks();
+                        events.changeTheme();
+                    }) //load user data
             })
             .on('logout', () => {
                     router.navigo.navigate('/home');

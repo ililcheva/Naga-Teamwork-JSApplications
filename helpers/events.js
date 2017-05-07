@@ -136,6 +136,18 @@ const events = {
                 googleBook.comment(comment);
             }
         })
+    },
+    changeTheme: () => {
+        const $themeForm = $('#site-theme');
+        $themeForm.on('submit', e => {
+            e.preventDefault();
+            let data = $themeForm.serializeArray();
+            data = data[0].value;
+            console.log(data);
+            localStorage.setItem('theme',data);
+            $('#theme').attr('href',`/assets/css/theme-${data}.css`);
+        })
+
     }
 };
 

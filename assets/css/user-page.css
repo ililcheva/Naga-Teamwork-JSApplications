@@ -1,0 +1,25 @@
+#user-page {
+    vertical-align: middle;
+}
+#user-page h1 {
+    border-bottom: 1px solid #cccccc;
+    vertical-align: middle;
+    margin: 0;
+    display: inline-block;
+    width: 100%;
+}
+#site-theme {
+    margin-top: 20px;
+    vertical-align: middle;
+}
+
+#site-theme select, #site-theme input {
+    background-color: transparent;
+    border: none;
+    display: inline-block;
+    height: 30px;
+    outline: none;
+}
+#site-theme select:focus, #site-theme input:focus {
+    outline: none;
+}
