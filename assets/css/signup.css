@@ -1,0 +1,45 @@
+.panel {
+    width: 100%;
+    margin: 20px auto;
+    text-transform: uppercase;
+    background-color: rgba(235, 235, 212,0.43);
+    /*background-image: url("/assets/img/skulls.png");*/
+    box-shadow: 0 0 30px 5px #cccccc;
+}
+.panel > .panel-heading {
+    background-image: url("/assets/img/pw_maze_black_@2X.png");
+    color: #fff;
+}
+.panel label {
+    display: block;
+    text-align: center;
+}
+.panel h3 {
+    font-size: 18px;
+    text-align: center;
+    margin: 10px 0;
+}
+.panel input {
+    font-size: 18px;
+    height: 40px;
+    width: 90%;
+    margin: auto;
+}
+.panel input:focus {
+    border-color: #8c8c8c;
+    outline: none;
+}
+#content .panel .signup-submit {
+    padding: 0;
+    width: 30%;
+    margin: 30px auto 20px auto;
+}
+@media (min-width: 768px) {
+    .panel {
+        width: 70%;
+        margin: 160px auto;
+    }
+    .panel input {
+        width: 50%;
+    }
+}

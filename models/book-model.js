@@ -3,6 +3,7 @@ import dataBase from 'database';
 import Handlebars from 'handlebars';
 import booksFilter from 'booksFilter';
 import events from 'events';
+import errorHandler from 'errorHandler'
 
 class GoogleBook {
     search(data) {
@@ -52,14 +53,13 @@ class GoogleBook {
                 $('#comment-container').append(html);
             });
         } else {
-            console.log('ur not logged')
+            errorHandler.error('Please sign up or sign in to comment');
         }
     }
     updateComments(){
         dataBase.readDataOnce('comments')
             .then(result => {
                 let arr = Object.values(result.val());
-                console.log(result.val());
                 $('#comment-container').html('');
                 arr.forEach( element => {
                     const html = Handlebars.templates['comments'](element);

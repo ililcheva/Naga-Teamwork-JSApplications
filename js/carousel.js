@@ -7,8 +7,7 @@ const carousel = {
         let $owl = $('.owl-carousel');
         $owl.owlCarousel({
             loop:true,
-            margin:10,
-            nav: true,
+            margin: 10,
             autoHeight: true,
             autoplay:true,
             autoplayTimeout: 5000,

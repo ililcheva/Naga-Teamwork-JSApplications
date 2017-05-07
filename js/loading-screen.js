@@ -16,10 +16,14 @@ const loadingScreen = (() => {
             $pageSwap.hide();
             $content.fadeIn(500);
     }
+    function containerShow() {
+        $content.fadeIn(700);
+    }
     return {
         show: contentShow,
         swapShow: pageSwapShow,
-        swapHide: pageSwapHide
+        swapHide: pageSwapHide,
+        containerShow: containerShow
     }
 })();
 
