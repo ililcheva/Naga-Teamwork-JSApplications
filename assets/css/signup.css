@@ -32,7 +32,7 @@
 #content .panel .signup-submit {
     padding: 0;
     width: 30%;
-    margin: 30px auto 20px auto;
+    margin: 30px auto 35px auto;
 }
 @media (min-width: 768px) {
     .panel {

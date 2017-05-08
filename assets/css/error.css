@@ -1,16 +1,17 @@
 #errorDiv {
+    height: 30px;
+    width: 100%;
+}
+#error-container {
     border-radius: 2px;
-    background-color: rgba(230, 114, 23, 0.68);
+    background-color: rgba(209,34,29,0.67);
     display: none;
     font-size: 15px;
     text-align: center;
     text-transform: none;
-    padding: 10px;
 }
 #errorDiv p {
-    position: relative;
-    top: 50%;
-    transform: translateY(10%);
+    line-height: 30px;
     width: 100%;
 }
 

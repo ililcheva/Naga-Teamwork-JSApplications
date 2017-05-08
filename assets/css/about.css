@@ -13,7 +13,7 @@
     width: 50%;
     margin-left: 20px;
 }
-#about-container h3 {
+#about-container h2 {
     font-size: 18px;
 }
 @media (max-width: 768px) {
