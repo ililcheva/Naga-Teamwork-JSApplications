@@ -27,8 +27,8 @@ Please define and implement the following assets in your project:
     - [x] Both Prototypal and classical inheritances are Ok
   - [x] At least 3 modules
   - [x] At least 7 types (classes) of objects
-- [ ] Unit tests
-  - [ ] Using [Mocha](https://mochajs.org/), [Chai](http://chaijs.com/) and [SinonJS](http://sinonjs.org/)
+- [x] Unit tests
+  - [x] Using [Mocha](https://mochajs.org/), [Chai](http://chaijs.com/) and [SinonJS](http://sinonjs.org/)
 - [x] Implement a UI for your application
   - Use KendoUI, jQueryUI or implement your own UI logic
 - [x] Use some kind of web data storage, one of the following is Ok
@@ -65,6 +65,6 @@ Follow the best practices for producing high-quality code:
 If you have a chance, time and a suitable situation, you might add some of the following to your project:
 - [ ]   Backward compatibility (make the application usable on browsers like IE8, IE7 and IE6) NO FUKIN WAY
 - [ ]   Integration tests
-- [ ]   Minify your application source - minified and concatenated javascript and css files <--- coming soon&trade;
+- [x]   Minify your application source - minified and concatenated javascript and css files <--- coming soon&trade;
 - [x]   Use a module loader of your choice - SystemJS, RequireJS, etc, or roll up your own loader
 - [x]   Use semantic tags and semantic html
