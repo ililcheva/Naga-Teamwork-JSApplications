@@ -2,7 +2,6 @@ import booksDatabase from 'booksDatabase';
 import dataBase from 'database';
 import Handlebars from 'handlebars';
 import booksFilter from 'booksFilter';
-import events from 'events';
 import errorHandler from 'errorHandler'
 
 class GoogleBook {
@@ -26,12 +25,10 @@ class GoogleBook {
                                 $added.html('In My books');
                                 $added.removeClass('add-button').addClass('added-button');
                             } else {
-                                //not logged
+                                //hand message here
                             }
                         });
                     });
-                events.inSearchDescription();
-                events.addUserInfo();
                 $resultInfo.fadeIn(1000);
             })
     }
@@ -53,17 +50,18 @@ class GoogleBook {
                 $('#comment-container').append(html);
             });
         } else {
-            errorHandler.error('Please sign up or sign in to comment');
+            errorHandler.error('Please sign up or sign in to comment.');
         }
     }
     updateComments(){
         dataBase.readDataOnce('comments')
             .then(result => {
+                const $commentContainer = $('#comment-container');
                 let arr = Object.values(result.val());
-                $('#comment-container').html('');
+                $commentContainer.html('');
                 arr.forEach( element => {
                     const html = Handlebars.templates['comments'](element);
-                    $('#comment-container').append(html);
+                    $commentContainer.append(html);
                 })
             })
     }

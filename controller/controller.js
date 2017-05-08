@@ -9,30 +9,56 @@ import loadingScreen from 'loadingScreen';
 
 let controller = {
     home: () => {
-        carousel.init();
-        googleBook.updateComments();
-        events.postComment();
-        loadingScreen.containerShow();
+        handleHtml('home', 'content')
+            .then(() =>{
+                carousel.init();
+                googleBook.updateComments();
+                events.postComment();
+                loadingScreen.containerShow();
+                }
+            );
     },
     search: () => {
-        events.bookSearch();
-        loadingScreen.containerShow();
+        handleHtml('books-search', 'content')
+            .then(() =>{
+                events.bookSearch();
+                events.inSearchDescription();
+                events.addUserInfo();
+                loadingScreen.containerShow();
+                }
+            );
     },
     signUp: () => {
-        events.signUpForm();
-        loadingScreen.containerShow();
+        handleHtml('signup', 'content')
+            .then(() => {
+                events.signUpForm();
+                loadingScreen.containerShow();
+                }
+            );
     },
     logIn: () => {
-        events.logInForm();
-        loadingScreen.containerShow();
+        handleHtml('login', 'content')
+            .then(() => {
+                events.logInForm();
+                loadingScreen.containerShow();
+                }
+            );
     },
     userPage: () => {
-        newUser.getBooks();
-        events.changeTheme();
-        loadingScreen.containerShow();
+        handleHtml('userpage', 'content')
+            .then(() => {
+                newUser.getBooks();
+                events.changeTheme();
+                loadingScreen.containerShow();
+                }
+            );
     },
     about: () => {
-        loadingScreen.containerShow();
+        handleHtml('about', 'content')
+            .then(() => {
+                loadingScreen.containerShow();
+                }
+            );
     },
     logOut: () => {
         router.navigo.navigate('/home');
@@ -40,7 +66,11 @@ let controller = {
         loadingScreen.containerShow();
     },
     notFound: () => {
-        loadingScreen.containerShow();
+        handleHtml('error', 'content')
+            .then(() => {
+                loadingScreen.containerShow();
+                }
+            );
     }
 };
 
