@@ -12,7 +12,6 @@ const fire = (function () {
     firebase.initializeApp(config);
     return {
         database: firebase.database(),
-        auth: firebase.auth()
     }
 } ());
 

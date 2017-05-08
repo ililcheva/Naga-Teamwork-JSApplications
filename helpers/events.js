@@ -125,7 +125,6 @@ const events = {
         });
     },
     postComment: () => {
-        console.log('attached');
         $('#comment-button').on('click.postComment', () => {
             const $commentInput = $('#comment-input'),
                 comment = $commentInput.val();
@@ -141,11 +140,22 @@ const events = {
             e.preventDefault();
             let data = $themeForm.serializeArray();
             data = data[0].value;
-            console.log(data);
             localStorage.setItem('theme',data);
             $('#theme').attr('href',`/assets/css/theme-${data}.css`);
         })
-
+    },
+    showComments:() => {
+        const $commentContainer = $('#comment-container'),
+            $showComments = $('#show-comments');
+        $showComments.on('click',() => {
+            if($commentContainer.css('display') === 'none') {
+                $showComments.html('Hide Comments');
+                $commentContainer.fadeIn(700);
+            } else {
+                $showComments.html('Show Comments');
+                $commentContainer.fadeOut(700);
+            }
+        });
     }
 };
 

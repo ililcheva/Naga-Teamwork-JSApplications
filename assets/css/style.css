@@ -8,4 +8,6 @@ body {
     background-image: url("/assets/img/skulls.png");
     /*background-color: #cccccc;*/
 }
-
+main {
+    padding-top: 20px;
+}

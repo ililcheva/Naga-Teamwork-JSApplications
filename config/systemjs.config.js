@@ -33,7 +33,6 @@ SystemJS.config({
         //app scripts
         'main':'./../js/app.js',
         'unit-tests':'../tests/tests.js',
-        'main-test':'./../js/app.test.js' //remove this line in the future
     },
     packages: {
         '/':{
@@ -43,4 +42,3 @@ SystemJS.config({
 });
 
 //System.import('main'); //called from index.html to separate test
-//System.import('main-test'); //delete this in the future

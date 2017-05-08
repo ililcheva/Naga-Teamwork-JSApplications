@@ -1,4 +1,5 @@
 #errorDiv {
+    border-radius: 2px;
     background-color: rgba(230, 114, 23, 0.68);
     display: none;
     font-size: 15px;
@@ -6,12 +7,11 @@
     text-transform: none;
     padding: 10px;
 }
-
-
 #errorDiv p {
     position: relative;
     top: 50%;
     transform: translateY(10%);
+    width: 100%;
 }
 
 #popError img {

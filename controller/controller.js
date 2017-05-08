@@ -14,6 +14,7 @@ let controller = {
                 carousel.init();
                 googleBook.updateComments();
                 events.postComment();
+                events.showComments();
                 loadingScreen.containerShow();
                 }
             );

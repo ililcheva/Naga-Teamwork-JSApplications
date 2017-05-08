@@ -1,0 +1,27 @@
+#about-container {
+    background-color: rgba(242,238,242,0.77);
+    padding: 20px;
+}
+.about-header {
+    width: 70%;
+    text-align: justify;
+}
+.about-header h1 {
+    border-bottom: 1px solid #cccccc;
+}
+#about-container > .list-group a,#about-container > .list-group li{
+    width: 50%;
+    margin-left: 20px;
+}
+#about-container h3 {
+    font-size: 18px;
+}
+@media (max-width: 768px) {
+    #about-container > .list-group a,#about-container > .list-group li{
+        width: 100%;
+        margin: 0;
+    }
+    .about-header {
+        width: 100%;
+    }
+}

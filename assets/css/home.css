@@ -70,6 +70,7 @@
     display: block;
 }
 #comment-container {
+    display: none;
     margin: 20px auto;
     width: 80%;
 }
@@ -83,6 +84,18 @@
 }
 .comment-info span:last-child {
     float: right;
+}
+
+#show-comments, #comment-button {
+    border: none;
+    background-color: transparent;
+    display: block;
+}
+#show-comments {
+    margin: 0 auto;
+}
+#show-comments:focus {
+    outline: none;
 }
 @media only screen and (max-width: 767px) {
     .owl-carousel .item > img {
