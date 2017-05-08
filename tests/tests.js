@@ -53,6 +53,16 @@ describe("Events tests", () => {
 
 
 describe("Login tests", () => {
+	const LOCAL_STORAGE_USERNAME_KEY = 'signed-in-user-username',
+		LOCAL_STORAGE_AUTHKEY_KEY = 'signed-in-user-auth-key';
+
+	const clearLocalStorage = () => {
+		localStorage.removeItem(LOCAL_STORAGE_USERNAME_KEY);
+		localStorage.removeItem(LOCAL_STORAGE_AUTHKEY_KEY);
+	};
+
+	beforeEach(clearLocalStorage);
+	afterEach(clearLocalStorage);
 
 	describe("User tests", () => {
 		describe("Register user", () => {
@@ -106,24 +116,31 @@ describe("Login tests", () => {
 
 		});
 		describe("Login tests", () => {
+			let loginUser;
+			let LOCAL_STORAGE_EMAIL;
+			beforeEach(() => {
+				loginUser = sinon.stub(dataBase, "loginUser");
+			});
+			afterEach(() => {
+				loginUser.restore();
+				localStorage.removeItem(LOCAL_STORAGE_EMAIL);
+			});
 			it("Test if current user is set in localstorge", (done) => {
-				let loginUser = sinon.stub(dataBase, "loginUser");
 				const user = {
-					username: 'testuser',
-					password: '123456'
+					email: 'testuser@mail.bg',
+					pass: '123456aA!'
 				};
-
 				const response = {
 					result: {
 						username: user.username,
 						authKey: 'SOME_AUTH_KEY'
 					}
 				};
+				localStorage.LOCAL_STORAGE_EMAIL = user.email;
 				loginUser.returns(Promise.resolve(response));
-
-				loginUser(user)
+				loginUser(user.email, user.pass)
 					.then(() => {
-						expect(localStorage.getItem('currentUser')).to.equal(user.username);
+						expect(localStorage.getItem('LOCAL_STORAGE_USERNAME_KEY')).to.equal(user.email);
 					})
 					.then(done, done);
 			});
