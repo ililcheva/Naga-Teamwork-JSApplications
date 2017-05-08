@@ -74,6 +74,7 @@ describe("Login tests", () => {
 				createUser.restore();
 
 			});
+
 			it('Expext create user to make a request', (done) => {
 				let user = {
 					email: "testovUser",
@@ -91,6 +92,49 @@ describe("Login tests", () => {
 				createUser(user)
 					.then(() => {
 						expect(createUser).to.have.been.calledOnce;
+					})
+					.then(done, done);
+
+			});
+			it('Expext create user to be set in the localStorage', (done) => {
+				let user = {
+					email: "testuser@mail.bg",
+					password: "Parola-123"
+				};
+				let response = {
+					result: {
+						username: user.username,
+						authKey: 'SOME_AUTH_KEY'
+					}
+				}
+
+				createUser.returns(Promise.resolve(response));
+
+				createUser(user)
+					.then(() => {
+						console.log(localStorage)
+						expect(localStorage.getItem('LOCAL_STORAGE_EMAIL')).to.equal(user.email)
+					})
+					.then(done, done);
+
+			});
+						it('Expext create user to make a request with user', (done) => {
+				let user = {
+					email: "testovUser",
+					password: "Parola-123"
+				};
+				let response = {
+					result: {
+						username: user.username,
+						authKey: 'SOME_AUTH_KEY'
+					}
+				}
+
+				createUser.returns(Promise.resolve(response));
+
+				createUser(user)
+					.then(() => {
+						expect(createUser).to.have.been.calledWith(user);
 					})
 					.then(done, done);
 
