@@ -1,7 +1,7 @@
 import router from 'router';
 import  loadingScreen  from 'loadingScreen';
 import dataBase from 'database';
-import carousel from 'carousel';
+import carousel from 'helpers/carousel';
 import events from 'events';
 
 $(document).ready(() => {
