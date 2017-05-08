@@ -35,8 +35,8 @@ Please define and implement the following assets in your project:
   - Telerik Backend Services
   - Firebase
   - Microsoft Mobile App Services
-- [ ] Use some kind of local storage, one of the following is Ok:
-  - `localStorage`
+- [x] Use some kind of local storage, one of the following is Ok:
+  - `localStorage`  <----- this
   - `sessionStorage`
 - [x] Use [Twitter Bootstrap](https://getbootstrap.com/)
   - Research and use Bootstrap for your application
@@ -64,6 +64,6 @@ Follow the best practices for producing high-quality code:
 If you have a chance, time and a suitable situation, you might add some of the following to your project:
 - [ ]   Backward compatibility (make the application usable on browsers like IE8, IE7 and IE6) NO FUKIN WAY
 - [ ]   Integration tests
-- [ ]   Minify your application source - minified and concatenated javascript and css files
+- [ ]   Minify your application source - minified and concatenated javascript and css files <--- coming soon &trade;
 - [x]   Use a module loader of your choice - SystemJS, RequireJS, etc, or roll up your own loader
 - [x]   Use semantic tags and semantic html
