@@ -61,8 +61,17 @@ describe("Login tests", () => {
 		localStorage.removeItem(LOCAL_STORAGE_AUTHKEY_KEY);
 	};
 
-	beforeEach(clearLocalStorage);
-	afterEach(clearLocalStorage);
+
+	beforeEach(() => {
+		clearLocalStorage;
+		localStorage.setItem("LOCAL_STORAGE_EMAIL", "testuser@mail.bg")
+
+	});
+
+	afterEach(() => {
+		clearLocalStorage
+		localStorage.removeItem("LOCAL_STORAGE_EMAIL")
+	});
 
 	describe("User tests", () => {
 		describe("Register user", () => {
@@ -118,7 +127,7 @@ describe("Login tests", () => {
 					.then(done, done);
 
 			});
-						it('Expext create user to make a request with user', (done) => {
+			it('Expext create user to make a request with user', (done) => {
 				let user = {
 					email: "testovUser",
 					password: "Parola-123"
@@ -163,11 +172,13 @@ describe("Login tests", () => {
 			let loginUser;
 			let LOCAL_STORAGE_EMAIL;
 			beforeEach(() => {
+				localStorage.removeItem("LOCAL_STORAGE_EMAIL")
 				loginUser = sinon.stub(dataBase, "loginUser");
 			});
 			afterEach(() => {
 				loginUser.restore();
-				localStorage.removeItem(LOCAL_STORAGE_EMAIL);
+				localStorage.removeItem("LOCAL_STORAGE_EMAIL")
+
 			});
 			it("Test if current user is set in localstorge", (done) => {
 				const user = {
@@ -184,7 +195,7 @@ describe("Login tests", () => {
 				loginUser.returns(Promise.resolve(response));
 				loginUser(user.email, user.pass)
 					.then(() => {
-						expect(localStorage.getItem('LOCAL_STORAGE_USERNAME_KEY')).to.equal(user.email);
+						expect(localStorage.getItem('LOCAL_STORAGE_EMAIL')).to.equal(user.email);
 					})
 					.then(done, done);
 			});
