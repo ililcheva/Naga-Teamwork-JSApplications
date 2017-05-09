@@ -1,22 +1,8 @@
 ## Team Naga
 ### JavaScript Applications - Telerik Academy
 
-### URL: [naga books](https://naga-389d5.firebaseapp.com/)
-### Video: [Team NAGA YouTube showcase](https://www.youtube.com/watch?v=h3o91wzhx-k)
-
-#### TO DO:
-- [x] file system //done
-- [x] exporting with SystemJS //done
-- [x] Modules //done
-- [x] Bootstrap CSS //done
-- [x] back-end //db --- send and retrieve data
-- [x] routers: 
-* [Navigo](https://github.com/krasimir/navigo)
-- [x] basic interface / html skeleton
-- [x] helpers 
-- [x] user profile and data 
-- [x] handlebars precompiled tamplets and implemeting them !!! this is important 
-- [x] check FB or other sharing api-s  
+### URL: [Bookreads](https://naga-389d5.firebaseapp.com/)
+### Video: [YouTube showcase](https://www.youtube.com/watch?v=h3o91wzhx-k)
 
 #### Project Requirements:
 Please define and implement the following assets in your project:
