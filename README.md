@@ -1,5 +1,5 @@
-# Teamwork-JSApplications
-### Team Naga
+## Team Naga
+### JavaScript Applications - Telerik Academy
 
 ### URL: [naga books](https://naga-389d5.firebaseapp.com/)
 ### Video: [Team NAGA YouTube showcase](https://www.youtube.com/watch?v=h3o91wzhx-k)
