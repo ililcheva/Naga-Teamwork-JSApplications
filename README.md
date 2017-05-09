@@ -1,8 +1,8 @@
 ## Team Naga
 ### JavaScript Applications - Telerik Academy
 
-### URL: [Bookreads](https://naga-389d5.firebaseapp.com/)
-### Video: [YouTube showcase](https://www.youtube.com/watch?v=h3o91wzhx-k)
+### [Bookreads](https://naga-389d5.firebaseapp.com/)
+### [YouTube showcase](https://www.youtube.com/watch?v=h3o91wzhx-k)
 
 #### Project Requirements:
 Please define and implement the following assets in your project:
