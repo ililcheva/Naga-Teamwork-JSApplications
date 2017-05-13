@@ -4,6 +4,11 @@
 ### [Bookreads](https://naga-389d5.firebaseapp.com/)
 ### [YouTube showcase](https://www.youtube.com/watch?v=h3o91wzhx-k)
 
+### TODO: 
+* Fix structure!
+* Use async functions :D
+* Fix the syntax;
+
 #### Project Requirements:
 Please define and implement the following assets in your project:
 - - [x] Use [jQuery](https://jquery.com/)
