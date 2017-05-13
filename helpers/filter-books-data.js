@@ -1,42 +1,45 @@
 const booksFilter = {
     filteredData: [],
-    defaultFilter: function(data) { //arrows ----> no this
+    defaultFilter(data) {
         this.filteredData = [];
-         data.map(element => {
-            let title, authors, description, thumbnail, infoLink, id;
-            if (element.volumeInfo.hasOwnProperty('title')) {
+        data.map((element) => {
+            let title;
+            let authors;
+            let description;
+            let imageLink;
+            const infoLink = element.volumeInfo.infoLink;
+            const id = element.id;
+            const hasProperty = Object.prototype.hasOwnProperty;
+            if (hasProperty.call(element.volumeInfo, 'title')) {
                 title = element.volumeInfo.title;
             } else {
                 title = 'There is no information about the title.';
             }
-            if (element.volumeInfo.hasOwnProperty('authors')) {
+            if (hasProperty.call(element.volumeInfo, 'authors')) {
                 authors = element.volumeInfo.authors;
             } else {
                 authors = ['There is no information about the authors.'];
             }
-            if (element.volumeInfo.hasOwnProperty('description')) {
+            if (hasProperty.call(element.volumeInfo, 'description')) {
                 description = element.volumeInfo.description;
             } else {
                 description = 'There is no description provided.';
             }
-            if (element.volumeInfo.hasOwnProperty('imageLinks')) {
-                thumbnail =  element.volumeInfo.imageLinks.thumbnail;
+            if (hasProperty.call(element.volumeInfo, 'imageLinks')) {
+                imageLink = element.volumeInfo.imageLinks.thumbnail;
             } else {
-                thumbnail =  '/assets/img/nopreview.png';
+                imageLink = '/assets/img/nopreview.png';
             }
-            infoLink = element.volumeInfo.infoLink;
-            id = element.id;
             this.filteredData.push({
-                title: title,
-                authors: authors,
-                description: description,
-                imageLink: thumbnail,
-                infoLink: infoLink,
-                id: id
+                title,
+                authors,
+                description,
+                imageLink,
+                infoLink,
+                id,
             });
         });
     },
-
 };
 
 export default booksFilter;

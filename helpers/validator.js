@@ -1,11 +1,11 @@
-//stole this like a boss
-const validator = (function () {
+// stole this like a boss
+const validator = (() => {
     const PATTERNS = {
         NAME_PATTERN: /[^a-zA-Z]/,
         PASSWORD_PATTERN: /(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,20}/,
         USER_NAME_PATTERN: /\S[_a-zA-Z0-9]{5,10}/,
         EMAIL_PATTERN: /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/i,
-        RESTRICTED_SYMBOLS_PATTERN: /[<>$@#&]/gm
+        RESTRICTED_SYMBOLS_PATTERN: /[<>$@#&]/gm,
     };
 
     const MESSAGES = {
@@ -19,7 +19,7 @@ const validator = (function () {
     };
 
     function validateUsername(username) {
-        if(username === ''){
+        if (username === '') {
             throw MESSAGES.EMPTY_USERNAME_FIELD;
         }
         if (!PATTERNS.USER_NAME_PATTERN.test(username)) {
@@ -28,7 +28,7 @@ const validator = (function () {
     }
 
     function validateEmail(email) {
-        if(email === ''){
+        if (email === '') {
             throw MESSAGES.EMPTY_EMAIL_FIELD;
         }
         if (!PATTERNS.EMAIL_PATTERN.test(email)) {
@@ -37,7 +37,7 @@ const validator = (function () {
     }
 
     function confirmPassword(password, passwordConfirm) {
-        if(password === '' || passwordConfirm === ''){
+        if (password === '' || passwordConfirm === '') {
             throw MESSAGES.EMPTY_PASSWORD_FIELD;
         }
 
@@ -64,8 +64,8 @@ const validator = (function () {
         validateSignUpForm,
         validateUsername,
         validateEmail,
-        confirmPassword
-    }
-} ());
+        confirmPassword,
+    };
+})();
 
 export default validator;

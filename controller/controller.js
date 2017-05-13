@@ -8,7 +8,7 @@ import loadingScreen from 'loadingScreen';
 
 
 const controller = {
-    home: () => {
+    home() {
         handleHtml('home', 'content')
             .then(() => {
                 carousel.init();
@@ -19,7 +19,7 @@ const controller = {
             },
             );
     },
-    search: () => {
+    search() {
         handleHtml('books-search', 'content')
             .then(() => {
                 events.bookSearch();
@@ -29,7 +29,7 @@ const controller = {
             },
             );
     },
-    signUp: () => {
+    signUp() {
         handleHtml('signup', 'content')
             .then(() => {
                 events.signUpForm();
@@ -37,7 +37,7 @@ const controller = {
             },
             );
     },
-    logIn: () => {
+    logIn() {
         handleHtml('login', 'content')
             .then(() => {
                 events.logInForm();
@@ -45,7 +45,7 @@ const controller = {
             },
             );
     },
-    userPage: () => {
+    userPage() {
         handleHtml('userpage', 'content')
             .then(() => {
                 newUser.getBooks();
@@ -54,19 +54,19 @@ const controller = {
             },
             );
     },
-    about: () => {
+    about() {
         handleHtml('about', 'content')
             .then(() => {
                 loadingScreen.containerShow();
             },
             );
     },
-    logOut: () => {
+    logOut() {
         router.navigo.navigate('/home');
         newUser.logOut();
         loadingScreen.containerShow();
     },
-    notFound: () => {
+    notFound() {
         handleHtml('error', 'content')
             .then(() => {
                 loadingScreen.containerShow();
