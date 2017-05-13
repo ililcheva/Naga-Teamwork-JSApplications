@@ -120,7 +120,7 @@ const events = {
             $($target).parents('.col-lg-3').remove();
         });
     },
-    postComment: () => {
+    postComment() {
         $('#comment-button').on('click.postComment', () => {
             const $commentInput = $('#comment-input');
             const comment = $commentInput.val();
@@ -128,9 +128,9 @@ const events = {
             if (comment !== '') {
                 googleBook.comment(comment);
             }
-        })
+        });
     },
-    changeTheme: () => {
+    changeTheme() {
         const $themeForm = $('#site-theme');
         $themeForm.on('submit', (e) => {
             e.preventDefault();
