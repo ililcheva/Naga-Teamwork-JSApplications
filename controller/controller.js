@@ -7,26 +7,26 @@ import googleBook from 'book';
 import loadingScreen from 'loadingScreen';
 
 
-let controller = {
+const controller = {
     home: () => {
         handleHtml('home', 'content')
-            .then(() =>{
+            .then(() => {
                 carousel.init();
                 googleBook.updateComments();
                 events.postComment();
                 events.showComments();
                 loadingScreen.containerShow();
-                }
+            },
             );
     },
     search: () => {
         handleHtml('books-search', 'content')
-            .then(() =>{
+            .then(() => {
                 events.bookSearch();
                 events.inSearchDescription();
                 events.addUserInfo();
                 loadingScreen.containerShow();
-                }
+            },
             );
     },
     signUp: () => {
@@ -34,7 +34,7 @@ let controller = {
             .then(() => {
                 events.signUpForm();
                 loadingScreen.containerShow();
-                }
+            },
             );
     },
     logIn: () => {
@@ -42,7 +42,7 @@ let controller = {
             .then(() => {
                 events.logInForm();
                 loadingScreen.containerShow();
-                }
+            },
             );
     },
     userPage: () => {
@@ -51,14 +51,14 @@ let controller = {
                 newUser.getBooks();
                 events.changeTheme();
                 loadingScreen.containerShow();
-                }
+            },
             );
     },
     about: () => {
         handleHtml('about', 'content')
             .then(() => {
                 loadingScreen.containerShow();
-                }
+            },
             );
     },
     logOut: () => {
@@ -70,9 +70,9 @@ let controller = {
         handleHtml('error', 'content')
             .then(() => {
                 loadingScreen.containerShow();
-                }
+            },
             );
-    }
+    },
 };
 
 export default controller;
